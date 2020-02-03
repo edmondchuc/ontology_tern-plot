@@ -160,7 +160,7 @@
     </figcaption>
    </figure>
    <figure>
-    <img alt="Feature of Interest class overview diagram." src="FOI.png"/>
+    <img alt="Feature of Interest class overview diagram." src="FOI.PNG"/>
     <figcaption style="padding-bottom: 3rem">
      <strong>
       Figure 2:
@@ -305,6 +305,30 @@
        Restrictions
       </th>
       <td>
+       <a href="http://linked.data.gov.au/def/plot/mapScale">
+        plot:mapScale
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <span class="cardinality">
+        max
+       </span>
+       1
+       <br/>
+       <a href="http://www.opengis.net/ont/geosparql#hasGeometry">
+        geosparql:hasGeometry
+       </a>
+       <span class="cardinality">
+        some
+       </span>
+       <a href="http://www.w3.org/2003/01/geo/wgs84_pos#Point">
+        w3cgeo:Point
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br/>
        <a href="http://linked.data.gov.au/def/plot/mapsheetNumber">
         plot:mapsheetNumber
        </a>
@@ -335,19 +359,6 @@
        </span>
        1
        <br/>
-       <a href="http://www.opengis.net/ont/geosparql#hasGeometry">
-        geosparql:hasGeometry
-       </a>
-       <span class="cardinality">
-        some
-       </span>
-       <a href="http://www.w3.org/2003/01/geo/wgs84_pos#Point">
-        w3cgeo:Point
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <br/>
        <a href="http://linked.data.gov.au/def/plot/locationMethod">
         plot:locationMethod
        </a>
@@ -358,17 +369,6 @@
         min
        </span>
        0
-       <br/>
-       <a href="http://linked.data.gov.au/def/plot/mapScale">
-        plot:mapScale
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <span class="cardinality">
-        max
-       </span>
-       1
        <br/>
       </td>
      </tr>
@@ -468,19 +468,6 @@
        </span>
        1
        <br/>
-       <a href="http://www.opengis.net/ont/geosparql#defaultGeometry">
-        geosparql:defaultGeometry
-       </a>
-       <span class="cardinality">
-        only
-       </span>
-       <a href="http://www.w3.org/2003/01/geo/wgs84_pos#Point">
-        w3cgeo:Point
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <br/>
        <a href="http://www.w3.org/ns/sosa/isSampleOf">
         sosa:isSampleOf
        </a>
@@ -489,6 +476,19 @@
        </span>
        <a href="http://linked.data.gov.au/def/plot/x/EcologicalCommunity">
         plot-x:EcologicalCommunity
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br/>
+       <a href="http://www.opengis.net/ont/geosparql#defaultGeometry">
+        geosparql:defaultGeometry
+       </a>
+       <span class="cardinality">
+        only
+       </span>
+       <a href="http://www.w3.org/2003/01/geo/wgs84_pos#Point">
+        w3cgeo:Point
        </a>
        <sup class="sup-c" title="class">
         c
@@ -541,10 +541,7 @@
        Description
       </th>
       <td>
-       Location where observations may be made
-May be a plot, quadrat, transect, trap etc
-
-This is a sub-class of sosa:Sample because a site should be designed to to be representative of an environmental system (which may be an ecosystem or bioregion) or zone (which might be a fiat zone such as a parcel or tract)
+       ownership is associated with the parent survey
       </td>
      </tr>
      <tr>
@@ -552,15 +549,15 @@ This is a sub-class of sosa:Sample because a site should be designed to to be re
        Super-classes
       </th>
       <td>
-       <a href="http://www.opengis.net/ont/geosparql#SpatialObject">
-        geosparql:SpatialObject
+       <a href="http://www.w3.org/ns/sosa/Sample">
+        sosa:Sample
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
        <br/>
-       <a href="http://www.w3.org/ns/sosa/Sample">
-        sosa:Sample
+       <a href="http://www.opengis.net/ont/geosparql#SpatialObject">
+        geosparql:SpatialObject
        </a>
        <sup class="sup-c" title="class">
         c
@@ -573,77 +570,6 @@ This is a sub-class of sosa:Sample because a site should be designed to to be re
        Restrictions
       </th>
       <td>
-       <a href="http://purl.org/dc/terms/relation">
-        dcterms:relation
-       </a>
-       <span class="cardinality">
-        some
-       </span>
-       <a href="http://linked.data.gov.au/def/plot/Site">
-        plot:Site
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <br/>
-       <a href="http://linked.data.gov.au/def/plot/siteDescription">
-        plot:siteDescription
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <span class="cardinality">
-        min
-       </span>
-       1
-       <br/>
-       <a href="http://purl.org/dc/terms/hasPart">
-        dcterms:hasPart
-       </a>
-       <span class="cardinality">
-        only
-       </span>
-       <a href="http://linked.data.gov.au/def/plot/Site">
-        plot:Site
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <br/>
-       <a href="http://www.w3.org/ns/prov#wasGeneratedBy">
-        prov:wasGeneratedBy
-       </a>
-       <span class="cardinality">
-        only
-       </span>
-       <a href="http://www.w3.org/ns/prov#Activity">
-        prov:Activity
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <br/>
-       <a href="http://purl.org/dc/terms/created">
-        dcterms:created
-       </a>
-       <span class="cardinality">
-        exactly
-       </span>
-       1
-       <br/>
-       <a href="http://purl.org/dc/terms/isPartOf">
-        dcterms:isPartOf
-       </a>
-       <span class="cardinality">
-        only
-       </span>
-       <a href="http://linked.data.gov.au/def/plot/Site">
-        plot:Site
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <br/>
        <a href="http://www.w3.org/ns/sosa/isResultOf">
         sosa:isResultOf
        </a>
@@ -652,22 +578,6 @@ This is a sub-class of sosa:Sample because a site should be designed to to be re
        </span>
        <a href="http://linked.data.gov.au/def/plot/SiteVisit">
         plot:SiteVisit
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <br/>
-       <a href="http://linked.data.gov.au/def/plot/hasLocation">
-        plot:hasLocation
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <span class="cardinality">
-        only
-       </span>
-       <a href="http://linked.data.gov.au/def/plot/Location">
-        plot:Location
        </a>
        <sup class="sup-c" title="class">
         c
@@ -695,6 +605,93 @@ This is a sub-class of sosa:Sample because a site should be designed to to be re
        </sup>
        )
        <br/>
+       <a href="http://purl.org/dc/terms/relation">
+        dcterms:relation
+       </a>
+       <span class="cardinality">
+        some
+       </span>
+       <a href="http://linked.data.gov.au/def/plot/Site">
+        plot:Site
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br/>
+       <a href="http://purl.org/dc/terms/isPartOf">
+        dcterms:isPartOf
+       </a>
+       <span class="cardinality">
+        only
+       </span>
+       <a href="http://linked.data.gov.au/def/plot/Site">
+        plot:Site
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br/>
+       <a href="http://linked.data.gov.au/def/plot/siteDescription">
+        plot:siteDescription
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <span class="cardinality">
+        min
+       </span>
+       1
+       <br/>
+       <a href="http://linked.data.gov.au/def/plot/hasLocation">
+        plot:hasLocation
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <span class="cardinality">
+        only
+       </span>
+       <a href="http://linked.data.gov.au/def/plot/Location">
+        plot:Location
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br/>
+       <a href="http://www.w3.org/ns/prov#wasGeneratedBy">
+        prov:wasGeneratedBy
+       </a>
+       <span class="cardinality">
+        only
+       </span>
+       <a href="http://www.w3.org/ns/prov#Activity">
+        prov:Activity
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br/>
+       <a href="http://purl.org/dc/terms/hasPart">
+        dcterms:hasPart
+       </a>
+       <span class="cardinality">
+        only
+       </span>
+       <a href="http://linked.data.gov.au/def/plot/Site">
+        plot:Site
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br/>
+       <a href="http://purl.org/dc/terms/created">
+        dcterms:created
+       </a>
+       <span class="cardinality">
+        exactly
+       </span>
+       1
+       <br/>
       </td>
      </tr>
      <tr>
@@ -702,8 +699,8 @@ This is a sub-class of sosa:Sample because a site should be designed to to be re
        In domain of
       </th>
       <td>
-       <a href="http://linked.data.gov.au/def/plot/x/floristics">
-        plot-x:floristics
+       <a href="http://linked.data.gov.au/def/plot/x/sampleType">
+        plot-x:sampleType
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -716,15 +713,15 @@ This is a sub-class of sosa:Sample because a site should be designed to to be re
         op
        </sup>
        <br/>
-       <a href="http://linked.data.gov.au/def/plot/siteDescription">
-        plot:siteDescription
+       <a href="http://linked.data.gov.au/def/plot/x/floristics">
+        plot-x:floristics
        </a>
        <sup class="sup-op" title="object property">
         op
        </sup>
        <br/>
-       <a href="http://linked.data.gov.au/def/plot/x/sampleType">
-        plot-x:sampleType
+       <a href="http://linked.data.gov.au/def/plot/siteDescription">
+        plot:siteDescription
        </a>
        <sup class="sup-op" title="object property">
         op
@@ -788,25 +785,6 @@ This is a sub-class of sosa:Sample because a site should be designed to to be re
        Restrictions
       </th>
       <td>
-       <a href="http://linked.data.gov.au/def/plot/stratum">
-        plot:stratum
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <span class="cardinality">
-        exactly
-       </span>
-       1
-       <br/>
-       <a href="http://www.w3.org/ns/sosa/isFeatureOfInterestOf">
-        sosa:isFeatureOfInterestOf
-       </a>
-       <span class="cardinality">
-        min
-       </span>
-       1
-       <br/>
        <a href="http://www.w3.org/ns/sosa/isSampleOf">
         sosa:isSampleOf
        </a>
@@ -819,6 +797,25 @@ This is a sub-class of sosa:Sample because a site should be designed to to be re
        <sup class="sup-c" title="class">
         c
        </sup>
+       <br/>
+       <a href="http://www.w3.org/ns/sosa/isFeatureOfInterestOf">
+        sosa:isFeatureOfInterestOf
+       </a>
+       <span class="cardinality">
+        min
+       </span>
+       1
+       <br/>
+       <a href="http://linked.data.gov.au/def/plot/stratum">
+        plot:stratum
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <span class="cardinality">
+        exactly
+       </span>
+       1
        <br/>
       </td>
      </tr>
@@ -869,26 +866,16 @@ This is a sub-class of sosa:Sample because a site should be designed to to be re
        Restrictions
       </th>
       <td>
-       <a href="http://www.w3.org/ns/sosa/isFeatureOfInterestOf">
-        sosa:isFeatureOfInterestOf
+       <a href="http://linked.data.gov.au/def/plot/stratum">
+        plot:stratum
        </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
        <span class="cardinality">
-        min
+        exactly
        </span>
        1
-       <br/>
-       <a href="http://www.w3.org/ns/sosa/isSampleOf">
-        sosa:isSampleOf
-       </a>
-       <span class="cardinality">
-        some
-       </span>
-       <a href="http://linked.data.gov.au/def/plot/SiteStratum">
-        plot:SiteStratum
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
        <br/>
        <a href="http://www.w3.org/ns/sosa/isSampleOf">
         sosa:isSampleOf
@@ -904,25 +891,11 @@ This is a sub-class of sosa:Sample because a site should be designed to to be re
         c
        </sup>
        <br/>
-       <a href="http://linked.data.gov.au/def/plot/stratum">
-        plot:stratum
+       <a href="http://www.w3.org/ns/sosa/isFeatureOfInterestOf">
+        sosa:isFeatureOfInterestOf
        </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
        <span class="cardinality">
-        exactly
-       </span>
-       1
-       <br/>
-       <a href="http://linked.data.gov.au/def/plot/taxon">
-        plot:taxon
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <span class="cardinality">
-        exactly
+        min
        </span>
        1
        <br/>
@@ -938,6 +911,30 @@ This is a sub-class of sosa:Sample because a site should be designed to to be re
        <sup class="sup-c" title="class">
         c
        </sup>
+       <br/>
+       <a href="http://www.w3.org/ns/sosa/isSampleOf">
+        sosa:isSampleOf
+       </a>
+       <span class="cardinality">
+        some
+       </span>
+       <a href="http://linked.data.gov.au/def/plot/SiteStratum">
+        plot:SiteStratum
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br/>
+       <a href="http://linked.data.gov.au/def/plot/taxon">
+        plot:taxon
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <span class="cardinality">
+        exactly
+       </span>
+       1
        <br/>
       </td>
      </tr>
@@ -988,25 +985,6 @@ This is a sub-class of sosa:Sample because a site should be designed to to be re
        Restrictions
       </th>
       <td>
-       <a href="http://www.w3.org/ns/sosa/isFeatureOfInterestOf">
-        sosa:isFeatureOfInterestOf
-       </a>
-       <span class="cardinality">
-        min
-       </span>
-       1
-       <br/>
-       <a href="http://linked.data.gov.au/def/plot/taxon">
-        plot:taxon
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <span class="cardinality">
-        exactly
-       </span>
-       1
-       <br/>
        <a href="http://www.w3.org/ns/sosa/isSampleOf">
         sosa:isSampleOf
        </a>
@@ -1019,6 +997,25 @@ This is a sub-class of sosa:Sample because a site should be designed to to be re
        <sup class="sup-c" title="class">
         c
        </sup>
+       <br/>
+       <a href="http://linked.data.gov.au/def/plot/taxon">
+        plot:taxon
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <span class="cardinality">
+        exactly
+       </span>
+       1
+       <br/>
+       <a href="http://www.w3.org/ns/sosa/isFeatureOfInterestOf">
+        sosa:isFeatureOfInterestOf
+       </a>
+       <span class="cardinality">
+        min
+       </span>
+       1
        <br/>
       </td>
      </tr>
@@ -1069,35 +1066,6 @@ This is a sub-class of sosa:Sample because a site should be designed to to be re
        Restrictions
       </th>
       <td>
-       <a href="http://www.w3.org/ns/sosa/hasFeatureOfInterest">
-        sosa:hasFeatureOfInterest
-       </a>
-       <span class="cardinality">
-        only
-       </span>
-       <a href="http://linked.data.gov.au/def/plot/Site">
-        plot:Site
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <br/>
-       <a href="http://linked.data.gov.au/def/plot/wasSubActivityOf">
-        plot:wasSubActivityOf
-       </a>
-       <sup class="sup-op" title="object property">
-        op
-       </sup>
-       <span class="cardinality">
-        some
-       </span>
-       <a href="http://linked.data.gov.au/def/plot/x/Survey">
-        plot-x:Survey
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <br/>
        <a href="http://linked.data.gov.au/def/plot/hadSubActivity">
         plot:hadSubActivity
        </a>
@@ -1129,6 +1097,35 @@ This is a sub-class of sosa:Sample because a site should be designed to to be re
         c
        </sup>
        )
+       <br/>
+       <a href="http://www.w3.org/ns/sosa/hasFeatureOfInterest">
+        sosa:hasFeatureOfInterest
+       </a>
+       <span class="cardinality">
+        only
+       </span>
+       <a href="http://linked.data.gov.au/def/plot/Site">
+        plot:Site
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br/>
+       <a href="http://linked.data.gov.au/def/plot/wasSubActivityOf">
+        plot:wasSubActivityOf
+       </a>
+       <sup class="sup-op" title="object property">
+        op
+       </sup>
+       <span class="cardinality">
+        some
+       </span>
+       <a href="http://linked.data.gov.au/def/plot/x/Survey">
+        plot-x:Survey
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
        <br/>
       </td>
      </tr>
@@ -1344,15 +1341,15 @@ This is a sub-class of sosa:Sample because a site should be designed to to be re
        Super-classes
       </th>
       <td>
-       <a href="http://linked.data.gov.au/def/plot/x/EnvironmentalContinuant">
-        plot-x:EnvironmentalContinuant
+       <a href="http://www.w3.org/2002/07/owl#Thing">
+        owl:Thing
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
        <br/>
-       <a href="http://www.w3.org/2002/07/owl#Thing">
-        owl:Thing
+       <a href="http://linked.data.gov.au/def/plot/x/EnvironmentalContinuant">
+        plot-x:EnvironmentalContinuant
        </a>
        <sup class="sup-c" title="class">
         c
@@ -1399,15 +1396,15 @@ This is a sub-class of sosa:Sample because a site should be designed to to be re
        Super-classes
       </th>
       <td>
-       <a href="http://www.w3.org/2002/07/owl#Thing">
-        owl:Thing
+       <a href="http://linked.data.gov.au/def/plot/x/EnvironmentalContinuant">
+        plot-x:EnvironmentalContinuant
        </a>
        <sup class="sup-c" title="class">
         c
        </sup>
        <br/>
-       <a href="http://linked.data.gov.au/def/plot/x/EnvironmentalContinuant">
-        plot-x:EnvironmentalContinuant
+       <a href="http://www.w3.org/2002/07/owl#Thing">
+        owl:Thing
        </a>
        <sup class="sup-c" title="class">
         c
@@ -1526,69 +1523,6 @@ In this context the value of feature-of-interest is expected to be the value of 
        Restrictions
       </th>
       <td>
-       <a href="http://purl.org/dc/terms/license">
-        dcterms:license
-       </a>
-       <span class="cardinality">
-        exactly
-       </span>
-       1
-       <a href="http://www.w3.org/ns/odrl/2/Policy">
-        http://www.w3.org/ns/odrl/2/Policy
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <br/>
-       <a href="http://www.w3.org/ns/sosa/hasFeatureOfInterest">
-        sosa:hasFeatureOfInterest
-       </a>
-       <span class="cardinality">
-        min
-       </span>
-       1
-       <a href="http://linked.data.gov.au/def/plot/Site">
-        plot:Site
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <br/>
-       <a href="http://purl.org/dc/terms/accessRights">
-        dcterms:accessRights
-       </a>
-       <span class="cardinality">
-        exactly
-       </span>
-       1
-       <a href="http://www.w3.org/ns/odrl/2/Permission">
-        http://www.w3.org/ns/odrl/2/Permission
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <br/>
-       <a href="http://www.w3.org/ns/prov#wasAssociatedWith">
-        prov:wasAssociatedWith
-       </a>
-       <span class="cardinality">
-        some
-       </span>
-       <a href="http://www.w3.org/ns/prov#Organization">
-        prov:Organization
-       </a>
-       <sup class="sup-c" title="class">
-        c
-       </sup>
-       <br/>
-       <a href="http://purl.org/dc/elements/1.1/creator">
-        http://purl.org/dc/elements/1.1/creator
-       </a>
-       <span class="cardinality">
-        min
-       </span>
-       1
-       <br/>
        <a href="http://www.w3.org/ns/locn#location">
         http://www.w3.org/ns/locn#location
        </a>
@@ -1609,6 +1543,69 @@ In this context the value of feature-of-interest is expected to be the value of 
         exactly
        </span>
        1
+       <br/>
+       <a href="http://www.w3.org/ns/sosa/hasFeatureOfInterest">
+        sosa:hasFeatureOfInterest
+       </a>
+       <span class="cardinality">
+        min
+       </span>
+       1
+       <a href="http://linked.data.gov.au/def/plot/Site">
+        plot:Site
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br/>
+       <a href="http://purl.org/dc/terms/license">
+        dcterms:license
+       </a>
+       <span class="cardinality">
+        exactly
+       </span>
+       1
+       <a href="http://www.w3.org/ns/odrl/2/Policy">
+        http://www.w3.org/ns/odrl/2/Policy
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br/>
+       <a href="http://purl.org/dc/elements/1.1/creator">
+        http://purl.org/dc/elements/1.1/creator
+       </a>
+       <span class="cardinality">
+        min
+       </span>
+       1
+       <br/>
+       <a href="http://www.w3.org/ns/prov#wasAssociatedWith">
+        prov:wasAssociatedWith
+       </a>
+       <span class="cardinality">
+        some
+       </span>
+       <a href="http://www.w3.org/ns/prov#Organization">
+        prov:Organization
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
+       <br/>
+       <a href="http://purl.org/dc/terms/accessRights">
+        dcterms:accessRights
+       </a>
+       <span class="cardinality">
+        exactly
+       </span>
+       1
+       <a href="http://www.w3.org/ns/odrl/2/Permission">
+        http://www.w3.org/ns/odrl/2/Permission
+       </a>
+       <sup class="sup-c" title="class">
+        c
+       </sup>
        <br/>
       </td>
      </tr>
@@ -2230,11 +2227,11 @@ In this context the value of feature-of-interest is expected to be the value of 
        Super-properties
       </th>
       <td>
-       <a href="http://www.w3.org/ns/prov#wasAssociatedWith">
-        prov:wasAssociatedWith
-       </a>
        <a href="http://www.w3.org/ns/sosa/madeBySensor">
         sosa:madeBySensor
+       </a>
+       <a href="http://www.w3.org/ns/prov#wasAssociatedWith">
+        prov:wasAssociatedWith
        </a>
       </td>
      </tr>

@@ -13,7 +13,7 @@ overview:
         alt: Observation class overview diagram.
         caption: Observation class overview
     - figure:
-        src: FOI.png
+        src: FOI.PNG
         alt: Feature of Interest class overview diagram.
         caption: Feature of Interest class overview
 
