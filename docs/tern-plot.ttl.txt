@@ -1,64 +1,64 @@
 @startuml
 title The PLOT ontology
-"sosa:Platform" <|-- ":FluxTower"
-"prov:Activity" <|-- ":SiteVisit"
-"sosa:Sample" <|-- ":SiteTaxon"
-"prov:Activity" <|-- ":Survey"
-"owl:Thing" <|-- ":EnvironmentalSystem"
 ":EnvironmentalContinuant" <|-- ":EnvironmentalSystem"
-"sosa:Sample" <|-- ":OrganismOccurence"
-"time:TemporalEntity" <|-- ":OrganismOccurence"
-"geosparql:SpatialObject" <|-- ":OrganismOccurence"
+"owl:Thing" <|-- ":EnvironmentalSystem"
+"sosa:Observation" <|-- ":TaxonAssignment"
+"sosa:Platform" <|-- ":FluxTower"
+"dct:Location" <|-- ":Location"
+"skos:Concept" <|-- ":Stratum"
+"prov:Activity" <|-- ":SiteVisit"
 "sosa:Sample" <|-- ":SiteStratumTaxon"
+"sosa:Sample" <|-- ":SiteTaxon"
+":EcologicalCommunity" <|-- ":Assemblage"
+"prov:Activity" <|-- ":Survey"
 ":EnvironmentalContinuant" <|-- ":EnvironmentalZone"
 "owl:Thing" <|-- ":EnvironmentalZone"
-"sosa:Observation" <|-- ":TaxonAssignment"
-":EcologicalCommunity" <|-- ":Assemblage"
-"dct:Location" <|-- ":Location"
 "sosa:Sample" <|-- ":SiteStratum"
-":EnvironmentalSystem" <|-- ":EcologicalCommunity"
-"skos:Concept" <|-- ":Stratum"
+"sosa:Sample" <|-- ":OrganismOccurence"
+"geosparql:SpatialObject" <|-- ":OrganismOccurence"
+"time:TemporalEntity" <|-- ":OrganismOccurence"
 "sosa:FeatureOfInterest" <|-- ":EnvironmentalContinuant"
-Class ":ub1bL494C15" [[ub1bL494C15]] {
-}
-Class ":FluxTower" [[http://linked.data.gov.au/def/plot/x/FluxTower]] {
-}
-Class ":ub1bL571C15" [[ub1bL571C15]] {
-[[http://www.w3.org/ns/ssn/ext/isMemberOf :isMemberOf]] : [[http://www.w3.org/ns/ssn/ext/ObservationCollection :ObservationCollection]]
-}
-Class ":SiteVisit" [[http://linked.data.gov.au/def/plot/SiteVisit]] {
-}
-Class ":SiteTaxon" [[http://linked.data.gov.au/def/plot/SiteTaxon]] {
-}
-Class ":Survey" [[http://linked.data.gov.au/def/plot/x/Survey]] {
-}
-Class ":ub1bL307C26" [[ub1bL307C26]] {
-}
+":EnvironmentalSystem" <|-- ":EcologicalCommunity"
 Class ":EnvironmentalSystem" [[http://linked.data.gov.au/def/plot/x/EnvironmentalSystem]] {
-}
-Class ":OrganismOccurence" [[http://linked.data.gov.au/def/plot/OrganismOccurence]] {
-}
-Class ":SiteStratumTaxon" [[http://linked.data.gov.au/def/plot/SiteStratumTaxon]] {
-}
-Class ":EnvironmentalZone" [[http://linked.data.gov.au/def/plot/x/EnvironmentalZone]] {
 }
 Class ":ub1bL554C23" [[ub1bL554C23]] {
 }
 Class ":ub1bL149C26" [[ub1bL149C26]] {
 }
+Class ":ub1bL307C26" [[ub1bL307C26]] {
+}
 Class ":TaxonAssignment" [[http://linked.data.gov.au/def/plot/x/TaxonAssignment]] {
 }
-Class ":Assemblage" [[http://linked.data.gov.au/def/plot/x/Assemblage]] {
+Class ":FluxTower" [[http://linked.data.gov.au/def/plot/x/FluxTower]] {
 }
 Class ":Location" [[http://linked.data.gov.au/def/plot/Location]] {
 }
-Class ":SiteStratum" [[http://linked.data.gov.au/def/plot/SiteStratum]] {
-}
-Class ":EcologicalCommunity" [[http://linked.data.gov.au/def/plot/x/EcologicalCommunity]] {
-}
 Class ":Stratum" [[http://linked.data.gov.au/def/plot/Stratum]] {
 }
+Class ":SiteVisit" [[http://linked.data.gov.au/def/plot/SiteVisit]] {
+}
+Class ":SiteStratumTaxon" [[http://linked.data.gov.au/def/plot/SiteStratumTaxon]] {
+}
+Class ":SiteTaxon" [[http://linked.data.gov.au/def/plot/SiteTaxon]] {
+}
+Class ":Assemblage" [[http://linked.data.gov.au/def/plot/x/Assemblage]] {
+}
+Class ":Survey" [[http://linked.data.gov.au/def/plot/x/Survey]] {
+}
+Class ":EnvironmentalZone" [[http://linked.data.gov.au/def/plot/x/EnvironmentalZone]] {
+}
+Class ":SiteStratum" [[http://linked.data.gov.au/def/plot/SiteStratum]] {
+}
+Class ":OrganismOccurence" [[http://linked.data.gov.au/def/plot/OrganismOccurence]] {
+}
+Class ":ub1bL571C15" [[ub1bL571C15]] {
+[[http://www.w3.org/ns/ssn/ext/isMemberOf :isMemberOf]] : [[http://www.w3.org/ns/ssn/ext/ObservationCollection :ObservationCollection]]
+}
 Class ":EnvironmentalContinuant" [[http://linked.data.gov.au/def/plot/x/EnvironmentalContinuant]] {
+}
+Class ":ub1bL494C15" [[ub1bL494C15]] {
+}
+Class ":EcologicalCommunity" [[http://linked.data.gov.au/def/plot/x/EcologicalCommunity]] {
 }
 "dwc:Occurrence" .. ":OrganismOccurence"
 header
