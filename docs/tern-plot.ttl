@@ -50,7 +50,7 @@ PLOT is technically an extension to the W3C SSN/SOSA vocabulary, and also uses e
   prov:wasGeneratedBy [
       a doap:Project ;
       a prov:Activity ;
-      doap:repository <https://bitbucket.org/terndatateam/ternplotdata-ontology> ;
+      doap:repository <https://github.com/ternaustralia/ontology_tern-plot> ;
     ] ;
 .
 plot:Location

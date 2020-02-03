@@ -104,7 +104,7 @@ PLOT is technically an extension to the W3C SSN/SOSA vocabulary, and also uses e
         ssn:ext ;
     prov:wasGeneratedBy [ a doap:Project,
                 prov:Activity ;
-            doap:repository <https://bitbucket.org/terndatateam/ternplotdata-ontology> ] .
+            doap:repository <https://github.com/ternaustralia/ontology_tern-plot> ] .
 
 plot:OrganismOccurence a owl:Class ;
     rdfs:label "Organism Occurrence " ;
@@ -224,6 +224,8 @@ ssn-ext:isMemberOf a owl:ObjectProperty ;
     rdfs:subPropertyOf plot:wasSubActivityOf ;
     owl:inverseOf ssn-ext:hasMember .
 
+<https://bitbucket.org/terndatateam/ternplotdata-ontology> a doap:Repository .
+
 plot:SiteStratum a owl:Class ;
     rdfs:label "Vegetation stratum" ;
     rdfs:comment "Structural element covering a recognisable height range in vegetation ecosystem occurring at an observation site" ;
@@ -337,8 +339,6 @@ In this context the value of feature-of-interest is expected to be the value of 
 <http://www.w3.org/ns/locn#geometry> rdfs:subPropertyOf sosa:hasResult .
 
 ssn-ext:hasMember rdfs:subPropertyOf plot:hadSubActivity .
-
-<https://bitbucket.org/terndatateam/ternplotdata-ontology> a doap:Repository .
 
 plot:Location a owl:Class ;
     rdfs:label "Location" ;

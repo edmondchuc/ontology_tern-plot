@@ -1,64 +1,64 @@
 @startuml
 title The PLOT ontology
-"sosa:FeatureOfInterest" <|-- ":EnvironmentalContinuant"
+"sosa:Platform" <|-- ":FluxTower"
+"sosa:Observation" <|-- ":TaxonAssignment"
+"prov:Activity" <|-- ":Survey"
+"sosa:Sample" <|-- ":OrganismOccurence"
+"geosparql:SpatialObject" <|-- ":OrganismOccurence"
+"time:TemporalEntity" <|-- ":OrganismOccurence"
+"sosa:Sample" <|-- ":SiteStratum"
+"sosa:Sample" <|-- ":SiteTaxon"
+"skos:Concept" <|-- ":Stratum"
 "dct:Location" <|-- ":Location"
 "sosa:Sample" <|-- ":SiteStratumTaxon"
-"sosa:Sample" <|-- ":OrganismOccurence"
-"time:TemporalEntity" <|-- ":OrganismOccurence"
-"geosparql:SpatialObject" <|-- ":OrganismOccurence"
-"sosa:Sample" <|-- ":SiteStratum"
-":EnvironmentalSystem" <|-- ":EcologicalCommunity"
-"owl:Thing" <|-- ":EnvironmentalSystem"
 ":EnvironmentalContinuant" <|-- ":EnvironmentalSystem"
-"skos:Concept" <|-- ":Stratum"
-"prov:Activity" <|-- ":Survey"
-"sosa:Observation" <|-- ":TaxonAssignment"
-"sosa:Platform" <|-- ":FluxTower"
+"owl:Thing" <|-- ":EnvironmentalSystem"
 "prov:Activity" <|-- ":SiteVisit"
+"sosa:FeatureOfInterest" <|-- ":EnvironmentalContinuant"
 ":EcologicalCommunity" <|-- ":Assemblage"
-"owl:Thing" <|-- ":EnvironmentalZone"
+":EnvironmentalSystem" <|-- ":EcologicalCommunity"
 ":EnvironmentalContinuant" <|-- ":EnvironmentalZone"
-"sosa:Sample" <|-- ":SiteTaxon"
-Class ":EnvironmentalContinuant" [[http://linked.data.gov.au/def/plot/x/EnvironmentalContinuant]] {
+"owl:Thing" <|-- ":EnvironmentalZone"
+Class ":FluxTower" [[http://linked.data.gov.au/def/plot/x/FluxTower]] {
+}
+Class ":TaxonAssignment" [[http://linked.data.gov.au/def/plot/x/TaxonAssignment]] {
+}
+Class ":Survey" [[http://linked.data.gov.au/def/plot/x/Survey]] {
+}
+Class ":OrganismOccurence" [[http://linked.data.gov.au/def/plot/OrganismOccurence]] {
+}
+Class ":SiteStratum" [[http://linked.data.gov.au/def/plot/SiteStratum]] {
+}
+Class ":SiteTaxon" [[http://linked.data.gov.au/def/plot/SiteTaxon]] {
+}
+Class ":Stratum" [[http://linked.data.gov.au/def/plot/Stratum]] {
 }
 Class ":Location" [[http://linked.data.gov.au/def/plot/Location]] {
 }
-Class ":ub1bL307C26" [[ub1bL307C26]] {
-}
 Class ":SiteStratumTaxon" [[http://linked.data.gov.au/def/plot/SiteStratumTaxon]] {
 }
-Class ":OrganismOccurence" [[http://linked.data.gov.au/def/plot/OrganismOccurence]] {
+Class ":ub1bL149C26" [[ub1bL149C26]] {
+}
+Class ":ub1bL494C15" [[ub1bL494C15]] {
+}
+Class ":EnvironmentalSystem" [[http://linked.data.gov.au/def/plot/x/EnvironmentalSystem]] {
+}
+Class ":ub1bL307C26" [[ub1bL307C26]] {
+}
+Class ":ub1bL554C23" [[ub1bL554C23]] {
 }
 Class ":ub1bL571C15" [[ub1bL571C15]] {
 [[http://www.w3.org/ns/ssn/ext/isMemberOf :isMemberOf]] : [[http://www.w3.org/ns/ssn/ext/ObservationCollection :ObservationCollection]]
 }
-Class ":SiteStratum" [[http://linked.data.gov.au/def/plot/SiteStratum]] {
-}
-Class ":EcologicalCommunity" [[http://linked.data.gov.au/def/plot/x/EcologicalCommunity]] {
-}
-Class ":EnvironmentalSystem" [[http://linked.data.gov.au/def/plot/x/EnvironmentalSystem]] {
-}
-Class ":Stratum" [[http://linked.data.gov.au/def/plot/Stratum]] {
-}
-Class ":Survey" [[http://linked.data.gov.au/def/plot/x/Survey]] {
-}
-Class ":TaxonAssignment" [[http://linked.data.gov.au/def/plot/x/TaxonAssignment]] {
-}
-Class ":ub1bL494C15" [[ub1bL494C15]] {
-}
-Class ":ub1bL554C23" [[ub1bL554C23]] {
-}
-Class ":ub1bL149C26" [[ub1bL149C26]] {
-}
-Class ":FluxTower" [[http://linked.data.gov.au/def/plot/x/FluxTower]] {
-}
 Class ":SiteVisit" [[http://linked.data.gov.au/def/plot/SiteVisit]] {
+}
+Class ":EnvironmentalContinuant" [[http://linked.data.gov.au/def/plot/x/EnvironmentalContinuant]] {
 }
 Class ":Assemblage" [[http://linked.data.gov.au/def/plot/x/Assemblage]] {
 }
-Class ":EnvironmentalZone" [[http://linked.data.gov.au/def/plot/x/EnvironmentalZone]] {
+Class ":EcologicalCommunity" [[http://linked.data.gov.au/def/plot/x/EcologicalCommunity]] {
 }
-Class ":SiteTaxon" [[http://linked.data.gov.au/def/plot/SiteTaxon]] {
+Class ":EnvironmentalZone" [[http://linked.data.gov.au/def/plot/x/EnvironmentalZone]] {
 }
 "dwc:Occurrence" .. ":OrganismOccurence"
 header
