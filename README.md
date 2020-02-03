@@ -1,5 +1,7 @@
 # TERN Plot Ontology
 
+Documentation online: https://ternaustralia.github.io/ontology_tern-plot/
+
 This is the new Git repository for the TERN Plot ontology. It was originally hosted on Bitbucket in [TERNPlotData-ontology](https://bitbucket.org/terndatateam/ternplotdata-ontology/src/master/). Only the plot vocabulary was moved out of the former Git repository. 
 
 See https://linkeddata.tern.org.au for our other Linked Data resources. 
