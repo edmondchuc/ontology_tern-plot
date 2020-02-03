@@ -36,6 +36,6 @@ classes:
         caption: Site class overview
     - figure:
         id: Survey
-        src: Activities.png
+        src: Activities.PNG
         alt: Survey overview diagram.
         caption: Properties of <a href="http://www.w3.org/ns/prov#Activity">prov:Activity</a> and SOSA specialisations of it that a Survey may use being, itself, a specialisation of <a href="http://www.w3.org/ns/prov#Activity">prov:Activity</a>
