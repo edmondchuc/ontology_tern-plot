@@ -17,7 +17,6 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix ssn: <http://www.w3.org/ns/ssn/> .
-@prefix ssn-ext: <http://www.w3.org/ns/ssn/ext/> .
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix w3cgeo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -300,7 +299,7 @@ plot:SiteVisit
           owl:unionOf (
               sosa:Sampling
               sosa:Observation
-              ssn-ext:ObservationCollection
+              sosa:ObservationCollection
             ) ;
         ] ;
     ] ;
@@ -321,6 +320,21 @@ plot:hadSubActivity
 plot:hasLocation
   a owl:ObjectProperty ;
   rdfs:label "has location" ;
+.
+plot:isMemberOf
+  a owl:ObjectProperty ;
+  rdfs:comment "indicates a collection of which the context resource is a member" ;
+  rdfs:domain [
+      a owl:Class ;
+      owl:unionOf (
+          sosa:Observation
+          sosa:ObservationCollection
+        ) ;
+    ] ;
+  rdfs:label "is member of" ;
+  rdfs:range sosa:ObservationCollection ;
+  rdfs:subPropertyOf plot:wasSubActivityOf ;
+  owl:inverseOf sosa:hasMember ;
 .
 plot:locationMethod
   a owl:ObjectProperty ;
@@ -343,7 +357,7 @@ plot:mapsheetNumber
 plot:siteDescription
   a owl:ObjectProperty ;
   rdfs:domain plot:Site ;
-  rdfs:range ssn-ext:ObservationCollection ;
+  rdfs:range sosa:ObservationCollection ;
   rdfs:subPropertyOf sosa:isFeatureOfInterestOf ;
 .
 plot:stratum
@@ -414,7 +428,7 @@ plot-x:FluxTower
 plot-x:Survey
   a owl:Class ;
   rdfs:comment """Survey is composed of a set of Observations and ObservationCollections, which may have a site as its feature-of-interest
-In this context the value of feature-of-interest is expected to be the value of the chain   (ssn-ext:hasMember)+/sosa:hasFeatureOfInterest""" ;
+In this context the value of feature-of-interest is expected to be the value of the chain   (sosa:hasMember)+/sosa:hasFeatureOfInterest""" ;
   rdfs:label "Survey" ;
   rdfs:subClassOf prov:Activity ;
   rdfs:subClassOf [
@@ -485,7 +499,7 @@ plot-x:hasResultQuality
       a owl:Class ;
       owl:unionOf (
           sosa:Observation
-          ssn-ext:ObservationCollection
+          sosa:ObservationCollection
         ) ;
     ] ;
   rdfs:label "Quality of individual or related observation results" ;
@@ -552,23 +566,8 @@ w3cgeo:Point
 <http://www.w3.org/ns/locn#geometry>
   rdfs:subPropertyOf sosa:hasResult ;
 .
-ssn-ext:hasMember
+sosa:hasMember
   rdfs:subPropertyOf plot:hadSubActivity ;
-.
-ssn-ext:isMemberOf
-  a owl:ObjectProperty ;
-  rdfs:comment "indicates a collection of which the context resource is a member" ;
-  rdfs:domain [
-      a owl:Class ;
-      owl:unionOf (
-          sosa:Observation
-          ssn-ext:ObservationCollection
-        ) ;
-    ] ;
-  rdfs:label "is member of" ;
-  rdfs:range ssn-ext:ObservationCollection ;
-  rdfs:subPropertyOf plot:wasSubActivityOf ;
-  owl:inverseOf ssn-ext:hasMember ;
 .
 <https://bitbucket.org/terndatateam/ternplotdata-ontology>
   a doap:Repository ;
