@@ -1,12 +1,12 @@
 [
   {
-    "@id": "http://linked.data.gov.au/def/plot/mapScale",
+    "@id": "http://linked.data.gov.au/def/plot/hasLocation",
     "@type": [
       "http://www.w3.org/2002/07/owl#ObjectProperty"
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Map scale"
+        "@value": "has location"
       }
     ]
   },
@@ -17,73 +17,49 @@
     ]
   },
   {
-    "@id": "http://linked.data.gov.au/def/plot/SiteTaxon",
+    "@id": "http://linked.data.gov.au/def/datatype/Percent",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Community of a single taxon in vegetation ecosystem occurring at an observation site"
-      },
-      {
-        "@value": "Data corresponding to an individual of this class would usually be derived from observations relating to the set of SiteStratumTaxon at the same site on the same taxon"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Single taxon community"
-      }
-    ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://www.w3.org/ns/sosa/Sample"
+        "@id": "_:ub1bL69C19"
       },
       {
-        "@id": "_:ub1bL271C19"
+        "@id": "_:ub1bL84C19"
       },
       {
-        "@id": "_:ub1bL281C19"
+        "@id": "_:ub1bL74C19"
       },
       {
-        "@id": "_:ub1bL276C19"
+        "@id": "_:ub1bL79C19"
+      },
+      {
+        "@id": "http://www.w3.org/ns/sosa/Result"
+      },
+      {
+        "@id": "_:ub1bL89C19"
       }
     ]
   },
   {
-    "@id": "_:ub1bL271C19",
+    "@id": "_:ub1bL69C19",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
     "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
-        "@id": "http://linked.data.gov.au/def/plot/Site"
+        "@id": "http://qudt.org/schema/qudt/Unit"
       }
     ],
     "http://www.w3.org/2002/07/owl#onProperty": [
       {
-        "@id": "http://www.w3.org/ns/sosa/isSampleOf"
+        "@id": "http://linked.data.gov.au/def/datatype/unit"
       }
     ]
   },
   {
-    "@id": "_:ub1bL281C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.w3.org/ns/sosa/isFeatureOfInterestOf"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL276C19",
+    "@id": "_:ub1bL84C19",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -95,7 +71,246 @@
     ],
     "http://www.w3.org/2002/07/owl#onProperty": [
       {
-        "@id": "http://linked.data.gov.au/def/plot/taxon"
+        "@id": "http://linked.data.gov.au/def/datatype/unit"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL74C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/datatype/uncertainty"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL79C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/datatype/value"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL89C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/datatype/value"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/Result",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:ub1bL1119C19"
+      },
+      {
+        "@id": "_:ub1bL1109C19"
+      },
+      {
+        "@id": "_:ub1bL1114C19"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL1119C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/isResultOf"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL1109C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/Observation"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/isResultOf"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL1114C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://w3id.org/tern/ontologies/org/Person"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/prov#wasAttributedTo"
+      }
+    ]
+  },
+  {
+    "@id": "http://linked.data.gov.au/def/plot/siteDescription",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/Site"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/ns/ssn/ext/ObservationCollection"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/isFeatureOfInterestOf"
+      }
+    ]
+  },
+  {
+    "@id": "http://linked.data.gov.au/def/datatype/Text",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/Result"
+      },
+      {
+        "@id": "_:ub1bL190C19"
+      },
+      {
+        "@id": "_:ub1bL185C19"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL190C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/datatype/value"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL185C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/datatype/value"
+      }
+    ]
+  },
+  {
+    "@id": "http://linked.data.gov.au/def/plot/datasetParameter",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Link to the dataset-level parameter."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "dataset parameter"
+      }
+    ]
+  },
+  {
+    "@id": "http://linked.data.gov.au/def/plot/siteVisit",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Link to a site visit."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "site visit"
+      }
+    ]
+  },
+  {
+    "@id": "http://linked.data.gov.au/def/plot/observationTheme",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Link to an observation theme."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "observation theme"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#note": [
+      {
+        "@value": "Recommended usage is to create observation themes as a controlled vocabulary."
       }
     ]
   },
@@ -104,6 +319,14 @@
     "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
       {
         "@id": "http://www.w3.org/ns/locn#geometry"
+      }
+    ]
+  },
+  {
+    "@id": "http://usefulinc.com/ns/doap#repository",
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.w3.org/ns/prov#used"
       }
     ]
   },
@@ -134,97 +357,153 @@
     ]
   },
   {
-    "@id": "http://linked.data.gov.au/def/plot/Site",
+    "@id": "http://www.w3.org/ns/sosa/ObservationCollection",
     "@type": [
-      "http://www.w3.org/2000/01/rdf-schema#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "ownership is associated with the parent survey"
-      },
-      {
-        "@value": "Location where observations may be made\r\nMay be a plot, quadrat, transect, trap etc\r\n\r\nThis is a sub-class of sosa:Sample because a site should be designed to to be representative of an environmental system (which may be an ecosystem or bioregion) or zone (which might be a fiat zone such as a parcel or tract)"
-      },
-      {
-        "@value": "rights and conditions are associated with the parnet survey"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Site or location"
-      }
+      "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://www.w3.org/ns/sosa/Sample"
+        "@id": "_:ub1bL1028C19"
       },
       {
-        "@id": "_:ub1bL197C19"
+        "@id": "_:ub1bL1043C19"
       },
       {
-        "@id": "http://www.opengis.net/ont/geosparql#SpatialObject"
+        "@id": "_:ub1bL1018C19"
       },
       {
-        "@id": "_:ub1bL187C19"
+        "@id": "_:ub1bL1033C19"
       },
       {
-        "@id": "_:ub1bL192C19"
+        "@id": "_:ub1bL1058C19"
       },
       {
-        "@id": "_:ub1bL165C19"
+        "@id": "_:ub1bL1038C19"
       },
       {
-        "@id": "_:ub1bL157C19"
+        "@id": "_:ub1bL1078C19"
       },
       {
-        "@id": "_:ub1bL182C19"
+        "@id": "_:ub1bL1053C19"
       },
       {
-        "@id": "_:ub1bL177C19"
+        "@id": "_:ub1bL1063C19"
       },
       {
-        "@id": "_:ub1bL145C19"
+        "@id": "_:ub1bL1073C19"
       },
       {
-        "@id": "_:ub1bL171C19"
+        "@id": "_:ub1bL1048C19"
+      },
+      {
+        "@id": "_:ub1bL1023C19"
+      },
+      {
+        "@id": "_:ub1bL1083C19"
+      },
+      {
+        "@id": "_:ub1bL1068C19"
       }
     ]
   },
   {
-    "@id": "_:ub1bL197C19",
+    "@id": "_:ub1bL1028C19",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
-        "@id": "http://purl.org/dc/terms/relation"
+        "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
       }
     ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/resultTime"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL1043C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2006/time#Instant"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/phenomenonTime"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL1018C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
         "@id": "http://linked.data.gov.au/def/plot/Site"
       }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/site"
+      }
     ]
   },
   {
-    "@id": "_:ub1bL187C19",
+    "@id": "_:ub1bL1033C19",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
-    "http://www.w3.org/2002/07/owl#cardinality": [
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
       }
     ],
     "http://www.w3.org/2002/07/owl#onProperty": [
       {
-        "@id": "http://purl.org/dc/terms/created"
+        "@id": "http://www.w3.org/2000/01/rdf-schema#comment"
       }
     ]
   },
   {
-    "@id": "_:ub1bL192C19",
+    "@id": "_:ub1bL1058C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://w3id.org/tern/ontologies/ssn/ObservationTheme"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/observationTheme"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL1038C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#label"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL1078C19",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -236,40 +515,80 @@
     ],
     "http://www.w3.org/2002/07/owl#onProperty": [
       {
-        "@id": "http://linked.data.gov.au/def/plot/siteDescription"
+        "@id": "http://linked.data.gov.au/def/plot/observationTheme"
       }
     ]
   },
   {
-    "@id": "_:ub1bL165C19",
+    "@id": "_:ub1bL1053C19",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A site may be part of a bigger site -e.g. points within a plot"
-      }
-    ],
     "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
-        "@id": "http://linked.data.gov.au/def/plot/Site"
+        "@id": "http://www.w3.org/ns/sosa/Sample"
       }
     ],
     "http://www.w3.org/2002/07/owl#onProperty": [
       {
-        "@id": "http://purl.org/dc/terms/hasPart"
+        "@id": "http://www.w3.org/ns/sosa/hasSample"
       }
     ]
   },
   {
-    "@id": "_:ub1bL157C19",
+    "@id": "_:ub1bL1063C19",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
+    "http://www.w3.org/2002/07/owl#cardinality": [
       {
-        "@value": "A site is established in the context of a site-visit, which is in turn part of a survey.\r\nDifferent visits might create sites in the same place with different identifiers"
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
       }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/site"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL1073C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#label"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL1048C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/Observation"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/hasMember"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL1023C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
     ],
     "http://www.w3.org/2002/07/owl#allValuesFrom": [
       {
@@ -278,483 +597,12 @@
     ],
     "http://www.w3.org/2002/07/owl#onProperty": [
       {
-        "@id": "http://www.w3.org/ns/sosa/isResultOf"
+        "@id": "http://linked.data.gov.au/def/plot/wasSubActivityOf"
       }
     ]
   },
   {
-    "@id": "_:ub1bL182C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "http://www.w3.org/ns/prov#Activity"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.w3.org/ns/prov#wasGeneratedBy"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL177C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "http://linked.data.gov.au/def/plot/Location"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://linked.data.gov.au/def/plot/hasLocation"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL145C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A Site is established to sample some biome, bioregion, ecosystem, etc."
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.w3.org/ns/sosa/isSampleOf"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "_:ub1bL149C26"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL149C26",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "http://linked.data.gov.au/def/plot/x/EnvironmentalSystem"
-          },
-          {
-            "@id": "http://linked.data.gov.au/def/plot/x/EnvironmentalZone"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL171C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A site may be part of a bigger site -e.g. points within a plot"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "http://linked.data.gov.au/def/plot/Site"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://purl.org/dc/terms/isPartOf"
-      }
-    ]
-  },
-  {
-    "@id": "http://linked.data.gov.au/def/plot/x/EnvironmentalSystem",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Environmental region defined primarily by its function and membership"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://linked.data.gov.au/def/plot/x/EnvironmentalContinuant"
-      },
-      {
-        "@id": "http://www.w3.org/2002/07/owl#Thing"
-      }
-    ]
-  },
-  {
-    "@id": "http://linked.data.gov.au/def/plot/x/hasResultQuality",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "this property allows an indication of the quality of the data to be provided at the level of either an individual observation or a thematic group. This is commonly done by some kind of description of the method, protocol, sensor, observer, etc. "
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:ub1bL494C15"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Quality of individual or related observation results"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL494C15",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "http://www.w3.org/ns/sosa/Observation"
-          },
-          {
-            "@id": "http://www.w3.org/ns/ssn/ext/ObservationCollection"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "http://linked.data.gov.au/def/plot/x/EnvironmentalZone",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Environmental region defined primarily by its location and extent"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://www.w3.org/2002/07/owl#Thing"
-      },
-      {
-        "@id": "http://linked.data.gov.au/def/plot/x/EnvironmentalContinuant"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.w3.org/ns/locn#Geometry",
-    "http://www.w3.org/2002/07/owl#equivalentClass": [
-      {
-        "@id": "_:ub1bL554C23"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL554C23",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "http://www.opengis.net/ont/geosparql#Geometry"
-          },
-          {
-            "@id": "http://www.w3.org/2003/01/geo/wgs84_pos#Point"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "http://linked.data.gov.au/def/plot/x/sampler",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Sampler"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://www.w3.org/ns/sosa/madeBySampler"
-      },
-      {
-        "@id": "http://www.w3.org/ns/prov#wasAssociatedWith"
-      }
-    ]
-  },
-  {
-    "@id": "http://www.w3.org/ns/locn#geometry",
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://www.w3.org/ns/sosa/hasResult"
-      }
-    ]
-  },
-  {
-    "@id": "http://linked.data.gov.au/def/plot/x/sampleLevel",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://linked.data.gov.au/def/plot/Site"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "sample level classification"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2004/02/skos/core#Concept"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://purl.org/dc/terms/type"
-      }
-    ]
-  },
-  {
-    "@id": "http://linked.data.gov.au/def/plot/wasSubActivityOf",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "pointer to parent activity"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://www.w3.org/ns/prov#wasInformedBy"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "http://linked.data.gov.au/def/plot/hadSubActivity"
-      }
-    ]
-  },
-  {
-    "@id": "http://linked.data.gov.au/def/plot/x/EcologicalCommunity",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Ecological Community"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://linked.data.gov.au/def/plot/x/EnvironmentalSystem"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#closeMatch": [
-      {
-        "@id": "http://purl.obolibrary.org/obo/PCO_0000002"
-      }
-    ]
-  },
-  {
-    "@id": "http://linked.data.gov.au/def/plot/mapsheetNumber",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Mapsheet"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "http://linked.data.gov.au/def/plot/hasLocation",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "has location"
-      }
-    ]
-  },
-  {
-    "@id": "http://linked.data.gov.au/def/plot/x/Survey",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Survey is composed of a set of Observations and ObservationCollections, which may have a site as its feature-of-interest\r\nIn this context the value of feature-of-interest is expected to be the value of the chain   (ssn-ext:hasMember)+/sosa:hasFeatureOfInterest"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Survey"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:ub1bL464C19"
-      },
-      {
-        "@id": "http://www.w3.org/ns/prov#Activity"
-      },
-      {
-        "@id": "_:ub1bL458C19"
-      },
-      {
-        "@id": "_:ub1bL442C19"
-      },
-      {
-        "@id": "_:ub1bL452C19"
-      },
-      {
-        "@id": "_:ub1bL430C19"
-      },
-      {
-        "@id": "_:ub1bL447C19"
-      },
-      {
-        "@id": "_:ub1bL436C19"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#editorialNote": [
-      {
-        "@value": "Do we also need Survey to be classified by: - data theme?"
-      },
-      {
-        "@value": "Do we need an association between Survey and SiteVisit?"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL464C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onClass": [
-      {
-        "@id": "http://www.w3.org/ns/odrl/2/Policy"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://purl.org/dc/terms/license"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL458C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onClass": [
-      {
-        "@id": "http://www.w3.org/ns/odrl/2/Permission"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://purl.org/dc/terms/accessRights"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL442C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#cardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://purl.org/dc/terms/title"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL452C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#minQualifiedCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onClass": [
-      {
-        "@id": "http://linked.data.gov.au/def/plot/Site"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL430C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "aka spatialScope? - to associate a jurisdiction or IBRA or other named thing with the Survey"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "http://www.w3.org/2004/02/skos/core#Concept"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.w3.org/ns/locn#location"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL447C19",
+    "@id": "_:ub1bL1083C19",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -766,695 +614,24 @@
     ],
     "http://www.w3.org/2002/07/owl#onProperty": [
       {
-        "@id": "http://purl.org/dc/elements/1.1/creator"
+        "@id": "http://www.w3.org/ns/sosa/hasMember"
       }
     ]
   },
   {
-    "@id": "_:ub1bL436C19",
+    "@id": "_:ub1bL1068C19",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
+    "http://www.w3.org/2002/07/owl#cardinality": [
       {
-        "@value": "link to organization instead of plot:Dataset class?"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.w3.org/ns/prov#wasAssociatedWith"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "http://www.w3.org/ns/prov#Organization"
-      }
-    ]
-  },
-  {
-    "@id": "http://linked.data.gov.au/def/plot/x/Assemblage",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Organism assemblage"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://linked.data.gov.au/def/plot/x/EcologicalCommunity"
-      }
-    ]
-  },
-  {
-    "@id": "http://linked.data.gov.au/def/plot/mapsheetName",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#DatatypeProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Mapsheet"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2001/XMLSchema#string"
-      }
-    ]
-  },
-  {
-    "@id": "http://linked.data.gov.au/def/plot/taxon",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "taxon classification"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2004/02/skos/core#Concept"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://purl.org/dc/terms/type"
-      }
-    ]
-  },
-  {
-    "@id": "http://linked.data.gov.au/def/plot/x/visitor",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Site visitor"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://www.w3.org/ns/prov#wasAssociatedWith"
-      }
-    ]
-  },
-  {
-    "@id": "http://linked.data.gov.au/def/plot/SiteVisit",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "A discrete time-bounded visit to a site, during which sampling or observation activities are undertaken"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Visit to a site"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:ub1bL304C19"
-      },
-      {
-        "@id": "_:ub1bL292C19"
-      },
-      {
-        "@id": "http://www.w3.org/ns/prov#Activity"
-      },
-      {
-        "@id": "_:ub1bL298C19"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL304C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://linked.data.gov.au/def/plot/hadSubActivity"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "_:ub1bL307C26"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL307C26",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2002/07/owl#unionOf": [
-      {
-        "@list": [
-          {
-            "@id": "http://www.w3.org/ns/sosa/Sampling"
-          },
-          {
-            "@id": "http://www.w3.org/ns/sosa/Observation"
-          },
-          {
-            "@id": "http://www.w3.org/ns/ssn/ext/ObservationCollection"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL292C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "link from site-visit to survey of which it is a part"
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
       }
     ],
     "http://www.w3.org/2002/07/owl#onProperty": [
       {
         "@id": "http://linked.data.gov.au/def/plot/wasSubActivityOf"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "http://linked.data.gov.au/def/plot/x/Survey"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL298C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "link to the visited site"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "http://linked.data.gov.au/def/plot/Site"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest"
-      }
-    ]
-  },
-  {
-    "@id": "http://linked.data.gov.au/def/plot/OrganismOccurence",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Organism occurrence at some specified time and place. \r\n\r\n1. sub-class of Sample because observations of an organism occurrence are primarily interesting if they represents a commuity or assemblage\r\n2. sub-class of SpatialObject because it is bound to a specified location\r\n3. sub-class of TemporalEntity because it is bound to a specified time"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Organism Occurrence "
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:ub1bL124C19"
-      },
-      {
-        "@id": "_:ub1bL108C19"
-      },
-      {
-        "@id": "http://www.w3.org/ns/sosa/Sample"
-      },
-      {
-        "@id": "_:ub1bL119C19"
-      },
-      {
-        "@id": "http://www.w3.org/2006/time#TemporalEntity"
-      },
-      {
-        "@id": "http://www.opengis.net/ont/geosparql#SpatialObject"
-      },
-      {
-        "@id": "_:ub1bL114C19"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#equivalentClass": [
-      {
-        "@id": "http://rs.tdwg.org/dwc/terms/Occurrence"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL124C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://linked.data.gov.au/def/plot/taxon"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL108C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "An organism-occurrence is a sample of a community or assemblage"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.w3.org/ns/sosa/isSampleOf"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "http://linked.data.gov.au/def/plot/x/EcologicalCommunity"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL119C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#cardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.opengis.net/ont/geosparql#defaultGeometry"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL114C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#allValuesFrom": [
-      {
-        "@id": "http://www.w3.org/2003/01/geo/wgs84_pos#Point"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.opengis.net/ont/geosparql#defaultGeometry"
-      }
-    ]
-  },
-  {
-    "@id": "http://linked.data.gov.au/def/plot/siteDescription",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://linked.data.gov.au/def/plot/Site"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/ns/ssn/ext/ObservationCollection"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://www.w3.org/ns/sosa/isFeatureOfInterestOf"
-      }
-    ]
-  },
-  {
-    "@id": "http://linked.data.gov.au/def/plot/SiteStratumTaxon",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Community of a single taxon in an identified stratum in a vegetation ecosystem occurring at an observation site"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Single taxon community"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:ub1bL242C19"
-      },
-      {
-        "@id": "_:ub1bL259C19"
-      },
-      {
-        "@id": "_:ub1bL248C19"
-      },
-      {
-        "@id": "_:ub1bL254C19"
-      },
-      {
-        "@id": "_:ub1bL229C19"
-      },
-      {
-        "@id": "http://www.w3.org/ns/sosa/Sample"
-      },
-      {
-        "@id": "_:ub1bL235C19"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL242C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "relation to the SiteStratum for which this SiteStratumTaxon represents the community of a single taxon"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.w3.org/ns/sosa/isSampleOf"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "http://linked.data.gov.au/def/plot/SiteStratum"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL259C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.w3.org/ns/sosa/isFeatureOfInterestOf"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL248C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "relation to the SiteTaxon for which this SiteStratumTaxon represents the community within a single stratum"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.w3.org/ns/sosa/isSampleOf"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "http://linked.data.gov.au/def/plot/SiteTaxon"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL254C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#cardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://linked.data.gov.au/def/plot/stratum"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL229C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "While the value of the SiteStratumTaxon/taxon property might be fixed a-priori, the taxon-classification is typically the result of an observation whose feature-of-interest is an individual of the SiteStratumTaxon class. "
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#cardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://linked.data.gov.au/def/plot/taxon"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL235C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "relation to the Site for which this SiteStratumTaxon represents the community of a single taxon within a single stratum"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#minQualifiedCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onClass": [
-      {
-        "@id": "http://linked.data.gov.au/def/plot/Site"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.w3.org/ns/sosa/isSampleOf"
-      }
-    ]
-  },
-  {
-    "@id": "http://linked.data.gov.au/def/plot/x/EnvironmentalContinuant",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Union of environmental system, environmental zone, and ecological community?"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Environmental continuant"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://www.w3.org/ns/sosa/FeatureOfInterest"
-      }
-    ],
-    "http://www.w3.org/2004/02/skos/core#closeMatch": [
-      {
-        "@id": "http://purl.obolibrary.org/obo/ENVO_01000408"
-      }
-    ]
-  },
-  {
-    "@id": "http://linked.data.gov.au/def/plot/",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Ontology"
-    ],
-    "http://purl.org/dc/terms/created": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2019-03-25"
-      }
-    ],
-    "http://purl.org/dc/terms/creator": [
-      {
-        "@id": "_:ub1bL27C19"
-      }
-    ],
-    "http://purl.org/dc/terms/description": [
-      {
-        "@value": "This vocabulary provides a set of classes to support capture of plot- and site-based ecological survey data. It is primary related to vegetation surveys, following the methdologies outlined in the Australian Soil and Land Survey Field Handbook. \r\n\r\nPLOT is technically an extension to the W3C SSN/SOSA vocabulary, and also uses elements from the SSN-EXT ontology."
-      }
-    ],
-    "http://purl.org/dc/terms/license": [
-      {
-        "@id": "http://creativecommons.org/publicdomain/zero/1.0/"
-      }
-    ],
-    "http://purl.org/dc/terms/modified": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#date",
-        "@value": "2019-06-19"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "The PLOT ontology"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
-      {
-        "@id": "https://www.w3.org/TR/vocab-ssn-ext/"
-      },
-      {
-        "@id": "https://www.w3.org/ns/ssn/"
-      },
-      {
-        "@id": "https://www.publish.csiro.au/book/5230/"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#imports": [
-      {
-        "@id": "http://purl.org/dc/elements/1.1/"
-      },
-      {
-        "@id": "http://www.w3.org/ns/ssn/ext"
-      }
-    ],
-    "http://www.w3.org/ns/prov#wasGeneratedBy": [
-      {
-        "@id": "_:ub1bL51C23"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL51C23",
-    "@type": [
-      "http://www.w3.org/ns/prov#Activity",
-      "http://usefulinc.com/ns/doap#Project"
-    ],
-    "http://usefulinc.com/ns/doap#repository": [
-      {
-        "@id": "https://github.com/ternaustralia/ontology_tern-plot"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL27C19",
-    "@type": [
-      "http://schema.org/Person"
-    ],
-    "http://schema.org/email": [
-      {
-        "@value": "simon.cox@csiro.au"
-      }
-    ],
-    "http://schema.org/identifier": [
-      {
-        "@id": "https://orcid.org/0000-0002-3884-3420"
-      }
-    ],
-    "http://schema.org/memberOf": [
-      {
-        "@id": "_:ub1bL31C20"
-      }
-    ],
-    "http://schema.org/name": [
-      {
-        "@value": "Simon J.D.Cox"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL31C20",
-    "@type": [
-      "http://schema.org/Organization"
-    ],
-    "http://schema.org/identifier": [
-      {
-        "@id": "http://catalogue.linked.data.gov.au/def/csiro"
-      }
-    ],
-    "http://schema.org/name": [
-      {
-        "@value": "CSIRO"
-      }
-    ]
-  },
-  {
-    "@id": "http://linked.data.gov.au/def/plot/x/TaxonAssignment",
-    "@type": [
-      "http://www.w3.org/2000/01/rdf-schema#Class",
-      "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Taxon assignment observation"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "_:ub1bL478C19"
-      },
-      {
-        "@id": "http://www.w3.org/ns/sosa/Observation"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL478C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#hasValue": [
-      {
-        "@id": "http://www.tern.org.au/cv/op/Taxon-identity"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.w3.org/ns/sosa/observedProperty"
-      }
-    ]
-  },
-  {
-    "@id": "http://linked.data.gov.au/def/plot/locationMethod",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "Location method"
       }
     ]
   },
@@ -1474,32 +651,15 @@
         "@id": "http://www.w3.org/ns/sosa/Platform"
       },
       {
-        "@id": "_:ub1bL411C19"
+        "@id": "_:ub1bL732C19"
       },
       {
-        "@id": "_:ub1bL416C19"
+        "@id": "_:ub1bL727C19"
       }
     ]
   },
   {
-    "@id": "_:ub1bL411C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.w3.org/ns/locn#location"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL416C19",
+    "@id": "_:ub1bL732C19",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -1521,29 +681,123 @@
     ]
   },
   {
-    "@id": "http://linked.data.gov.au/def/plot/x/observer",
+    "@id": "_:ub1bL727C19",
     "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
+      "http://www.w3.org/2002/07/owl#Restriction"
     ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
+    "http://www.w3.org/2002/07/owl#minCardinality": [
       {
-        "@value": "Observer"
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
       }
     ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+    "http://www.w3.org/2002/07/owl#onProperty": [
       {
-        "@id": "http://www.w3.org/ns/sosa/madeBySensor"
-      },
-      {
-        "@id": "http://www.w3.org/ns/prov#wasAssociatedWith"
+        "@id": "http://www.w3.org/ns/locn#location"
       }
     ]
   },
   {
-    "@id": "http://www.w3.org/ns/ssn/ext/hasMember",
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+    "@id": "http://www.w3.org/ns/ssn/Input",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "http://linked.data.gov.au/def/plot/hadSubActivity"
+        "@id": "_:ub1bL1243C19"
+      },
+      {
+        "@id": "_:ub1bL1248C19"
+      },
+      {
+        "@id": "_:ub1bL1238C19"
+      },
+      {
+        "@id": "_:ub1bL1233C19"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL1243C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/datatype/value"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL1248C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/dc/terms/description"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL1238C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/dc/terms/description"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL1233C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/datatype/value"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66",
+    "http://schema.org/alternateName": [
+      {
+        "@value": "TERN"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Terrestrial Ecosystem Research Network"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@id": "https://www.tern.org.au/"
       }
     ]
   },
@@ -1574,58 +828,57 @@
     ]
   },
   {
-    "@id": "http://linked.data.gov.au/def/plot/stratum",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "stratum classification"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#range": [
-      {
-        "@id": "http://www.w3.org/2004/02/skos/core#Concept"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://purl.org/dc/terms/type"
-      }
-    ]
-  },
-  {
-    "@id": "http://linked.data.gov.au/def/plot/SiteStratum",
+    "@id": "http://linked.data.gov.au/def/plot/SiteTaxon",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@value": "Structural element covering a recognisable height range in vegetation ecosystem occurring at an observation site"
+        "@value": "Community of a single taxon in vegetation ecosystem occurring at an observation site"
+      },
+      {
+        "@value": "Data corresponding to an individual of this class would usually be derived from observations relating to the set of SiteStratumTaxon at the same site on the same taxon"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Vegetation stratum"
+        "@value": "Single taxon community"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:ub1bL208C19"
+        "@id": "_:ub1bL543C19"
       },
       {
-        "@id": "_:ub1bL218C19"
-      },
-      {
-        "@id": "_:ub1bL213C19"
+        "@id": "_:ub1bL538C19"
       },
       {
         "@id": "http://www.w3.org/ns/sosa/Sample"
+      },
+      {
+        "@id": "_:ub1bL548C19"
       }
     ]
   },
   {
-    "@id": "_:ub1bL208C19",
+    "@id": "_:ub1bL543C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/taxon"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL538C19",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -1641,7 +894,7 @@
     ]
   },
   {
-    "@id": "_:ub1bL218C19",
+    "@id": "_:ub1bL548C19",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -1658,7 +911,94 @@
     ]
   },
   {
-    "@id": "_:ub1bL213C19",
+    "@id": "http://www.w3.org/ns/sosa/Sampling",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:ub1bL1225C19"
+      },
+      {
+        "@id": "_:ub1bL1190C19"
+      },
+      {
+        "@id": "_:ub1bL1195C19"
+      },
+      {
+        "@id": "_:ub1bL1220C19"
+      },
+      {
+        "@id": "_:ub1bL1180C19"
+      },
+      {
+        "@id": "_:ub1bL1185C19"
+      },
+      {
+        "@id": "_:ub1bL1205C19"
+      },
+      {
+        "@id": "_:ub1bL1210C19"
+      },
+      {
+        "@id": "_:ub1bL1215C19"
+      },
+      {
+        "@id": "_:ub1bL1200C19"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL1225C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.opengis.net/ont/geosparql#hasGeometry"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL1190C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/Sample"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/hasResult"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL1195C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://w3id.org/tern/ontologies/loc/Point"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.opengis.net/ont/geosparql#hasGeometry"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL1220C19",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -1670,7 +1010,431 @@
     ],
     "http://www.w3.org/2002/07/owl#onProperty": [
       {
-        "@id": "http://linked.data.gov.au/def/plot/stratum"
+        "@id": "http://www.w3.org/ns/sosa/usedProcedure"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL1180C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#comment"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL1185C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#label"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL1205C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://w3id.org/tern/ontologies/ssn/Method"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/usedProcedure"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL1210C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#label"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL1215C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/hasResult"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL1200C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://w3id.org/tern/ontologies/org/Person"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/x/sampler"
+      }
+    ]
+  },
+  {
+    "@id": "http://linked.data.gov.au/def/plot/locationMethod",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Location method"
+      }
+    ]
+  },
+  {
+    "@id": "http://linked.data.gov.au/def/plot/x/Survey",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Survey is composed of a set of Observations and ObservationCollections, which may have a site as its feature-of-interest\nIn this context the value of feature-of-interest is expected to be the value of the chain   (ssn-ext:hasMember)+/sosa:hasFeatureOfInterest"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Survey"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:ub1bL751C19"
+      },
+      {
+        "@id": "_:ub1bL767C19"
+      },
+      {
+        "@id": "_:ub1bL762C19"
+      },
+      {
+        "@id": "http://www.w3.org/ns/prov#Activity"
+      },
+      {
+        "@id": "_:ub1bL757C19"
+      },
+      {
+        "@id": "_:ub1bL745C19"
+      },
+      {
+        "@id": "_:ub1bL779C19"
+      },
+      {
+        "@id": "_:ub1bL773C19"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#editorialNote": [
+      {
+        "@value": "Do we need an association between Survey and SiteVisit?"
+      },
+      {
+        "@value": "Do we also need Survey to be classified by: - data theme?"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL751C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "link to organization instead of plot:Dataset class?"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/prov#wasAssociatedWith"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://www.w3.org/ns/prov#Organization"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL767C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minQualifiedCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onClass": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/Site"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL762C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/dc/elements/1.1/creator"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL757C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/dc/terms/title"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL745C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "aka spatialScope? - to associate a jurisdiction or IBRA or other named thing with the Survey"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/locn#location"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL779C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onClass": [
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/Policy"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/dc/terms/license"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL773C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onClass": [
+      {
+        "@id": "http://www.w3.org/ns/odrl/2/Permission"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/dc/terms/accessRights"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#qualifiedCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ]
+  },
+  {
+    "@id": "http://linked.data.gov.au/def/datatype/Count",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:ub1bL60C19"
+      },
+      {
+        "@id": "http://www.w3.org/ns/sosa/Result"
+      },
+      {
+        "@id": "_:ub1bL50C19"
+      },
+      {
+        "@id": "_:ub1bL55C19"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL60C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/datatype/value"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL50C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/datatype/uncertainty"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL55C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#integer"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/datatype/value"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/ssn/ext/isMemberOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "indicates a collection of which the context resource is a member"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:ub1bL1260C15"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "is member of"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/ns/ssn/ext/ObservationCollection"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/wasSubActivityOf"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://www.w3.org/ns/ssn/ext/hasMember"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL1260C15",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://www.w3.org/ns/sosa/Observation"
+          },
+          {
+            "@id": "http://www.w3.org/ns/ssn/ext/ObservationCollection"
+          }
+        ]
       }
     ]
   },
@@ -1692,6 +1456,1793 @@
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
         "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+      }
+    ]
+  },
+  {
+    "@id": "http://linked.data.gov.au/def/plot/x/EnvironmentalSystem",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Environmental region defined primarily by its function and membership"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/x/EnvironmentalContinuant"
+      },
+      {
+        "@id": "http://www.w3.org/2002/07/owl#Thing"
+      }
+    ]
+  },
+  {
+    "@id": "http://linked.data.gov.au/def/plot/x/EnvironmentalContinuant",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Union of environmental system, environmental zone, and ecological community?"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Environmental continuant"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/FeatureOfInterest"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#closeMatch": [
+      {
+        "@id": "http://purl.obolibrary.org/obo/ENVO_01000408"
+      }
+    ]
+  },
+  {
+    "@id": "http://linked.data.gov.au/def/datatype/QuantitativeMeasure",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/Result"
+      },
+      {
+        "@id": "_:ub1bL147C19"
+      },
+      {
+        "@id": "_:ub1bL127C19"
+      },
+      {
+        "@id": "_:ub1bL142C19"
+      },
+      {
+        "@id": "_:ub1bL132C19"
+      },
+      {
+        "@id": "_:ub1bL137C19"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL147C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/datatype/value"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL127C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://qudt.org/schema/qudt/Unit"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/datatype/unit"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL142C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/datatype/unit"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL132C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/datatype/uncertainty"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL137C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#integer"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/datatype/value"
+      }
+    ]
+  },
+  {
+    "@id": "http://linked.data.gov.au/def/plot/x/observer",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Observer"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/madeBySensor"
+      },
+      {
+        "@id": "http://www.w3.org/ns/prov#wasAssociatedWith"
+      }
+    ]
+  },
+  {
+    "@id": "http://linked.data.gov.au/def/plot/SiteStratumTaxon",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Community of a single taxon in an identified stratum in a vegetation ecosystem occurring at an observation site"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Single taxon community"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:ub1bL515C19"
+      },
+      {
+        "@id": "_:ub1bL496C19"
+      },
+      {
+        "@id": "_:ub1bL526C19"
+      },
+      {
+        "@id": "_:ub1bL502C19"
+      },
+      {
+        "@id": "_:ub1bL509C19"
+      },
+      {
+        "@id": "http://www.w3.org/ns/sosa/Sample"
+      },
+      {
+        "@id": "_:ub1bL521C19"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL515C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "relation to the SiteTaxon for which this SiteStratumTaxon represents the community within a single stratum"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/isSampleOf"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/SiteTaxon"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL496C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "While the value of the SiteStratumTaxon/taxon property might be fixed a-priori, the taxon-classification is typically the result of an observation whose feature-of-interest is an individual of the SiteStratumTaxon class. "
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/taxon"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL526C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/isFeatureOfInterestOf"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL502C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "relation to the Site for which this SiteStratumTaxon represents the community of a single taxon within a single stratum"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#minQualifiedCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onClass": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/Site"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/isSampleOf"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL509C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "relation to the SiteStratum for which this SiteStratumTaxon represents the community of a single taxon"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/isSampleOf"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/SiteStratum"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL521C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/stratum"
+      }
+    ]
+  },
+  {
+    "@id": "http://linked.data.gov.au/def/plot/Location",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Location together with information about how it was obtained"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Location"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:ub1bL275C19"
+      },
+      {
+        "@id": "_:ub1bL285C19"
+      },
+      {
+        "@id": "_:ub1bL280C19"
+      },
+      {
+        "@id": "_:ub1bL295C19"
+      },
+      {
+        "@id": "_:ub1bL290C19"
+      },
+      {
+        "@id": "_:ub1bL300C19"
+      },
+      {
+        "@id": "http://purl.org/dc/terms/Location"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL275C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/mapScale"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL285C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/mapsheetNumber"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL280C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#maxCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/mapsheetName"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL295C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.opengis.net/ont/geosparql#hasGeometry"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL290C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "0"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/locationMethod"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL300C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.opengis.net/ont/geosparql#hasGeometry"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2003/01/geo/wgs84_pos#Point"
+      }
+    ]
+  },
+  {
+    "@id": "http://linked.data.gov.au/def/plot/SiteVisit",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A discrete time-bounded visit to a site, during which sampling or observation activities are undertaken"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Visit to a site"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:ub1bL559C19"
+      },
+      {
+        "@id": "_:ub1bL589C19"
+      },
+      {
+        "@id": "_:ub1bL574C19"
+      },
+      {
+        "@id": "_:ub1bL579C19"
+      },
+      {
+        "@id": "_:ub1bL584C19"
+      },
+      {
+        "@id": "http://www.w3.org/ns/prov#Activity"
+      },
+      {
+        "@id": "_:ub1bL564C19"
+      },
+      {
+        "@id": "_:ub1bL569C19"
+      },
+      {
+        "@id": "_:ub1bL594C19"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL559C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/Site"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/site"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL589C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#label"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL574C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#comment"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL579C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#label"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL584C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/site"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL564C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/prov#startedAtTime"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL569C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/prov#startedAtTime"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL594C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/hadSubActivity"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "_:ub1bL597C26"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL597C26",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://www.w3.org/ns/sosa/Sampling"
+          },
+          {
+            "@id": "http://www.w3.org/ns/sosa/Observation"
+          },
+          {
+            "@id": "http://www.w3.org/ns/sosa/ObservationCollection"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://linked.data.gov.au/def/plot/wasSubActivityOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "pointer to parent activity"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.w3.org/ns/prov#wasInformedBy"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/hadSubActivity"
+      }
+    ]
+  },
+  {
+    "@id": "http://linked.data.gov.au/def/datatype/Boolean",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/Result"
+      },
+      {
+        "@id": "_:ub1bL36C19"
+      },
+      {
+        "@id": "_:ub1bL41C19"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL36C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#boolean"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/datatype/value"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL41C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/datatype/value"
+      }
+    ]
+  },
+  {
+    "@id": "http://linked.data.gov.au/def/plot/stratum",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "stratum classification"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/dc/terms/type"
+      }
+    ]
+  },
+  {
+    "@id": "http://linked.data.gov.au/def/plot/x/visitor",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Site visitor"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.w3.org/ns/prov#wasAssociatedWith"
+      }
+    ]
+  },
+  {
+    "@id": "http://linked.data.gov.au/def/plot/",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ],
+    "http://purl.org/dc/terms/contributor": [
+      {
+        "@id": "_:ub1bL217C23"
+      },
+      {
+        "@id": "_:ub1bL237C23"
+      },
+      {
+        "@id": "_:ub1bL231C23"
+      },
+      {
+        "@id": "_:ub1bL224C23"
+      }
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2019-03-25"
+      }
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@id": "_:ub1bL206C19"
+      }
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@value": "This vocabulary provides a set of classes to support capture of plot- and site-based ecological survey data. It is primary related to vegetation surveys, following the methdologies outlined in the Australian Soil and Land Survey Field Handbook. \n\nPlot is technically an extension to the W3C SSN/SOSA vocabulary, and also uses elements from the SSN Extensions ontology."
+      }
+    ],
+    "http://purl.org/dc/terms/license": [
+      {
+        "@id": "http://creativecommons.org/publicdomain/zero/1.0/"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#date",
+        "@value": "2020-05-18"
+      }
+    ],
+    "http://purl.org/dc/terms/publisher": [
+      {
+        "@id": "https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "The Plot Ontology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "https://www.w3.org/ns/ssn/"
+      },
+      {
+        "@id": "https://www.w3.org/TR/vocab-ssn-ext/"
+      },
+      {
+        "@id": "https://www.publish.csiro.au/book/5230/"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#imports": [
+      {
+        "@id": "http://www.w3.org/ns/ssn/ext"
+      },
+      {
+        "@id": "http://purl.org/dc/elements/1.1/"
+      },
+      {
+        "@id": "https://raw.githubusercontent.com/AGLDWG/datatype-ont/master/rdf/datatype.rdf"
+      },
+      {
+        "@id": "http://www.w3.org/ns/dcat#"
+      },
+      {
+        "@id": "https://w3id.org/tern/ontologies/ssn/"
+      },
+      {
+        "@id": "http://www.w3.org/2006/time#"
+      },
+      {
+        "@id": "https://w3id.org/tern/ontologies/loc/"
+      },
+      {
+        "@id": "http://www.w3.org/ns/prov#"
+      },
+      {
+        "@id": "http://www.qudt.org/2.1/schema/qudt"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#versionIRI": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/0.0.2"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#versionInfo": [
+      {
+        "@value": "0.0.2"
+      }
+    ],
+    "http://www.w3.org/ns/prov#wasGeneratedBy": [
+      {
+        "@id": "_:ub1bL262C23"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL206C19",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/email": [
+      {
+        "@value": "simon.cox@csiro.au"
+      }
+    ],
+    "http://schema.org/identifier": [
+      {
+        "@id": "https://orcid.org/0000-0002-3884-3420"
+      }
+    ],
+    "http://schema.org/memberOf": [
+      {
+        "@id": "_:ub1bL210C20"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Simon J.D.Cox"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL210C20",
+    "@type": [
+      "http://schema.org/Organization"
+    ],
+    "http://schema.org/identifier": [
+      {
+        "@id": "http://catalogue.linked.data.gov.au/def/csiro"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "CSIRO"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL262C23",
+    "@type": [
+      "http://usefulinc.com/ns/doap#Project",
+      "http://www.w3.org/ns/prov#Activity"
+    ],
+    "http://usefulinc.com/ns/doap#repository": [
+      {
+        "@id": "https://github.com/ternaustralia/ontology_tern-plot"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL217C23",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/affiliation": [
+      {
+        "@id": "https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66"
+      }
+    ],
+    "http://schema.org/email": [
+      {
+        "@value": "e.chuc@uq.edu.au"
+      }
+    ],
+    "http://schema.org/identifier": [
+      {
+        "@value": "https://orcid.org/0000-0002-6047-9864"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Edmond Chuc"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL237C23",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/affiliation": [
+      {
+        "@id": "https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66"
+      }
+    ],
+    "http://schema.org/email": [
+      {
+        "@value": "mosheh.eliyahu@adelaide.edu.au"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Mosheh Eliyahu"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL231C23",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/affiliation": [
+      {
+        "@id": "https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66"
+      }
+    ],
+    "http://schema.org/email": [
+      {
+        "@value": "j.sanchezgonzalez@uq.edu.au"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Javier Sanchez Gonzalez"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL224C23",
+    "@type": [
+      "http://schema.org/Person"
+    ],
+    "http://schema.org/affiliation": [
+      {
+        "@id": "https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66"
+      }
+    ],
+    "http://schema.org/email": [
+      {
+        "@value": "s.guru@uq.edu.au"
+      }
+    ],
+    "http://schema.org/identifier": [
+      {
+        "@value": "https://orcid.org/0000-0002-3903-254X"
+      }
+    ],
+    "http://schema.org/name": [
+      {
+        "@value": "Siddeswara Guru"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/Observation",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:ub1bL1000C19"
+      },
+      {
+        "@id": "_:ub1bL920C19"
+      },
+      {
+        "@id": "_:ub1bL975C19"
+      },
+      {
+        "@id": "_:ub1bL915C19"
+      },
+      {
+        "@id": "_:ub1bL950C19"
+      },
+      {
+        "@id": "_:ub1bL945C19"
+      },
+      {
+        "@id": "_:ub1bL905C19"
+      },
+      {
+        "@id": "_:ub1bL935C19"
+      },
+      {
+        "@id": "_:ub1bL980C19"
+      },
+      {
+        "@id": "_:ub1bL995C19"
+      },
+      {
+        "@id": "_:ub1bL925C19"
+      },
+      {
+        "@id": "_:ub1bL910C19"
+      },
+      {
+        "@id": "_:ub1bL965C19"
+      },
+      {
+        "@id": "_:ub1bL1005C19"
+      },
+      {
+        "@id": "_:ub1bL990C19"
+      },
+      {
+        "@id": "_:ub1bL985C19"
+      },
+      {
+        "@id": "_:ub1bL930C19"
+      },
+      {
+        "@id": "_:ub1bL960C19"
+      },
+      {
+        "@id": "_:ub1bL1010C19"
+      },
+      {
+        "@id": "_:ub1bL970C19"
+      },
+      {
+        "@id": "_:ub1bL955C19"
+      },
+      {
+        "@id": "_:ub1bL940C19"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL1000C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/resultTime"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL920C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#comment"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL975C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#label"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL915C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/resultTime"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL950C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/Sample"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL945C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/Result"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/hasResult"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL905C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/Site"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/site"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL935C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/ObservableProperty"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/observedProperty"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL980C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/hasFeatureOfInterest"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL995C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/phenomenonTime"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL925C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#label"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL910C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/SiteVisit"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/wasSubActivityOf"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL965C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/site"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL1005C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/usedProcedure"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL990C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/observedProperty"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL985C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/hasResult"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL930C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2006/time#Instant"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/phenomenonTime"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL960C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://w3id.org/tern/ontologies/ssn/ObservationTheme"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/observationTheme"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL1010C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/observationTheme"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL970C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/wasSubActivityOf"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL955C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://w3id.org/tern/ontologies/org/Person"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/x/observer"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL940C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/Procedure"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/usedProcedure"
+      }
+    ]
+  },
+  {
+    "@id": "http://linked.data.gov.au/def/plot/site",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Link to a site."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "site"
+      }
+    ]
+  },
+  {
+    "@id": "http://linked.data.gov.au/def/plot/x/EnvironmentalZone",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Environmental region defined primarily by its location and extent"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/x/EnvironmentalContinuant"
+      },
+      {
+        "@id": "http://www.w3.org/2002/07/owl#Thing"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/2003/01/geo/wgs84_pos#Point",
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.opengis.net/ont/geosparql#Geometry"
+      },
+      {
+        "@id": "http://www.w3.org/ns/sosa/Result"
+      },
+      {
+        "@id": "http://www.w3.org/ns/locn#Geometry"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/Sample",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:ub1bL1132C19"
+      },
+      {
+        "@id": "_:ub1bL1137C19"
+      },
+      {
+        "@id": "_:ub1bL1147C19"
+      },
+      {
+        "@id": "_:ub1bL1157C19"
+      },
+      {
+        "@id": "_:ub1bL1172C19"
+      },
+      {
+        "@id": "_:ub1bL1142C19"
+      },
+      {
+        "@id": "_:ub1bL1127C19"
+      },
+      {
+        "@id": "_:ub1bL1167C19"
+      },
+      {
+        "@id": "_:ub1bL1152C19"
+      },
+      {
+        "@id": "_:ub1bL1162C19"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL1132C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/SiteVisit"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/siteVisit"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL1137C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#comment"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL1147C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/Sample"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/hasSample"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL1157C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/Sampling"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/isResultOf"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL1172C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#label"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL1142C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#label"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL1127C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/Site"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/site"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL1167C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/siteVisit"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL1152C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/Sample"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/isSampleOf"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL1162C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/site"
+      }
+    ]
+  },
+  {
+    "@id": "http://linked.data.gov.au/def/plot/x/Assemblage",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Organism assemblage"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/x/EcologicalCommunity"
+      }
+    ]
+  },
+  {
+    "@id": "http://linked.data.gov.au/def/plot/mapScale",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Map scale"
+      }
+    ]
+  },
+  {
+    "@id": "http://linked.data.gov.au/def/plot/x/isLocationOf",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Links an individual location description to the resource (e.g. a plot:Site) that it relates to"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/Location"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "describes the location of"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "http://www.w3.org/ns/locn#location"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/locn#geometry",
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/hasResult"
       }
     ]
   },
@@ -1727,91 +3278,402 @@
     ]
   },
   {
-    "@id": "http://www.w3.org/2003/01/geo/wgs84_pos#Point",
-    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
-      {
-        "@id": "http://www.opengis.net/ont/geosparql#Geometry"
-      },
-      {
-        "@id": "http://www.w3.org/ns/locn#Geometry"
-      },
-      {
-        "@id": "http://www.w3.org/ns/sosa/Result"
-      }
-    ]
-  },
-  {
-    "@id": "http://linked.data.gov.au/def/plot/x/isLocationOf",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Links an individual location description to the resource (e.g. a plot:Site) that it relates to"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "http://linked.data.gov.au/def/plot/Location"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#label": [
-      {
-        "@value": "describes the location of"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "http://www.w3.org/ns/locn#location"
-      }
-    ]
-  },
-  {
-    "@id": "http://usefulinc.com/ns/doap#repository",
+    "@id": "http://www.w3.org/ns/ssn/ext/hasMember",
     "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
       {
-        "@id": "http://www.w3.org/ns/prov#used"
+        "@id": "http://linked.data.gov.au/def/plot/hadSubActivity"
       }
     ]
   },
   {
-    "@id": "http://www.w3.org/ns/ssn/ext/isMemberOf",
+    "@id": "http://linked.data.gov.au/def/plot/SiteStratum",
     "@type": [
-      "http://www.w3.org/2002/07/owl#ObjectProperty"
+      "http://www.w3.org/2002/07/owl#Class"
     ],
     "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@value": "indicates a collection of which the context resource is a member"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#domain": [
-      {
-        "@id": "_:ub1bL571C15"
+        "@value": "Structural element covering a recognisable height range in vegetation ecosystem occurring at an observation site"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "is member of"
+        "@value": "Vegetation stratum"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/Sample"
+      },
+      {
+        "@id": "_:ub1bL480C19"
+      },
+      {
+        "@id": "_:ub1bL475C19"
+      },
+      {
+        "@id": "_:ub1bL485C19"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL480C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/stratum"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL475C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/Site"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/isSampleOf"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL485C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/isFeatureOfInterestOf"
+      }
+    ]
+  },
+  {
+    "@id": "http://linked.data.gov.au/def/plot/OrganismOccurence",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Organism occurrence at some specified time and place. \n\n1. sub-class of Sample because observations of an organism occurrence are primarily interesting if they represents a commuity or assemblage\n2. sub-class of SpatialObject because it is bound to a specified location\n3. sub-class of TemporalEntity because it is bound to a specified time"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Organism Occurrence "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:ub1bL333C19"
+      },
+      {
+        "@id": "http://www.opengis.net/ont/geosparql#SpatialObject"
+      },
+      {
+        "@id": "_:ub1bL317C19"
+      },
+      {
+        "@id": "http://www.w3.org/2006/time#TemporalEntity"
+      },
+      {
+        "@id": "_:ub1bL328C19"
+      },
+      {
+        "@id": "http://www.w3.org/ns/sosa/Sample"
+      },
+      {
+        "@id": "_:ub1bL323C19"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "http://rs.tdwg.org/dwc/terms/Occurrence"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL333C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/taxon"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL317C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "An organism-occurrence is a sample of a community or assemblage"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/isSampleOf"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/x/EcologicalCommunity"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL328C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.opengis.net/ont/geosparql#defaultGeometry"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL323C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2003/01/geo/wgs84_pos#Point"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.opengis.net/ont/geosparql#defaultGeometry"
+      }
+    ]
+  },
+  {
+    "@id": "http://linked.data.gov.au/def/plot/mapsheetName",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "map sheet name"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#range": [
       {
-        "@id": "http://www.w3.org/ns/ssn/ext/ObservationCollection"
-      }
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-      {
-        "@id": "http://linked.data.gov.au/def/plot/wasSubActivityOf"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#inverseOf": [
-      {
-        "@id": "http://www.w3.org/ns/ssn/ext/hasMember"
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
       }
     ]
   },
   {
-    "@id": "_:ub1bL571C15",
+    "@id": "http://linked.data.gov.au/def/datatype/PercentRange",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/Result"
+      },
+      {
+        "@id": "_:ub1bL113C19"
+      },
+      {
+        "@id": "_:ub1bL98C19"
+      },
+      {
+        "@id": "_:ub1bL103C19"
+      },
+      {
+        "@id": "_:ub1bL118C19"
+      },
+      {
+        "@id": "_:ub1bL108C19"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL113C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/datatype/unit"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL98C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://qudt.org/schema/qudt/Unit"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/datatype/unit"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL103C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/datatype/uncertainty"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL118C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/datatype/value"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL108C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/datatype/value"
+      }
+    ]
+  },
+  {
+    "@id": "http://linked.data.gov.au/def/plot/x/EcologicalCommunity",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Ecological Community"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/x/EnvironmentalSystem"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#closeMatch": [
+      {
+        "@id": "http://purl.obolibrary.org/obo/PCO_0000002"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/locn#Geometry",
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:ub1bL869C23"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL869C23",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "http://www.opengis.net/ont/geosparql#Geometry"
+          },
+          {
+            "@id": "http://www.w3.org/2003/01/geo/wgs84_pos#Point"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "http://linked.data.gov.au/def/plot/x/hasResultQuality",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "this property allows an indication of the quality of the data to be provided at the level of either an individual observation or a thematic group. This is commonly done by some kind of description of the method, protocol, sensor, observer, etc. "
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "_:ub1bL809C15"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Quality of individual or related observation results"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL809C15",
     "@type": [
       "http://www.w3.org/2002/07/owl#Class"
     ],
@@ -1829,46 +3691,595 @@
     ]
   },
   {
-    "@id": "http://linked.data.gov.au/def/plot/Location",
+    "@id": "http://linked.data.gov.au/def/plot/x/TaxonAssignment",
     "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class",
       "http://www.w3.org/2002/07/owl#Class"
-    ],
-    "http://www.w3.org/2000/01/rdf-schema#comment": [
-      {
-        "@value": "Location together with information about how it was obtained"
-      }
     ],
     "http://www.w3.org/2000/01/rdf-schema#label": [
       {
-        "@value": "Location"
+        "@value": "Taxon assignment observation"
       }
     ],
     "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
       {
-        "@id": "_:ub1bL67C19"
+        "@id": "http://www.w3.org/ns/sosa/Observation"
       },
       {
-        "@id": "_:ub1bL62C19"
-      },
-      {
-        "@id": "_:ub1bL77C19"
-      },
-      {
-        "@id": "_:ub1bL87C19"
-      },
-      {
-        "@id": "http://purl.org/dc/terms/Location"
-      },
-      {
-        "@id": "_:ub1bL82C19"
-      },
-      {
-        "@id": "_:ub1bL72C19"
+        "@id": "_:ub1bL793C19"
       }
     ]
   },
   {
-    "@id": "_:ub1bL67C19",
+    "@id": "_:ub1bL793C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#hasValue": [
+      {
+        "@id": "http://www.tern.org.au/cv/op/Taxon-identity"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/observedProperty"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/Procedure",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:ub1bL1091C19"
+      },
+      {
+        "@id": "_:ub1bL1096C19"
+      },
+      {
+        "@id": "_:ub1bL1101C19"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL1091C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/ns/ssn/Input"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/ssn/hasInput"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL1096C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://w3id.org/tern/ontologies/ssn/Method"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/datatype/vocabulary"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL1101C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/datatype/vocabulary"
+      }
+    ]
+  },
+  {
+    "@id": "http://linked.data.gov.au/def/plot/mapsheetNumber",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "map sheet number"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ]
+  },
+  {
+    "@id": "http://linked.data.gov.au/def/datatype/QuantitativeRange",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:ub1bL166C19"
+      },
+      {
+        "@id": "http://www.w3.org/ns/sosa/Result"
+      },
+      {
+        "@id": "_:ub1bL171C19"
+      },
+      {
+        "@id": "_:ub1bL176C19"
+      },
+      {
+        "@id": "_:ub1bL156C19"
+      },
+      {
+        "@id": "_:ub1bL161C19"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL166C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/datatype/max"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL171C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/datatype/min"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL176C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/datatype/unit"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL156C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://qudt.org/schema/qudt/Unit"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/datatype/unit"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL161C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/datatype/uncertainty"
+      }
+    ]
+  },
+  {
+    "@id": "http://www.w3.org/ns/sosa/ObservableProperty",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:ub1bL897C19"
+      },
+      {
+        "@id": "_:ub1bL882C19"
+      },
+      {
+        "@id": "_:ub1bL892C19"
+      },
+      {
+        "@id": "_:ub1bL887C19"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL897C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/upperParameter"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL882C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://w3id.org/tern/ontologies/ssn/Parameter"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/datasetParameter"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL892C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/datasetParameter"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL887C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://w3id.org/tern/ontologies/ssn/Parameter"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/upperParameter"
+      }
+    ]
+  },
+  {
+    "@id": "http://linked.data.gov.au/def/plot/x/sampleLevel",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/Site"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "sample level classification"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/dc/terms/type"
+      }
+    ]
+  },
+  {
+    "@id": "http://linked.data.gov.au/def/plot/x/sampler",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Sampler"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/madeBySampler"
+      },
+      {
+        "@id": "http://www.w3.org/ns/prov#wasAssociatedWith"
+      }
+    ]
+  },
+  {
+    "@id": "http://linked.data.gov.au/def/plot/upperParameter",
+    "@type": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Link to the upper (global) parameter."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "upper parameter"
+      }
+    ]
+  },
+  {
+    "@id": "http://linked.data.gov.au/def/plot/taxon",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "taxon classification"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://purl.org/dc/terms/type"
+      }
+    ]
+  },
+  {
+    "@id": "http://linked.data.gov.au/def/plot/Site",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "Location where observations may be made\nMay be a plot, quadrat, transect, trap etc\n\nThis is a sub-class of sosa:Sample because a site should be designed to to be representative of an environmental system (which may be an ecosystem or bioregion) or zone (which might be a fiat zone such as a parcel or tract)"
+      },
+      {
+        "@value": "ownership is associated with the parent survey"
+      },
+      {
+        "@value": "rights and conditions are associated with the parnet survey"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Site"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "_:ub1bL363C19"
+      },
+      {
+        "@id": "_:ub1bL398C19"
+      },
+      {
+        "@id": "http://www.w3.org/ns/sosa/Sample"
+      },
+      {
+        "@id": "_:ub1bL403C19"
+      },
+      {
+        "@id": "_:ub1bL413C19"
+      },
+      {
+        "@id": "_:ub1bL408C19"
+      },
+      {
+        "@id": "_:ub1bL453C19"
+      },
+      {
+        "@id": "_:ub1bL438C19"
+      },
+      {
+        "@id": "_:ub1bL433C19"
+      },
+      {
+        "@id": "_:ub1bL357C19"
+      },
+      {
+        "@id": "_:ub1bL443C19"
+      },
+      {
+        "@id": "_:ub1bL368C19"
+      },
+      {
+        "@id": "http://www.opengis.net/ont/geosparql#SpatialObject"
+      },
+      {
+        "@id": "_:ub1bL351C19"
+      },
+      {
+        "@id": "_:ub1bL458C19"
+      },
+      {
+        "@id": "_:ub1bL428C19"
+      },
+      {
+        "@id": "_:ub1bL448C19"
+      },
+      {
+        "@id": "_:ub1bL378C19"
+      },
+      {
+        "@id": "_:ub1bL388C19"
+      },
+      {
+        "@id": "_:ub1bL373C19"
+      },
+      {
+        "@id": "_:ub1bL418C19"
+      },
+      {
+        "@id": "_:ub1bL423C19"
+      },
+      {
+        "@id": "_:ub1bL393C19"
+      },
+      {
+        "@id": "_:ub1bL383C19"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL363C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/SiteVisit"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/siteVisit"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL398C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2004/02/skos/core#Concept"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/mapScale"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL403C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#Dataset"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#dataset"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL413C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "https://w3id.org/tern/ontologies/ssn/Method"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/locationMethod"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL408C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/Sample"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/hasSample"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL453C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.opengis.net/ont/geosparql#hasGeometry"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL438C19",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -1885,7 +4296,7 @@
     ]
   },
   {
-    "@id": "_:ub1bL62C19",
+    "@id": "_:ub1bL433C19",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -1902,57 +4313,28 @@
     ]
   },
   {
-    "@id": "_:ub1bL77C19",
+    "@id": "_:ub1bL357C19",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
       {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "0"
+        "@value": "A site may be part of a bigger site -e.g. points within a plot"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/Site"
       }
     ],
     "http://www.w3.org/2002/07/owl#onProperty": [
       {
-        "@id": "http://linked.data.gov.au/def/plot/locationMethod"
+        "@id": "http://purl.org/dc/terms/isPartOf"
       }
     ]
   },
   {
-    "@id": "_:ub1bL87C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.opengis.net/ont/geosparql#hasGeometry"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#someValuesFrom": [
-      {
-        "@id": "http://www.w3.org/2003/01/geo/wgs84_pos#Point"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL82C19",
-    "@type": [
-      "http://www.w3.org/2002/07/owl#Restriction"
-    ],
-    "http://www.w3.org/2002/07/owl#minCardinality": [
-      {
-        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-        "@value": "1"
-      }
-    ],
-    "http://www.w3.org/2002/07/owl#onProperty": [
-      {
-        "@id": "http://www.opengis.net/ont/geosparql#hasGeometry"
-      }
-    ]
-  },
-  {
-    "@id": "_:ub1bL72C19",
+    "@id": "_:ub1bL443C19",
     "@type": [
       "http://www.w3.org/2002/07/owl#Restriction"
     ],
@@ -1965,6 +4347,225 @@
     "http://www.w3.org/2002/07/owl#onProperty": [
       {
         "@id": "http://linked.data.gov.au/def/plot/mapsheetNumber"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL368C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.opengis.net/ont/geosparql#Feature"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL351C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#comment": [
+      {
+        "@value": "A site may be part of a bigger site -e.g. points within a plot"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/Site"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/dc/terms/hasPart"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL458C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.opengis.net/ont/geosparql#hasGeometry"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#someValuesFrom": [
+      {
+        "@id": "_:ub1bL461C26"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL461C26",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2002/07/owl#unionOf": [
+      {
+        "@list": [
+          {
+            "@id": "https://w3id.org/tern/ontologies/loc/Point"
+          },
+          {
+            "@id": "https://w3id.org/tern/ontologies/loc/Polygon"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL428C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/ns/dcat#dataset"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL448C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#minCardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/siteVisit"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL378C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/mapsheetNumber"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL388C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#comment"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL373C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://linked.data.gov.au/def/plot/mapsheetName"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL418C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/dc/terms/identifier"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL423C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#cardinality": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+        "@value": "1"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#label"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL393C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#label"
+      }
+    ]
+  },
+  {
+    "@id": "_:ub1bL383C19",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Restriction"
+    ],
+    "http://www.w3.org/2002/07/owl#allValuesFrom": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#onProperty": [
+      {
+        "@id": "http://purl.org/dc/terms/identifier"
       }
     ]
   }

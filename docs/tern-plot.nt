@@ -1,409 +1,938 @@
-<http://linked.data.gov.au/def/plot/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.w3.org/ns/ssn/> .
-_:ub1bL229C19 <http://www.w3.org/2000/01/rdf-schema#comment> "While the value of the SiteStratumTaxon/taxon property might be fixed a-priori, the taxon-classification is typically the result of an observation whose feature-of-interest is an individual of the SiteStratumTaxon class. " .
-<http://linked.data.gov.au/def/plot/> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/dc/elements/1.1/> .
-<http://linked.data.gov.au/def/plot/x/sampleType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:ub1bL218C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL114C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2003/01/geo/wgs84_pos#Point> .
-_:ub1bL77C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://linked.data.gov.au/def/plot/siteDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://linked.data.gov.au/def/plot/Site> .
-<http://linked.data.gov.au/def/plot/x/Survey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL442C19 .
-_:ub1bL458C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL235C19 <http://www.w3.org/2000/01/rdf-schema#comment> "relation to the Site for which this SiteStratumTaxon represents the community of a single taxon within a single stratum" .
-_:ub1bL149C26 <http://www.w3.org/2002/07/owl#unionOf> _:f5cce781f943e43c395bbc9d475a549a5b1 .
-_:ub1bL27C19 <http://schema.org/name> "Simon J.D.Cox" .
-<http://linked.data.gov.au/def/plot/x/EnvironmentalZone> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
-_:ub1bL124C19 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:ub1bL430C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/locn#location> .
-<http://www.w3.org/ns/ssn/ext/hasMember> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://linked.data.gov.au/def/plot/hadSubActivity> .
-<http://linked.data.gov.au/def/plot/SiteVisit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL304C19 .
-<http://linked.data.gov.au/def/plot/x/EnvironmentalZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:ub1bL192C19 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<http://linked.data.gov.au/def/plot/x/sampleType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
-<http://linked.data.gov.au/def/plot/Stratum> <http://www.w3.org/2000/01/rdf-schema#comment> "Structural element covering a recognisable height range in vegetation ecosystem" .
-_:ub1bL229C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<http://linked.data.gov.au/def/plot/OrganismOccurence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL119C19 .
-<http://linked.data.gov.au/def/plot/x/floristics> <http://www.w3.org/2000/01/rdf-schema#label> "Site floristics classification" .
-<http://linked.data.gov.au/def/plot/x/TaxonAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL478C19 .
-<http://linked.data.gov.au/def/plot/OrganismOccurence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#SpatialObject> .
-_:ub1bL235C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL430C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://linked.data.gov.au/def/plot/x/EcologicalCommunity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linked.data.gov.au/def/plot/x/EnvironmentalSystem> .
-<http://linked.data.gov.au/def/plot/x/visitor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#wasAssociatedWith> .
-_:f5cce781f943e43c395bbc9d475a549a5b10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/sosa/Observation> .
-_:f5cce781f943e43c395bbc9d475a549a5b8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:f5cce781f943e43c395bbc9d475a549a5b9 .
-<http://linked.data.gov.au/def/plot/SiteStratumTaxon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL254C19 .
-_:ub1bL187C19 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/created> .
-<http://linked.data.gov.au/def/plot/x/EnvironmentalSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
-<http://linked.data.gov.au/def/plot/x/EnvironmentalSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:ub1bL271C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://linked.data.gov.au/def/plot/Site> .
-_:ub1bL304C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/hadSubActivity> .
-<http://linked.data.gov.au/def/plot/x/sampler> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#wasAssociatedWith> .
-_:ub1bL145C19 <http://www.w3.org/2000/01/rdf-schema#comment> "A Site is established to sample some biome, bioregion, ecosystem, etc." .
-_:ub1bL213C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/stratum> .
-_:f5cce781f943e43c395bbc9d475a549a5b7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://linked.data.gov.au/def/plot/SiteVisit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL292C19 .
-<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL177C19 .
-_:ub1bL77C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/locationMethod> .
-_:ub1bL298C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://linked.data.gov.au/def/plot/Site> .
-<http://linked.data.gov.au/def/plot/x/Survey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL436C19 .
-<http://linked.data.gov.au/def/plot/SiteStratum> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Sample> .
-<http://linked.data.gov.au/def/plot/SiteTaxon> <http://www.w3.org/2000/01/rdf-schema#label> "Single taxon community" .
-_:ub1bL218C19 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<http://linked.data.gov.au/def/plot/SiteTaxon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://linked.data.gov.au/def/plot/x/EnvironmentalContinuant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
-<http://linked.data.gov.au/def/plot/x/Survey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Activity> .
-<http://linked.data.gov.au/def/plot/x/visitor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:ub1bL108C19 <http://www.w3.org/2000/01/rdf-schema#comment> "An organism-occurrence is a sample of a community or assemblage" .
-<http://linked.data.gov.au/def/plot/x/EcologicalCommunity> <http://www.w3.org/2000/01/rdf-schema#label> "Ecological Community" .
-<http://linked.data.gov.au/def/plot/wasSubActivityOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#wasInformedBy> .
-<http://linked.data.gov.au/def/plot/mapsheetNumber> <http://www.w3.org/2000/01/rdf-schema#label> "Mapsheet" .
-_:ub1bL248C19 <http://www.w3.org/2000/01/rdf-schema#comment> "relation to the SiteTaxon for which this SiteStratumTaxon represents the community within a single stratum" .
-<http://linked.data.gov.au/def/plot/mapsheetNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://linked.data.gov.au/def/plot/SiteVisit> <http://www.w3.org/2000/01/rdf-schema#comment> "A discrete time-bounded visit to a site, during which sampling or observation activities are undertaken" .
-<http://linked.data.gov.au/def/plot/Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL67C19 .
-_:ub1bL478C19 <http://www.w3.org/2002/07/owl#hasValue> <http://www.tern.org.au/cv/op/Taxon-identity> .
-_:ub1bL114C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL213C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:ub1bL187C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:ub1bL554C23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://linked.data.gov.au/def/plot/OrganismOccurence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Sample> .
-<http://linked.data.gov.au/def/plot/hadSubActivity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/prov#Activity> .
-_:ub1bL494C15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://linked.data.gov.au/def/plot/SiteStratum> <http://www.w3.org/2000/01/rdf-schema#label> "Vegetation stratum" .
-_:ub1bL411C19 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<http://linked.data.gov.au/def/plot/SiteStratum> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL218C19 .
-_:ub1bL187C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL430C19 <http://www.w3.org/2000/01/rdf-schema#comment> "aka spatialScope? - to associate a jurisdiction or IBRA or other named thing with the Survey" .
-<http://linked.data.gov.au/def/plot/mapScale> <http://www.w3.org/2000/01/rdf-schema#label> "Map scale" .
-_:ub1bL242C19 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://linked.data.gov.au/def/plot/SiteStratum> .
-<http://linked.data.gov.au/def/plot/x/Assemblage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://linked.data.gov.au/def/plot/Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL87C19 .
-<http://linked.data.gov.au/def/plot/SiteTaxon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL271C19 .
-<http://linked.data.gov.au/def/plot/x/FluxTower> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL411C19 .
-_:ub1bL77C19 <http://www.w3.org/2002/07/owl#minCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:ub1bL554C23 <http://www.w3.org/2002/07/owl#unionOf> _:f5cce781f943e43c395bbc9d475a549a5b8 .
-<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#SpatialObject> .
-<http://linked.data.gov.au/def/plot/x/isLocationOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://linked.data.gov.au/def/plot/Location> .
-<http://linked.data.gov.au/def/plot/OrganismOccurence> <http://www.w3.org/2002/07/owl#equivalentClass> <http://rs.tdwg.org/dwc/terms/Occurrence> .
-_:ub1bL171C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://linked.data.gov.au/def/plot/Site> .
-<http://linked.data.gov.au/def/plot/Location> <http://www.w3.org/2000/01/rdf-schema#label> "Location" .
-_:ub1bL452C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
-<http://linked.data.gov.au/def/plot/wasSubActivityOf> <http://www.w3.org/2000/01/rdf-schema#label> "pointer to parent activity" .
-_:ub1bL298C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
-<http://linked.data.gov.au/def/plot/x/EnvironmentalSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Environmental region defined primarily by its function and membership" .
-<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL192C19 .
-<http://linked.data.gov.au/def/plot/taxon> <http://www.w3.org/2000/01/rdf-schema#label> "taxon classification" .
-<http://linked.data.gov.au/def/plot/x/isLocationOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://linked.data.gov.au/def/plot/OrganismOccurence> <http://www.w3.org/2000/01/rdf-schema#comment> "Organism occurrence at some specified time and place. \r\n\r\n1. sub-class of Sample because observations of an organism occurrence are primarily interesting if they represents a commuity or assemblage\r\n2. sub-class of SpatialObject because it is bound to a specified location\r\n3. sub-class of TemporalEntity because it is bound to a specified time" .
-_:ub1bL254C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://linked.data.gov.au/def/plot/x/Survey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:ub1bL458C19 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/ns/odrl/2/Permission> .
-<http://www.w3.org/ns/ssn/ext/isMemberOf> <http://www.w3.org/2000/01/rdf-schema#comment> "indicates a collection of which the context resource is a member" .
-_:ub1bL31C20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
-<http://linked.data.gov.au/def/plot/x/FluxTower> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Platform> .
-<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL171C19 .
-<http://linked.data.gov.au/def/plot/siteDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/ssn/ext/ObservationCollection> .
-_:ub1bL208C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/isSampleOf> .
-<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/locn#geometry> .
-_:ub1bL436C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/prov#wasAssociatedWith> .
-_:f5cce781f943e43c395bbc9d475a549a5b6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/sosa/Observation> .
-<http://linked.data.gov.au/def/plot/SiteStratumTaxon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL248C19 .
-<http://www.w3.org/ns/ssn/ext/isMemberOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/ssn/ext/hasMember> .
-<http://linked.data.gov.au/def/plot/hadSubActivity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/prov#Activity> .
-<http://linked.data.gov.au/def/plot/hadSubActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://linked.data.gov.au/def/plot/mapsheetNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://linked.data.gov.au/def/plot/> <http://purl.org/dc/terms/creator> _:ub1bL27C19 .
-<http://linked.data.gov.au/def/plot/x/Assemblage> <http://www.w3.org/2000/01/rdf-schema#label> "Organism assemblage" .
-_:ub1bL478C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:f5cce781f943e43c395bbc9d475a549a5b11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/ssn/ext/ObservationCollection> .
-_:ub1bL177C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://linked.data.gov.au/def/plot/x/Survey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL458C19 .
-_:f5cce781f943e43c395bbc9d475a549a5b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://linked.data.gov.au/def/plot/x/EnvironmentalZone> .
-<http://linked.data.gov.au/def/plot/x/EcologicalCommunity> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://purl.obolibrary.org/obo/PCO_0000002> .
-<http://linked.data.gov.au/def/plot/x/TaxonAssignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:ub1bL145C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/isSampleOf> .
-_:ub1bL229C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/taxon> .
-_:f5cce781f943e43c395bbc9d475a549a5b6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:f5cce781f943e43c395bbc9d475a549a5b7 .
-_:ub1bL447C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://linked.data.gov.au/def/plot/x/Survey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL447C19 .
-<http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Result> .
-_:ub1bL27C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Person> .
-_:ub1bL124C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/taxon> .
-_:ub1bL157C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://linked.data.gov.au/def/plot/SiteVisit> .
-<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Sample> .
-_:ub1bL292C19 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://linked.data.gov.au/def/plot/x/Survey> .
-_:ub1bL304C19 <http://www.w3.org/2002/07/owl#someValuesFrom> _:ub1bL307C26 .
-<http://linked.data.gov.au/def/plot/wasSubActivityOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://linked.data.gov.au/def/plot/hadSubActivity> .
-_:ub1bL119C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL281C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/isFeatureOfInterestOf> .
-_:ub1bL242C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL177C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/hasLocation> .
-_:f5cce781f943e43c395bbc9d475a549a5b9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2003/01/geo/wgs84_pos#Point> .
-_:ub1bL51C23 <http://usefulinc.com/ns/doap#repository> <https://github.com/ternaustralia/ontology_tern-plot> .
-_:f5cce781f943e43c395bbc9d475a549a5b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/sosa/Sampling> .
-_:ub1bL62C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/mapScale> .
-_:ub1bL87C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://linked.data.gov.au/def/plot/x/FluxTower> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://linked.data.gov.au/def/plot/locationMethod> <http://www.w3.org/2000/01/rdf-schema#label> "Location method" .
-<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL157C19 .
-<http://linked.data.gov.au/def/plot/SiteVisit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL298C19 .
-_:ub1bL430C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2004/02/skos/core#Concept> .
-_:ub1bL307C26 <http://www.w3.org/2002/07/owl#unionOf> _:f5cce781f943e43c395bbc9d475a549a5b3 .
-<http://linked.data.gov.au/def/plot/x/Assemblage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linked.data.gov.au/def/plot/x/EcologicalCommunity> .
-<http://linked.data.gov.au/def/plot/OrganismOccurence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2006/time#TemporalEntity> .
-<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL145C19 .
-<http://linked.data.gov.au/def/plot/x/TaxonAssignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
-<http://linked.data.gov.au/def/plot/SiteTaxon> <http://www.w3.org/2000/01/rdf-schema#comment> "Community of a single taxon in vegetation ecosystem occurring at an observation site" .
-_:ub1bL182C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/prov#wasGeneratedBy> .
-<http://linked.data.gov.au/def/plot/x/sampleLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
-<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#comment> "Location where observations may be made\r\nMay be a plot, quadrat, transect, trap etc\r\n\r\nThis is a sub-class of sosa:Sample because a site should be designed to to be representative of an environmental system (which may be an ecosystem or bioregion) or zone (which might be a fiat zone such as a parcel or tract)" .
-<http://linked.data.gov.au/def/plot/x/Survey> <http://www.w3.org/2000/01/rdf-schema#label> "Survey" .
-<http://linked.data.gov.au/def/plot/hadSubActivity> <http://www.w3.org/2000/01/rdf-schema#comment> "To allow links between observations or site-visits and projects, programs and initiatives, between observations and site-visits, etc" .
-_:ub1bL464C19 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<http://linked.data.gov.au/def/plot/hasLocation> <http://www.w3.org/2000/01/rdf-schema#label> "has location" .
-_:ub1bL281C19 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:f5cce781f943e43c395bbc9d475a549a5b9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:ub1bL436C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://linked.data.gov.au/def/plot/Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL62C19 .
-<http://linked.data.gov.au/def/plot/x/FluxTower> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
-_:ub1bL235C19 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<http://linked.data.gov.au/def/plot/> <http://www.w3.org/2000/01/rdf-schema#label> "The PLOT ontology" .
-<http://linked.data.gov.au/def/plot/mapsheetName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-_:ub1bL114C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.opengis.net/ont/geosparql#defaultGeometry> .
-<http://linked.data.gov.au/def/plot/x/visitor> <http://www.w3.org/2000/01/rdf-schema#label> "Site visitor" .
-_:ub1bL229C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL271C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/isSampleOf> .
-_:ub1bL452C19 <http://www.w3.org/2002/07/owl#onClass> <http://linked.data.gov.au/def/plot/Site> .
-_:ub1bL304C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL182C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/prov#Activity> .
-_:ub1bL298C19 <http://www.w3.org/2000/01/rdf-schema#comment> "link to the visited site" .
-<http://linked.data.gov.au/def/plot/x/Survey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL430C19 .
-_:ub1bL124C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL208C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL171C19 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/isPartOf> .
-<http://linked.data.gov.au/def/plot/stratum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://linked.data.gov.au/def/plot/OrganismOccurence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL124C19 .
-<http://linked.data.gov.au/def/plot/Stratum> <http://www.w3.org/2000/01/rdf-schema#label> "Vegetation strata classification " .
-_:ub1bL62C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://linked.data.gov.au/def/plot/x/floristics> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
-<http://linked.data.gov.au/def/plot/x/isLocationOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an individual location description to the resource (e.g. a plot:Site) that it relates to" .
-_:ub1bL436C19 <http://www.w3.org/2000/01/rdf-schema#comment> "link to organization instead of plot:Dataset class?" .
-_:ub1bL165C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://linked.data.gov.au/def/plot/Site> .
-<http://linked.data.gov.au/def/plot/x/sampler> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/sosa/madeBySampler> .
-<http://linked.data.gov.au/def/plot/x/sampleLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.w3.org/ns/ssn/ext/isMemberOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/ssn/ext/ObservationCollection> .
-_:ub1bL276C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<http://linked.data.gov.au/def/plot/> <http://purl.org/dc/terms/license> <http://creativecommons.org/publicdomain/zero/1.0/> .
-<http://linked.data.gov.au/def/plot/x/TaxonAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
-<http://linked.data.gov.au/def/plot/SiteStratum> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL213C19 .
-<http://linked.data.gov.au/def/plot/stratum> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
-<http://linked.data.gov.au/def/plot/SiteStratum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:ub1bL307C26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:f5cce781f943e43c395bbc9d475a549a5b10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:f5cce781f943e43c395bbc9d475a549a5b11 .
-<http://linked.data.gov.au/def/plot/x/sampleLevel> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/type> .
-<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#label> "Site or location" .
-<http://linked.data.gov.au/def/plot/Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://linked.data.gov.au/def/plot/x/EnvironmentalContinuant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://linked.data.gov.au/def/plot/x/EnvironmentalZone> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linked.data.gov.au/def/plot/x/EnvironmentalContinuant> .
-<http://linked.data.gov.au/def/plot/x/Survey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL452C19 .
-<http://linked.data.gov.au/def/plot/x/Survey> <http://www.w3.org/2000/01/rdf-schema#comment> "Survey is composed of a set of Observations and ObservationCollections, which may have a site as its feature-of-interest\r\nIn this context the value of feature-of-interest is expected to be the value of the chain   (ssn-ext:hasMember)+/sosa:hasFeatureOfInterest" .
-<http://linked.data.gov.au/def/plot/Location> <http://www.w3.org/2000/01/rdf-schema#comment> "Location together with information about how it was obtained" .
-_:ub1bL31C20 <http://schema.org/name> "CSIRO" .
-_:ub1bL464C19 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/ns/odrl/2/Policy> .
-<http://linked.data.gov.au/def/plot/stratum> <http://www.w3.org/2000/01/rdf-schema#label> "stratum classification" .
-_:ub1bL452C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL87C19 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2003/01/geo/wgs84_pos#Point> .
-<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#comment> "ownership is associated with the parent survey" .
-<http://linked.data.gov.au/def/plot/x/EnvironmentalContinuant> <http://www.w3.org/2000/01/rdf-schema#label> "Environmental continuant" .
-<http://usefulinc.com/ns/doap#repository> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#used> .
-<http://linked.data.gov.au/def/plot/> <http://purl.org/dc/terms/modified> "2019-06-19"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://linked.data.gov.au/def/plot/Stratum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:ub1bL442C19 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/title> .
-<http://linked.data.gov.au/def/plot/SiteStratumTaxon> <http://www.w3.org/2000/01/rdf-schema#label> "Single taxon community" .
-<http://linked.data.gov.au/def/plot/x/observer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://linked.data.gov.au/def/plot/SiteStratumTaxon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:ub1bL259C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/isFeatureOfInterestOf> .
-<http://linked.data.gov.au/def/plot/x/EnvironmentalSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linked.data.gov.au/def/plot/x/EnvironmentalContinuant> .
-<http://linked.data.gov.au/def/plot/x/Survey> <http://www.w3.org/2004/02/skos/core#editorialNote> "Do we need an association between Survey and SiteVisit?" .
-_:ub1bL182C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL67C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://linked.data.gov.au/def/plot/x/hasResultQuality> <http://www.w3.org/2000/01/rdf-schema#comment> "this property allows an indication of the quality of the data to be provided at the level of either an individual observation or a thematic group. This is commonly done by some kind of description of the method, protocol, sensor, observer, etc. " .
-<http://linked.data.gov.au/def/plot/x/Survey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL464C19 .
-_:ub1bL82C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://linked.data.gov.au/def/plot/x/floristics> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/type> .
-_:ub1bL157C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/isResultOf> .
-_:f5cce781f943e43c395bbc9d475a549a5b5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/ssn/ext/ObservationCollection> .
-<http://linked.data.gov.au/def/plot/x/sampleLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://linked.data.gov.au/def/plot/Site> .
-<http://linked.data.gov.au/def/plot/x/sampleType> <http://www.w3.org/2000/01/rdf-schema#comment> "The site's plot shape description, e.g. square, circle, etc." .
-_:ub1bL51C23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
-<http://linked.data.gov.au/def/plot/x/EcologicalCommunity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://linked.data.gov.au/def/plot/siteDescription> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/sosa/isFeatureOfInterestOf> .
-<http://linked.data.gov.au/def/plot/stratum> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/type> .
-_:ub1bL571C15 <http://www.w3.org/2002/07/owl#unionOf> _:f5cce781f943e43c395bbc9d475a549a5b10 .
-_:ub1bL197C19 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://linked.data.gov.au/def/plot/Site> .
-<http://linked.data.gov.au/def/plot/OrganismOccurence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL114C19 .
-<http://linked.data.gov.au/def/plot/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.w3.org/TR/vocab-ssn-ext/> .
-<http://linked.data.gov.au/def/plot/taxon> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/type> .
-_:ub1bL218C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/isFeatureOfInterestOf> .
-_:ub1bL447C19 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/elements/1.1/creator> .
-<http://linked.data.gov.au/def/plot/x/FluxTower> <http://www.w3.org/2000/01/rdf-schema#label> "Flux tower" .
-_:ub1bL119C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.opengis.net/ont/geosparql#defaultGeometry> .
-_:ub1bL248C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/isSampleOf> .
-<http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/locn#Geometry> .
-<http://linked.data.gov.au/def/plot/SiteTaxon> <http://www.w3.org/2000/01/rdf-schema#comment> "Data corresponding to an individual of this class would usually be derived from observations relating to the set of SiteStratumTaxon at the same site on the same taxon" .
-<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL187C19 .
-<http://linked.data.gov.au/def/plot/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.publish.csiro.au/book/5230/> .
-<http://linked.data.gov.au/def/plot/SiteStratumTaxon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL259C19 .
-<http://linked.data.gov.au/def/plot/Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL77C19 .
-<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL182C19 .
-<http://linked.data.gov.au/def/plot/x/FluxTower> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL416C19 .
-_:ub1bL464C19 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/license> .
-_:ub1bL235C19 <http://www.w3.org/2002/07/owl#onClass> <http://linked.data.gov.au/def/plot/Site> .
-_:ub1bL442C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:ub1bL27C19 <http://schema.org/identifier> <https://orcid.org/0000-0002-3884-3420> .
-_:ub1bL197C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://www.w3.org/ns/ssn/ext/isMemberOf> <http://www.w3.org/2000/01/rdf-schema#label> "is member of" .
-_:f5cce781f943e43c395bbc9d475a549a5b11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:ub1bL442C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://linked.data.gov.au/def/plot/x/Survey> <http://www.w3.org/2004/02/skos/core#editorialNote> "Do we also need Survey to be classified by: - data theme?" .
-<http://www.w3.org/ns/locn#geometry> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/sosa/hasResult> .
-_:ub1bL62C19 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<http://linked.data.gov.au/def/plot/SiteStratumTaxon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL229C19 .
-<http://linked.data.gov.au/def/plot/SiteVisit> <http://www.w3.org/2000/01/rdf-schema#label> "Visit to a site" .
-_:ub1bL416C19 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/ns/sosa/Sensor> .
-<http://linked.data.gov.au/def/plot/x/sampleType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/type> .
-_:ub1bL447C19 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:ub1bL213C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:f5cce781f943e43c395bbc9d475a549a5b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:f5cce781f943e43c395bbc9d475a549a5b5 .
-<http://linked.data.gov.au/def/plot/Stratum> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
-<http://linked.data.gov.au/def/plot/x/sampler> <http://www.w3.org/2000/01/rdf-schema#label> "Sampler" .
-_:ub1bL87C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.opengis.net/ont/geosparql#hasGeometry> .
-<http://linked.data.gov.au/def/plot/> <http://purl.org/dc/terms/description> "This vocabulary provides a set of classes to support capture of plot- and site-based ecological survey data. It is primary related to vegetation surveys, following the methdologies outlined in the Australian Soil and Land Survey Field Handbook. \r\n\r\nPLOT is technically an extension to the W3C SSN/SOSA vocabulary, and also uses elements from the SSN-EXT ontology." .
-_:ub1bL458C19 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<http://linked.data.gov.au/def/plot/Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL82C19 .
-_:ub1bL208C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://linked.data.gov.au/def/plot/Site> .
-_:ub1bL72C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/mapsheetNumber> .
-_:f5cce781f943e43c395bbc9d475a549a5b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:f5cce781f943e43c395bbc9d475a549a5b4 .
-_:ub1bL411C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/locn#location> .
-_:ub1bL165C19 <http://www.w3.org/2000/01/rdf-schema#comment> "A site may be part of a bigger site -e.g. points within a plot" .
-_:ub1bL145C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://linked.data.gov.au/def/plot/x/EnvironmentalContinuant> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://purl.obolibrary.org/obo/ENVO_01000408> .
-<http://linked.data.gov.au/def/plot/wasSubActivityOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:ub1bL276C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/taxon> .
-<http://linked.data.gov.au/def/plot/SiteStratum> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL208C19 .
-<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL165C19 .
-<http://linked.data.gov.au/def/plot/SiteStratumTaxon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL242C19 .
-_:ub1bL145C19 <http://www.w3.org/2002/07/owl#someValuesFrom> _:ub1bL149C26 .
-_:ub1bL411C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#comment> "rights and conditions are associated with the parnet survey" .
-<http://linked.data.gov.au/def/plot/OrganismOccurence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://linked.data.gov.au/def/plot/x/sampleType> <http://www.w3.org/2000/01/rdf-schema#label> "sample type classification" .
-_:f5cce781f943e43c395bbc9d475a549a5b7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/ssn/ext/ObservationCollection> .
-<http://linked.data.gov.au/def/plot/> <http://www.w3.org/ns/prov#wasGeneratedBy> _:ub1bL51C23 .
-_:ub1bL165C19 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/hasPart> .
-<http://linked.data.gov.au/def/plot/x/observer> <http://www.w3.org/2000/01/rdf-schema#label> "Observer" .
-<http://linked.data.gov.au/def/plot/x/floristics> <http://www.w3.org/2000/01/rdf-schema#domain> <http://linked.data.gov.au/def/plot/Site> .
-_:ub1bL571C15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://linked.data.gov.au/def/plot/x/sampleLevel> <http://www.w3.org/2000/01/rdf-schema#label> "sample level classification" .
-<http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Geometry> .
-_:ub1bL254C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/stratum> .
-_:ub1bL242C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/isSampleOf> .
-<http://linked.data.gov.au/def/plot/hadSubActivity> <http://www.w3.org/2000/01/rdf-schema#label> "pointer to child activity" .
-<http://linked.data.gov.au/def/plot/taxon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:ub1bL436C19 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/ns/prov#Organization> .
-<http://linked.data.gov.au/def/plot/OrganismOccurence> <http://www.w3.org/2000/01/rdf-schema#label> "Organism Occurrence " .
-<http://linked.data.gov.au/def/plot/SiteTaxon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Sample> .
-_:ub1bL494C15 <http://www.w3.org/2002/07/owl#unionOf> _:f5cce781f943e43c395bbc9d475a549a5b6 .
-_:ub1bL171C19 <http://www.w3.org/2000/01/rdf-schema#comment> "A site may be part of a bigger site -e.g. points within a plot" .
-_:ub1bL416C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hosts> .
-<http://linked.data.gov.au/def/plot/x/hasResultQuality> <http://www.w3.org/2000/01/rdf-schema#label> "Quality of individual or related observation results" .
-<http://linked.data.gov.au/def/plot/Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/dc/terms/Location> .
-<http://linked.data.gov.au/def/plot/x/sampler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:ub1bL292C19 <http://www.w3.org/2000/01/rdf-schema#comment> "link from site-visit to survey of which it is a part" .
-_:ub1bL72C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL281C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://linked.data.gov.au/def/plot/SiteTaxon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL281C19 .
-_:ub1bL27C19 <http://schema.org/memberOf> _:ub1bL31C20 .
-_:ub1bL51C23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://usefulinc.com/ns/doap#Project> .
-_:ub1bL416C19 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<http://linked.data.gov.au/def/plot/SiteStratumTaxon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Sample> .
-_:f5cce781f943e43c395bbc9d475a549a5b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://linked.data.gov.au/def/plot/x/EnvironmentalSystem> .
-_:f5cce781f943e43c395bbc9d475a549a5b8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.opengis.net/ont/geosparql#Geometry> .
-_:ub1bL108C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/isSampleOf> .
-<http://linked.data.gov.au/def/plot/x/observer> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/sosa/madeBySensor> .
-_:ub1bL197C19 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/relation> .
-<http://linked.data.gov.au/def/plot/SiteStratumTaxon> <http://www.w3.org/2000/01/rdf-schema#comment> "Community of a single taxon in an identified stratum in a vegetation ecosystem occurring at an observation site" .
-<http://www.w3.org/ns/ssn/ext/isMemberOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://linked.data.gov.au/def/plot/wasSubActivityOf> .
-_:ub1bL119C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:ub1bL27C19 <http://schema.org/email> "simon.cox@csiro.au" .
-<http://www.w3.org/ns/ssn/ext/isMemberOf> <http://www.w3.org/2000/01/rdf-schema#domain> _:ub1bL571C15 .
-<http://linked.data.gov.au/def/plot/SiteStratumTaxon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL235C19 .
-_:ub1bL192C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/siteDescription> .
-_:ub1bL254C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<http://linked.data.gov.au/def/plot/taxon> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
-_:ub1bL157C19 <http://www.w3.org/2000/01/rdf-schema#comment> "A site is established in the context of a site-visit, which is in turn part of a survey.\r\nDifferent visits might create sites in the same place with different identifiers" .
-_:ub1bL452C19 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<http://linked.data.gov.au/def/plot/OrganismOccurence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL108C19 .
-<http://linked.data.gov.au/def/plot/x/EnvironmentalZone> <http://www.w3.org/2000/01/rdf-schema#label> "Environmental region defined primarily by its location and extent" .
-_:ub1bL259C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL67C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/mapsheetName> .
-_:ub1bL292C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL165C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL298C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL108C19 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://linked.data.gov.au/def/plot/x/EcologicalCommunity> .
-_:ub1bL464C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL82C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.opengis.net/ont/geosparql#hasGeometry> .
-_:ub1bL478C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
-_:f5cce781f943e43c395bbc9d475a549a5b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:f5cce781f943e43c395bbc9d475a549a5b2 .
-<http://linked.data.gov.au/def/plot/> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/ssn/ext> .
-<http://linked.data.gov.au/def/plot/x/TaxonAssignment> <http://www.w3.org/2000/01/rdf-schema#label> "Taxon assignment observation" .
-_:ub1bL72C19 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:ub1bL82C19 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:ub1bL242C19 <http://www.w3.org/2000/01/rdf-schema#comment> "relation to the SiteStratum for which this SiteStratumTaxon represents the community of a single taxon" .
-<http://linked.data.gov.au/def/plot/x/isLocationOf> <http://www.w3.org/2000/01/rdf-schema#label> "describes the location of" .
-_:ub1bL108C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://linked.data.gov.au/def/plot/x/floristics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://linked.data.gov.au/def/plot/SiteVisit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:f5cce781f943e43c395bbc9d475a549a5b5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://linked.data.gov.au/def/plot/x/isLocationOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/locn#location> .
-_:ub1bL177C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://linked.data.gov.au/def/plot/Location> .
-<http://linked.data.gov.au/def/plot/mapScale> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://linked.data.gov.au/def/plot/SiteVisit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Activity> .
-<http://linked.data.gov.au/def/plot/mapsheetName> <http://www.w3.org/2000/01/rdf-schema#label> "Mapsheet" .
-<http://linked.data.gov.au/def/plot/> <http://purl.org/dc/terms/created> "2019-03-25"^^<http://www.w3.org/2001/XMLSchema#date> .
-<http://linked.data.gov.au/def/plot/x/observer> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#wasAssociatedWith> .
-<http://linked.data.gov.au/def/plot/siteDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://linked.data.gov.au/def/plot/mapsheetName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-_:ub1bL157C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://linked.data.gov.au/def/plot/locationMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:ub1bL416C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://linked.data.gov.au/def/plot/SiteTaxon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL276C19 .
-<http://linked.data.gov.au/def/plot/x/hasResultQuality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://linked.data.gov.au/def/plot/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-_:ub1bL248C19 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://linked.data.gov.au/def/plot/SiteTaxon> .
-_:ub1bL31C20 <http://schema.org/identifier> <http://catalogue.linked.data.gov.au/def/csiro> .
-<http://www.w3.org/ns/locn#Geometry> <http://www.w3.org/2002/07/owl#equivalentClass> _:ub1bL554C23 .
-<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL197C19 .
-_:ub1bL192C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL276C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL171C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
-<https://bitbucket.org/terndatateam/ternplotdata-ontology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://usefulinc.com/ns/doap#Repository> .
-<http://linked.data.gov.au/def/plot/SiteStratum> <http://www.w3.org/2000/01/rdf-schema#comment> "Structural element covering a recognisable height range in vegetation ecosystem occurring at an observation site" .
-_:ub1bL292C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/wasSubActivityOf> .
-_:ub1bL149C26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://linked.data.gov.au/def/plot/x/hasResultQuality> <http://www.w3.org/2000/01/rdf-schema#domain> _:ub1bL494C15 .
-_:ub1bL271C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:ub1bL259C19 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:ub1bL67C19 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<http://linked.data.gov.au/def/plot/x/sampleType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://linked.data.gov.au/def/plot/Site> .
-_:ub1bL235C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/isSampleOf> .
-<http://linked.data.gov.au/def/plot/hasLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-_:ub1bL248C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL41C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/datatype/value> .
+_:ub1bL980C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+<http://linked.data.gov.au/def/plot/siteVisit> <http://www.w3.org/2000/01/rdf-schema#label> "site visit" .
+_:ub1bL300C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.opengis.net/ont/geosparql#hasGeometry> .
+_:ub1bL955C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/x/observer> .
+_:ub1bL50C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL1225C19 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://linked.data.gov.au/def/plot/x/Survey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL779C19 .
+<http://linked.data.gov.au/def/plot/SiteStratum> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL480C19 .
+<http://linked.data.gov.au/def/plot/> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/tern/ontologies/ssn/> .
+<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL443C19 .
+_:ub1bL1127C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://linked.data.gov.au/def/plot/Site> .
+_:ub1bL1215C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+<http://www.w3.org/ns/sosa/Sampling> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1225C19 .
+_:ub1bL1109C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/datatype/Boolean> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Result> .
+_:ub1bL1033C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL809C15 <http://www.w3.org/2002/07/owl#unionOf> _:fc0f59ebf7084421892dd9cbcde837ec4b6 .
+_:ub1bL1243C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:fc0f59ebf7084421892dd9cbcde837ec4b8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.opengis.net/ont/geosparql#Geometry> .
 <http://www.w3.org/ns/ssn/ext/isMemberOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:ub1bL1132C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/siteVisit> .
+_:ub1bL574C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:ub1bL480C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:ub1bL930C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL418C19 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/identifier> .
+_:ub1bL1205C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL1053C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/Sample> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Result> .
+_:ub1bL1220C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/usedProcedure> .
+_:fc0f59ebf7084421892dd9cbcde837ec4b11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://linked.data.gov.au/def/plot/Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL285C19 .
+<http://linked.data.gov.au/def/plot/wasSubActivityOf> <http://www.w3.org/2000/01/rdf-schema#label> "pointer to parent activity" .
+_:ub1bL1152C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/isSampleOf> .
+<https://bitbucket.org/terndatateam/ternplotdata-ontology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://usefulinc.com/ns/doap#Repository> .
+_:ub1bL423C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:ub1bL1109C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/Observation> .
+_:ub1bL751C19 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/ns/prov#Organization> .
+<http://linked.data.gov.au/def/plot/> <http://purl.org/dc/terms/created> "2019-03-25"^^<http://www.w3.org/2001/XMLSchema#date> .
+_:ub1bL990C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:ub1bL767C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/plot/x/floristics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL925C19 .
+<http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1172C19 .
+_:ub1bL980C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/datatype/Percent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL74C19 .
+<http://linked.data.gov.au/def/plot/x/sampleType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://linked.data.gov.au/def/plot/Site> .
+<http://linked.data.gov.au/def/plot/mapsheetNumber> <http://www.w3.org/2000/01/rdf-schema#label> "map sheet number" .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL930C19 .
+<http://www.w3.org/ns/sosa/Procedure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1101C19 .
+_:ub1bL526C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL727C19 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://linked.data.gov.au/def/datatype/QuantitativeRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://linked.data.gov.au/def/plot/x/observer> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/sosa/madeBySensor> .
+_:ub1bL368C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/plot/OrganismOccurence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#SpatialObject> .
+<http://linked.data.gov.au/def/plot/x/sampleType> <http://www.w3.org/2000/01/rdf-schema#comment> "The site's plot shape description, e.g. square, circle, etc." .
+<http://linked.data.gov.au/def/plot/x/EnvironmentalZone> <http://www.w3.org/2000/01/rdf-schema#label> "Environmental region defined primarily by its location and extent" .
+_:ub1bL275C19 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://linked.data.gov.au/def/plot/OrganismOccurence> <http://www.w3.org/2002/07/owl#equivalentClass> <http://rs.tdwg.org/dwc/terms/Occurrence> .
+<http://www.w3.org/ns/sosa/ObservationCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/ObservationCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1058C19 .
+<http://linked.data.gov.au/def/plot/x/observer> <http://www.w3.org/2000/01/rdf-schema#label> "Observer" .
+_:ub1bL60C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:ub1bL458C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/plot/x/TaxonAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Observation> .
+<http://www.w3.org/ns/sosa/ObservationCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1073C19 .
+<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL438C19 .
+_:ub1bL206C19 <http://schema.org/name> "Simon J.D.Cox" .
+_:ub1bL945C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/Result> .
+_:ub1bL1180C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/plot/SiteStratum> <http://www.w3.org/2000/01/rdf-schema#comment> "Structural element covering a recognisable height range in vegetation ecosystem occurring at an observation site" .
+<http://linked.data.gov.au/def/datatype/Count> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Result> .
+_:ub1bL357C19 <http://www.w3.org/2000/01/rdf-schema#comment> "A site may be part of a bigger site -e.g. points within a plot" .
+<http://linked.data.gov.au/def/plot/x/Survey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL762C19 .
+<http://linked.data.gov.au/def/plot/> <http://purl.org/dc/terms/contributor> _:ub1bL224C23 .
+_:ub1bL237C23 <http://schema.org/email> "mosheh.eliyahu@adelaide.edu.au" .
+_:ub1bL502C19 <http://www.w3.org/2002/07/owl#onClass> <http://linked.data.gov.au/def/plot/Site> .
+_:ub1bL1063C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/site> .
+<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL378C19 .
+_:ub1bL103C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/plot/x/TaxonAssignment> <http://www.w3.org/2000/01/rdf-schema#label> "Taxon assignment observation" .
+<http://www.w3.org/ns/sosa/Procedure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1096C19 .
+_:ub1bL1114C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/prov#wasAttributedTo> .
+<http://linked.data.gov.au/def/plot/SiteStratumTaxon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL526C19 .
+_:ub1bL1096C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL920C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:ub1bL897C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/datatype/Text> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:ub1bL408C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/Sample> .
+_:ub1bL176C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL79C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/datatype/value> .
+_:ub1bL403C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL1142C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://linked.data.gov.au/def/plot/SiteStratumTaxon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL521C19 .
+<http://linked.data.gov.au/def/plot/SiteVisit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL569C19 .
+_:ub1bL892C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:ub1bL206C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Person> .
+<http://linked.data.gov.au/def/plot/> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.2" .
+_:ub1bL584C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/ns/ssn/ext/isMemberOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/ssn/ext/ObservationCollection> .
+_:ub1bL185C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://linked.data.gov.au/def/plot/x/EnvironmentalContinuant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:ub1bL118C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://linked.data.gov.au/def/plot/Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL275C19 .
+<https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> <http://schema.org/alternateName> "TERN" .
+_:ub1bL368C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.opengis.net/ont/geosparql#Feature> .
+_:ub1bL413C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/plot/Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL295C19 .
+_:ub1bL433C19 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://linked.data.gov.au/def/plot/observationTheme> <http://www.w3.org/2000/01/rdf-schema#comment> "Link to an observation theme." .
+_:ub1bL773C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/ns/sosa/Sampling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:ub1bL280C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/mapsheetName> .
+<http://linked.data.gov.au/def/plot/mapScale> <http://www.w3.org/2000/01/rdf-schema#label> "Map scale" .
+_:ub1bL975C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:ub1bL1220C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:ub1bL548C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/isFeatureOfInterestOf> .
+_:ub1bL915C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> <http://schema.org/name> "Terrestrial Ecosystem Research Network" .
+_:ub1bL543C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/taxon> .
+_:ub1bL413C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/locationMethod> .
+_:ub1bL398C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/datatype/PercentRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL103C19 .
+<http://linked.data.gov.au/def/plot/x/EnvironmentalZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:ub1bL147C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:ub1bL378C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:ub1bL1010C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/observationTheme> .
+<http://www.w3.org/ns/ssn/Input> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1233C19 .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL980C19 .
+_:ub1bL438C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/plot/SiteVisit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Activity> .
+_:ub1bL1200C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL1078C19 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:ub1bL137C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
+_:ub1bL579C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/plot/Location> <http://www.w3.org/2000/01/rdf-schema#label> "Location" .
+<http://linked.data.gov.au/def/plot/datasetParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Link to the dataset-level parameter." .
+_:ub1bL779C19 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/ns/odrl/2/Policy> .
+_:ub1bL1096C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/datatype/vocabulary> .
+_:ub1bL1162C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/site> .
+<http://www.w3.org/ns/ssn/ext/isMemberOf> <http://www.w3.org/2000/01/rdf-schema#label> "is member of" .
+<http://linked.data.gov.au/def/plot/> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/tern/ontologies/loc/> .
+_:ub1bL1225C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL89C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL1063C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/plot/> <http://www.w3.org/2002/07/owl#imports> <http://www.qudt.org/2.1/schema/qudt> .
+_:ub1bL300C19 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2003/01/geo/wgs84_pos#Point> .
+<http://www.w3.org/ns/sosa/Sampling> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1190C19 .
+_:ub1bL940C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL373C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://linked.data.gov.au/def/plot/x/EcologicalCommunity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://linked.data.gov.au/def/plot/x/FluxTower> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:ub1bL564C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/prov#startedAtTime> .
+_:ub1bL905C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://linked.data.gov.au/def/plot/Site> .
+<http://www.w3.org/ns/sosa/ObservationCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1053C19 .
+_:ub1bL1215C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL383C19 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/identifier> .
+<http://linked.data.gov.au/def/plot/SiteVisit> <http://www.w3.org/2000/01/rdf-schema#comment> "A discrete time-bounded visit to a site, during which sampling or observation activities are undertaken" .
+_:ub1bL1091C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/ns/sosa/Result> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://linked.data.gov.au/def/plot/hadSubActivity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/prov#Activity> .
+<http://linked.data.gov.au/def/plot/x/Survey> <http://www.w3.org/2000/01/rdf-schema#comment> "Survey is composed of a set of Observations and ObservationCollections, which may have a site as its feature-of-interest\nIn this context the value of feature-of-interest is expected to be the value of the chain   (ssn-ext:hasMember)+/sosa:hasFeatureOfInterest" .
+<http://linked.data.gov.au/def/plot/SiteStratumTaxon> <http://www.w3.org/2000/01/rdf-schema#label> "Single taxon community" .
 <http://linked.data.gov.au/def/plot/x/EnvironmentalContinuant> <http://www.w3.org/2000/01/rdf-schema#comment> "Union of environmental system, environmental zone, and ecological community?" .
-<http://linked.data.gov.au/def/plot/Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL72C19 .
-_:f5cce781f943e43c395bbc9d475a549a5b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:f5cce781f943e43c395bbc9d475a549a5b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/sosa/Observation> .
-_:ub1bL458C19 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/accessRights> .
+<http://linked.data.gov.au/def/plot/SiteVisit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL564C19 .
+_:ub1bL751C19 <http://www.w3.org/2000/01/rdf-schema#comment> "link to organization instead of plot:Dataset class?" .
+_:ub1bL333C19 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:ub1bL887C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/tern/ontologies/ssn/Parameter> .
+_:ub1bL127C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/plot/x/floristics> <http://www.w3.org/2000/01/rdf-schema#label> "Site floristics classification" .
+<http://linked.data.gov.au/def/datatype/QuantitativeRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL156C19 .
+_:ub1bL41C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL171C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/datatype/min> .
+<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL418C19 .
+_:ub1bL579C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#label> .
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL887C19 .
+_:ub1bL1147C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/Sample> .
+<http://linked.data.gov.au/def/plot/OrganismOccurence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL333C19 .
+_:fc0f59ebf7084421892dd9cbcde837ec4b10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/sosa/Observation> .
+_:ub1bL910C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL990C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+<http://linked.data.gov.au/def/datatype/QuantitativeMeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL142C19 .
+_:ub1bL166C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:ub1bL113C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:ub1bL55C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/datatype/PercentRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Result> .
+_:ub1bL171C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:ub1bL231C23 <http://schema.org/name> "Javier Sanchez Gonzalez" .
+_:ub1bL388C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:ub1bL496C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:ub1bL538C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL779C19 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://linked.data.gov.au/def/plot/SiteTaxon> <http://www.w3.org/2000/01/rdf-schema#comment> "Data corresponding to an individual of this class would usually be derived from observations relating to the set of SiteStratumTaxon at the same site on the same taxon" .
+_:ub1bL985C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:ub1bL1147C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/plot/siteDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://linked.data.gov.au/def/plot/Site> .
+<http://linked.data.gov.au/def/plot/> <http://purl.org/dc/terms/publisher> <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> .
+_:fc0f59ebf7084421892dd9cbcde837ec4b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/tern/ontologies/loc/Point> .
+<http://linked.data.gov.au/def/plot/site> <http://www.w3.org/2000/01/rdf-schema#comment> "Link to a site." .
+<http://www.w3.org/ns/ssn/ext/isMemberOf> <http://www.w3.org/2000/01/rdf-schema#domain> _:ub1bL1260C15 .
+_:ub1bL275C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL757C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL1023C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://linked.data.gov.au/def/plot/SiteVisit> .
+<http://linked.data.gov.au/def/datatype/Text> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL185C19 .
+_:ub1bL190C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/datatype/value> .
+_:ub1bL323C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.opengis.net/ont/geosparql#defaultGeometry> .
+_:ub1bL1005C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL496C19 <http://www.w3.org/2000/01/rdf-schema#comment> "While the value of the SiteStratumTaxon/taxon property might be fixed a-priori, the taxon-classification is typically the result of an observation whose feature-of-interest is an individual of the SiteStratumTaxon class. " .
+_:ub1bL1260C15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://linked.data.gov.au/def/plot/x/floristics> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/type> .
+_:ub1bL69C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/datatype/unit> .
+_:ub1bL290C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/ns/sosa/ObservationCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1083C19 .
+_:ub1bL597C26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://linked.data.gov.au/def/plot/SiteStratumTaxon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:ub1bL1127C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/site> .
+<http://linked.data.gov.au/def/plot/SiteStratumTaxon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL515C19 .
+_:ub1bL161C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/datatype/uncertainty> .
+<http://linked.data.gov.au/def/plot/x/EnvironmentalContinuant> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://purl.obolibrary.org/obo/ENVO_01000408> .
+_:ub1bL975C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#comment> "rights and conditions are associated with the parnet survey" .
+_:fc0f59ebf7084421892dd9cbcde837ec4b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/tern/ontologies/loc/Polygon> .
+<http://linked.data.gov.au/def/plot/Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:ub1bL1167C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:ub1bL1210C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/plot/site> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+_:ub1bL543C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/ns/sosa/Sampling> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1220C19 .
+_:ub1bL351C19 <http://www.w3.org/2000/01/rdf-schema#comment> "A site may be part of a bigger site -e.g. points within a plot" .
+<http://linked.data.gov.au/def/datatype/Boolean> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL41C19 .
+_:ub1bL1152C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/Sample> .
+_:ub1bL594C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/ns/sosa/Sampling> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1180C19 .
+_:ub1bL1010C19 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:ub1bL773C19 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/accessRights> .
+_:ub1bL509C19 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://linked.data.gov.au/def/plot/SiteStratum> .
+<http://linked.data.gov.au/def/plot/x/observer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://linked.data.gov.au/def/plot/hadSubActivity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/prov#Activity> .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL995C19 .
+<http://linked.data.gov.au/def/plot/x/sampleType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://linked.data.gov.au/def/plot/hasLocation> <http://www.w3.org/2000/01/rdf-schema#label> "has location" .
+_:ub1bL373C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/mapsheetName> .
+<http://linked.data.gov.au/def/plot/OrganismOccurence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL328C19 .
+_:ub1bL496C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/taxon> .
+<http://linked.data.gov.au/def/plot/hasLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:ub1bL418C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL509C19 <http://www.w3.org/2000/01/rdf-schema#comment> "relation to the SiteStratum for which this SiteStratumTaxon represents the community of a single taxon" .
+<http://linked.data.gov.au/def/plot/SiteVisit> <http://www.w3.org/2000/01/rdf-schema#label> "Visit to a site" .
+<http://linked.data.gov.au/def/plot/taxon> <http://www.w3.org/2000/01/rdf-schema#label> "taxon classification" .
+_:ub1bL156C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL762C19 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/elements/1.1/creator> .
+_:ub1bL965C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:ub1bL995C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL1215C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://linked.data.gov.au/def/plot/stratum> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:ub1bL224C23 <http://schema.org/name> "Siddeswara Guru" .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL940C19 .
+_:ub1bL428C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:fc0f59ebf7084421892dd9cbcde837ec4b5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/sosa/ObservationCollection> .
+_:ub1bL935C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL1195C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/datatype/QuantitativeRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL166C19 .
+_:ub1bL50C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/datatype/uncertainty> .
+_:fc0f59ebf7084421892dd9cbcde837ec4b11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/ssn/ext/ObservationCollection> .
+<http://www.w3.org/ns/sosa/ObservationCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1028C19 .
+_:ub1bL108C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#decimal> .
+_:ub1bL1162C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/plot/SiteTaxon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Sample> .
+_:ub1bL1005C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/usedProcedure> .
+_:ub1bL1243C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/datatype/value> .
+_:ub1bL74C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/datatype/uncertainty> .
+_:ub1bL98C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/datatype/unit> .
+_:fc0f59ebf7084421892dd9cbcde837ec4b6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/sosa/Observation> .
+_:ub1bL1000C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL1078C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL882C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/tern/ontologies/ssn/Parameter> .
+_:ub1bL757C19 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/title> .
+_:ub1bL1000C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/resultTime> .
+_:ub1bL940C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/Procedure> .
+_:ub1bL461C26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:ub1bL408C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/plot/hadSubActivity> <http://www.w3.org/2000/01/rdf-schema#comment> "To allow links between observations or site-visits and projects, programs and initiatives, between observations and site-visits, etc" .
+<http://linked.data.gov.au/def/plot/siteVisit> <http://www.w3.org/2000/01/rdf-schema#comment> "Link to a site visit." .
+<http://linked.data.gov.au/def/plot/x/EcologicalCommunity> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://purl.obolibrary.org/obo/PCO_0000002> .
+_:ub1bL887C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL1119C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://www.w3.org/ns/ssn/Input> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1243C19 .
+_:ub1bL732C19 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/ns/sosa/Sensor> .
+_:ub1bL127C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://qudt.org/schema/qudt/Unit> .
+_:ub1bL351C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL403C19 .
+<http://linked.data.gov.au/def/plot/x/Survey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL745C19 .
+<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL433C19 .
+<http://linked.data.gov.au/def/plot/SiteStratumTaxon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL502C19 .
+<http://linked.data.gov.au/def/plot/datasetParameter> <http://www.w3.org/2000/01/rdf-schema#label> "dataset parameter" .
+_:ub1bL1005C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL910C19 .
+_:ub1bL559C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://linked.data.gov.au/def/plot/Site> .
+_:ub1bL1172C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/ns/ssn/ext/isMemberOf> <http://www.w3.org/2000/01/rdf-schema#comment> "indicates a collection of which the context resource is a member" .
+_:ub1bL1073C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:ub1bL779C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#label> "Site" .
+_:ub1bL1233C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/ns/sosa/ObservationCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1048C19 .
+_:ub1bL1248C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL60C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/datatype/value> .
+_:ub1bL317C19 <http://www.w3.org/2000/01/rdf-schema#comment> "An organism-occurrence is a sample of a community or assemblage" .
+_:ub1bL438C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/mapsheetName> .
+_:ub1bL368C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest> .
+<http://linked.data.gov.au/def/datatype/Text> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL190C19 .
+_:ub1bL767C19 <http://www.w3.org/2002/07/owl#onClass> <http://linked.data.gov.au/def/plot/Site> .
+_:ub1bL333C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL217C23 <http://schema.org/email> "e.chuc@uq.edu.au" .
+<http://linked.data.gov.au/def/plot/x/sampler> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/sosa/madeBySampler> .
+_:fc0f59ebf7084421892dd9cbcde837ec4b7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL975C19 .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL915C19 .
+_:ub1bL1225C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.opengis.net/ont/geosparql#hasGeometry> .
+<http://linked.data.gov.au/def/plot/SiteVisit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL559C19 .
+_:ub1bL1157C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/Sampling> .
+<http://www.w3.org/ns/sosa/ObservationCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1038C19 .
+<http://linked.data.gov.au/def/plot/x/visitor> <http://www.w3.org/2000/01/rdf-schema#label> "Site visitor" .
+_:ub1bL1190C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:ub1bL210C20 <http://schema.org/identifier> <http://catalogue.linked.data.gov.au/def/csiro> .
+<http://linked.data.gov.au/def/plot/Stratum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:ub1bL453C19 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:ub1bL1127C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL1185C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#label> .
+<http://www.w3.org/ns/sosa/Result> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1109C19 .
+_:ub1bL1083C19 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://linked.data.gov.au/def/plot/x/Assemblage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linked.data.gov.au/def/plot/x/EcologicalCommunity> .
+_:ub1bL142C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://linked.data.gov.au/def/plot/OrganismOccurence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL323C19 .
+_:ub1bL773C19 <http://www.w3.org/2002/07/owl#onClass> <http://www.w3.org/ns/odrl/2/Permission> .
+<http://linked.data.gov.au/def/plot/x/EcologicalCommunity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linked.data.gov.au/def/plot/x/EnvironmentalSystem> .
+_:ub1bL1238C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL1210C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:ub1bL103C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/datatype/uncertainty> .
+_:ub1bL1010C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL285C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/mapsheetNumber> .
+<http://linked.data.gov.au/def/plot/x/sampleLevel> <http://www.w3.org/2000/01/rdf-schema#label> "sample level classification" .
+_:ub1bL960C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/datatype/QuantitativeRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL171C19 .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL960C19 .
+_:ub1bL1137C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:ub1bL1190C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL74C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1132C19 .
+<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL398C19 .
+<http://linked.data.gov.au/def/plot/x/Survey> <http://www.w3.org/2004/02/skos/core#editorialNote> "Do we need an association between Survey and SiteVisit?" .
+<http://linked.data.gov.au/def/plot/> <http://purl.org/dc/terms/creator> _:ub1bL206C19 .
+_:ub1bL905C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/site> .
+_:ub1bL945C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+_:ub1bL118C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/datatype/value> .
+<http://linked.data.gov.au/def/plot/> <http://www.w3.org/2002/07/owl#imports> <https://raw.githubusercontent.com/AGLDWG/datatype-ont/master/rdf/datatype.rdf> .
+_:ub1bL597C26 <http://www.w3.org/2002/07/owl#unionOf> _:fc0f59ebf7084421892dd9cbcde837ec4b3 .
+_:ub1bL869C23 <http://www.w3.org/2002/07/owl#unionOf> _:fc0f59ebf7084421892dd9cbcde837ec4b8 .
+_:ub1bL564C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL509C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL161C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://linked.data.gov.au/def/plot/> <http://purl.org/dc/terms/description> "This vocabulary provides a set of classes to support capture of plot- and site-based ecological survey data. It is primary related to vegetation surveys, following the methdologies outlined in the Australian Soil and Land Survey Field Handbook. \n\nPlot is technically an extension to the W3C SSN/SOSA vocabulary, and also uses elements from the SSN Extensions ontology." .
+<http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://linked.data.gov.au/def/datatype/Percent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL84C19 .
+<http://linked.data.gov.au/def/plot/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.w3.org/TR/vocab-ssn-ext/> .
+_:ub1bL1109C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/isResultOf> .
+<http://linked.data.gov.au/def/plot/OrganismOccurence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Sample> .
+_:ub1bL147C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/datatype/value> .
+_:ub1bL1038C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL448C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/siteVisit> .
+_:ub1bL574C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#comment> .
+<http://linked.data.gov.au/def/plot/SiteVisit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL579C19 .
+<http://linked.data.gov.au/def/plot/x/FluxTower> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL892C19 .
+_:ub1bL1028C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL108C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/datatype/value> .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1000C19 .
+_:ub1bL137C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/datatype/value> .
+_:ub1bL1028C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/resultTime> .
+<http://www.w3.org/ns/ssn/ext/isMemberOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/ssn/ext/hasMember> .
+<http://linked.data.gov.au/def/plot/x/Survey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL757C19 .
+_:ub1bL84C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/plot/siteDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1167C19 .
+_:fc0f59ebf7084421892dd9cbcde837ec4b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:fc0f59ebf7084421892dd9cbcde837ec4b5 .
+_:ub1bL475C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL995C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/phenomenonTime> .
+_:ub1bL485C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL383C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL428C19 .
+_:ub1bL69C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/plot/x/TaxonAssignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL388C19 .
+_:ub1bL295C19 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:ub1bL526C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/isFeatureOfInterestOf> .
+_:ub1bL1205C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/usedProcedure> .
+_:ub1bL393C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:ub1bL1101C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/datatype/vocabulary> .
+<http://linked.data.gov.au/def/plot/x/sampleLevel> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/type> .
+<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL363C19 .
+_:ub1bL521C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL950C19 .
+<http://linked.data.gov.au/def/plot/SiteStratum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://linked.data.gov.au/def/datatype/QuantitativeMeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Result> .
+<http://linked.data.gov.au/def/plot/> <http://purl.org/dc/terms/contributor> _:ub1bL217C23 .
+<http://linked.data.gov.au/def/plot/x/hasResultQuality> <http://www.w3.org/2000/01/rdf-schema#label> "Quality of individual or related observation results" .
+<http://www.w3.org/ns/sosa/ObservationCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1043C19 .
+<http://linked.data.gov.au/def/plot/x/sampleType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/type> .
+_:ub1bL132C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://linked.data.gov.au/def/datatype/Percent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL69C19 .
+_:ub1bL502C19 <http://www.w3.org/2000/01/rdf-schema#comment> "relation to the Site for which this SiteStratumTaxon represents the community of a single taxon within a single stratum" .
+_:ub1bL1038C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:ub1bL231C23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Person> .
+<http://linked.data.gov.au/def/plot/Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/dc/terms/Location> .
+_:ub1bL113C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/datatype/unit> .
+_:ub1bL1053C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasSample> .
+_:ub1bL1073C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://linked.data.gov.au/def/plot/mapsheetName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL351C19 .
+<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL458C19 .
+<http://linked.data.gov.au/def/plot/x/hasResultQuality> <http://www.w3.org/2000/01/rdf-schema#comment> "this property allows an indication of the quality of the data to be provided at the level of either an individual observation or a thematic group. This is commonly done by some kind of description of the method, protocol, sensor, observer, etc. " .
+_:ub1bL453C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL448C19 .
+<http://linked.data.gov.au/def/plot/OrganismOccurence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://linked.data.gov.au/def/plot/wasSubActivityOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:ub1bL1058C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/tern/ontologies/ssn/ObservationTheme> .
+<http://linked.data.gov.au/def/plot/x/EnvironmentalZone> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linked.data.gov.au/def/plot/x/EnvironmentalContinuant> .
+<http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1142C19 .
+_:ub1bL1018C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://linked.data.gov.au/def/plot/Site> .
+_:ub1bL970C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL393C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:ub1bL502C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL217C23 <http://schema.org/name> "Edmond Chuc" .
+_:ub1bL428C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/dcat#dataset> .
+<http://linked.data.gov.au/def/plot/Stratum> <http://www.w3.org/2000/01/rdf-schema#label> "Vegetation strata classification " .
+<http://linked.data.gov.au/def/plot/> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/ssn/ext> .
+<http://linked.data.gov.au/def/datatype/PercentRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL108C19 .
+_:ub1bL945C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL475C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/isSampleOf> .
+_:ub1bL882C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/plot/x/EnvironmentalZone> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://linked.data.gov.au/def/datatype/QuantitativeRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL176C19 .
+<http://linked.data.gov.au/def/datatype/Percent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Result> .
+_:ub1bL1190C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/Sample> .
+_:ub1bL574C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL1033C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:ub1bL98C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL393C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL869C23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:ub1bL1083C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasMember> .
+<http://linked.data.gov.au/def/plot/x/hasResultQuality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:ub1bL300C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/datatype/Boolean> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL36C19 .
+_:ub1bL480C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/stratum> .
+_:ub1bL925C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:ub1bL955C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/plot/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.w3.org/ns/ssn/> .
+_:ub1bL275C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/mapScale> .
+<http://linked.data.gov.au/def/plot/observationTheme> <http://www.w3.org/2000/01/rdf-schema#label> "observation theme" .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL920C19 .
+_:ub1bL217C23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Person> .
+_:ub1bL745C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL925C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/plot/> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/dc/elements/1.1/> .
+_:ub1bL231C23 <http://schema.org/affiliation> <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> .
+<http://linked.data.gov.au/def/plot/x/Assemblage> <http://www.w3.org/2000/01/rdf-schema#label> "Organism assemblage" .
+_:ub1bL1132C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL950C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:fc0f59ebf7084421892dd9cbcde837ec4b4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/sosa/Observation> .
+_:ub1bL285C19 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:ub1bL408C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasSample> .
+_:ub1bL1185C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:ub1bL328C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL569C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/prov#startedAtTime> .
+_:ub1bL217C23 <http://schema.org/identifier> "https://orcid.org/0000-0002-6047-9864" .
+<http://linked.data.gov.au/def/plot/upperParameter> <http://www.w3.org/2000/01/rdf-schema#label> "upper parameter" .
+<http://linked.data.gov.au/def/plot/stratum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:ub1bL1058C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL589C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:fc0f59ebf7084421892dd9cbcde837ec4b1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:fc0f59ebf7084421892dd9cbcde837ec4b2 .
+_:ub1bL920C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#comment> .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL985C19 .
+_:ub1bL237C23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Person> .
+_:ub1bL458C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.opengis.net/ont/geosparql#hasGeometry> .
+_:ub1bL1200C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/tern/ontologies/org/Person> .
+<http://www.w3.org/ns/ssn/Input> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1238C19 .
+_:ub1bL502C19 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://www.w3.org/ns/ssn/Input> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/sosa/Sampling> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1195C19 .
+_:ub1bL480C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/plot/locationMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:ub1bL295C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL935C19 .
+_:ub1bL224C23 <http://schema.org/email> "s.guru@uq.edu.au" .
+<http://linked.data.gov.au/def/plot/SiteTaxon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL548C19 .
+<http://linked.data.gov.au/def/plot/x/TaxonAssignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL793C19 .
+_:ub1bL980C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:ub1bL950C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/Sample> .
+_:ub1bL357C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://linked.data.gov.au/def/plot/Site> .
+_:ub1bL423C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL1068C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL1180C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:ub1bL357C19 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/isPartOf> .
+_:ub1bL727C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL920C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL433C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/mapScale> .
+<http://linked.data.gov.au/def/plot/Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL280C19 .
+_:fc0f59ebf7084421892dd9cbcde837ec4b5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://linked.data.gov.au/def/plot/> <http://purl.org/dc/terms/license> <http://creativecommons.org/publicdomain/zero/1.0/> .
+_:fc0f59ebf7084421892dd9cbcde837ec4b6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:fc0f59ebf7084421892dd9cbcde837ec4b7 .
+<http://linked.data.gov.au/def/plot/x/FluxTower> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL727C19 .
+<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL373C19 .
+<http://linked.data.gov.au/def/plot/taxon> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:fc0f59ebf7084421892dd9cbcde837ec4b2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://linked.data.gov.au/def/plot/x/isLocationOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/locn#location> .
+<http://www.w3.org/ns/sosa/Sampling> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1215C19 .
+_:ub1bL950C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1152C19 .
+<http://linked.data.gov.au/def/plot/stratum> <http://www.w3.org/2000/01/rdf-schema#label> "stratum classification" .
+<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#comment> "Location where observations may be made\nMay be a plot, quadrat, transect, trap etc\n\nThis is a sub-class of sosa:Sample because a site should be designed to to be representative of an environmental system (which may be an ecosystem or bioregion) or zone (which might be a fiat zone such as a parcel or tract)" .
+_:ub1bL1142C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL217C23 <http://schema.org/affiliation> <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> .
+<http://linked.data.gov.au/def/plot/x/FluxTower> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Platform> .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1005C19 .
+_:ub1bL1091C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/hasInput> .
+<http://linked.data.gov.au/def/plot/> <http://purl.org/dc/terms/modified> "2020-05-18"^^<http://www.w3.org/2001/XMLSchema#date> .
+_:ub1bL1119C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/isResultOf> .
+_:ub1bL905C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL538C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/isSampleOf> .
+_:ub1bL84C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:ub1bL60C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL1200C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/x/sampler> .
+<http://linked.data.gov.au/def/plot/OrganismOccurence> <http://www.w3.org/2000/01/rdf-schema#comment> "Organism occurrence at some specified time and place. \n\n1. sub-class of Sample because observations of an organism occurrence are primarily interesting if they represents a commuity or assemblage\n2. sub-class of SpatialObject because it is bound to a specified location\n3. sub-class of TemporalEntity because it is bound to a specified time" .
+_:ub1bL237C23 <http://schema.org/affiliation> <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> .
+_:ub1bL897C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://linked.data.gov.au/def/plot/x/EcologicalCommunity> <http://www.w3.org/2000/01/rdf-schema#label> "Ecological Community" .
+<http://linked.data.gov.au/def/datatype/PercentRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:ub1bL1083C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL970C19 .
+<http://www.w3.org/ns/sosa/Result> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1114C19 .
+_:ub1bL1152C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL515C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL176C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:ub1bL206C19 <http://schema.org/email> "simon.cox@csiro.au" .
+<http://linked.data.gov.au/def/plot/x/EnvironmentalContinuant> <http://www.w3.org/2000/01/rdf-schema#label> "Environmental continuant" .
+<http://linked.data.gov.au/def/datatype/QuantitativeRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL161C19 .
+<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL393C19 .
+<http://linked.data.gov.au/def/plot/> <http://www.w3.org/2000/01/rdf-schema#label> "The Plot Ontology" .
+_:ub1bL137C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL443C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/mapsheetNumber> .
+_:ub1bL1167C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/siteVisit> .
+_:ub1bL280C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL1243C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL559C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/site> .
+<http://linked.data.gov.au/def/plot/SiteVisit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL574C19 .
+_:ub1bL584C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://linked.data.gov.au/def/plot/x/Survey> <http://www.w3.org/2004/02/skos/core#editorialNote> "Do we also need Survey to be classified by: - data theme?" .
+_:ub1bL732C19 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> <http://schema.org/url> <https://www.tern.org.au/> .
+_:ub1bL438C19 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://linked.data.gov.au/def/plot/datasetParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+_:ub1bL762C19 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://linked.data.gov.au/def/plot/site> <http://www.w3.org/2000/01/rdf-schema#label> "site" .
+<http://linked.data.gov.au/def/plot/x/EnvironmentalSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:fc0f59ebf7084421892dd9cbcde837ec4b9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:ub1bL41C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:ub1bL882C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/datasetParameter> .
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL897C19 .
+_:ub1bL423C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#label> .
+<http://www.w3.org/ns/sosa/Sampling> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1200C19 .
+<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#SpatialObject> .
+_:ub1bL1048C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/Observation> .
+<http://linked.data.gov.au/def/plot/upperParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+_:ub1bL142C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/datatype/unit> .
+_:ub1bL378C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/mapsheetNumber> .
+<http://linked.data.gov.au/def/plot/wasSubActivityOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://linked.data.gov.au/def/plot/hadSubActivity> .
+<http://linked.data.gov.au/def/plot/SiteTaxon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL543C19 .
+_:ub1bL940C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/usedProcedure> .
+<http://linked.data.gov.au/def/plot/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.publish.csiro.au/book/5230/> .
+<http://linked.data.gov.au/def/datatype/Percent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL89C19 .
+_:ub1bL118C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/plot/x/isLocationOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://linked.data.gov.au/def/plot/x/observer> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#wasAssociatedWith> .
+_:ub1bL328C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://www.w3.org/ns/ssn/ext/isMemberOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://linked.data.gov.au/def/plot/wasSubActivityOf> .
+<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL423C19 .
+_:ub1bL363C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://linked.data.gov.au/def/plot/SiteVisit> .
+_:ub1bL809C15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://linked.data.gov.au/def/plot/x/visitor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#wasAssociatedWith> .
+_:ub1bL793C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Sample> .
+_:ub1bL779C19 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/license> .
+_:ub1bL1220C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL383C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:ub1bL485C19 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://linked.data.gov.au/def/plot/SiteTaxon> <http://www.w3.org/2000/01/rdf-schema#label> "Single taxon community" .
+<http://linked.data.gov.au/def/plot/locationMethod> <http://www.w3.org/2000/01/rdf-schema#label> "Location method" .
+_:ub1bL185C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/plot/OrganismOccurence> <http://www.w3.org/2000/01/rdf-schema#label> "Organism Occurrence " .
+_:ub1bL89C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:ub1bL185C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/datatype/value> .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:ub1bL1063C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:ub1bL403C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/dcat#Dataset> .
+_:ub1bL156C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://qudt.org/schema/qudt/Unit> .
+_:ub1bL515C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/isSampleOf> .
+_:ub1bL751C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/prov#wasAssociatedWith> .
+_:ub1bL1147C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasSample> .
+_:ub1bL515C19 <http://www.w3.org/2000/01/rdf-schema#comment> "relation to the SiteTaxon for which this SiteStratumTaxon represents the community within a single stratum" .
+_:ub1bL317C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/plot/mapsheetNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL408C19 .
+<http://linked.data.gov.au/def/datatype/QuantitativeMeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL147C19 .
+_:ub1bL108C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL1048C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL323C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL521C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/stratum> .
+_:ub1bL579C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://linked.data.gov.au/def/plot/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://linked.data.gov.au/def/plot/SiteVisit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL584C19 .
+_:ub1bL773C19 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:fc0f59ebf7084421892dd9cbcde837ec4b7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/ssn/ext/ObservationCollection> .
+<http://linked.data.gov.au/def/datatype/QuantitativeRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Result> .
+_:ub1bL515C19 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://linked.data.gov.au/def/plot/SiteTaxon> .
+<http://linked.data.gov.au/def/plot/SiteTaxon> <http://www.w3.org/2000/01/rdf-schema#comment> "Community of a single taxon in vegetation ecosystem occurring at an observation site" .
+_:fc0f59ebf7084421892dd9cbcde837ec4b9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2003/01/geo/wgs84_pos#Point> .
+_:ub1bL210C20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
+<http://linked.data.gov.au/def/plot/x/TaxonAssignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://linked.data.gov.au/def/plot/SiteStratum> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL475C19 .
+_:ub1bL910C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/wasSubActivityOf> .
+<http://www.w3.org/ns/sosa/Result> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1119C19 .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL990C19 .
+_:ub1bL262C23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://usefulinc.com/ns/doap#Project> .
+_:ub1bL985C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasResult> .
+<http://linked.data.gov.au/def/plot/SiteTaxon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://linked.data.gov.au/def/datatype/PercentRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL98C19 .
+<http://linked.data.gov.au/def/plot/x/EnvironmentalSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Environmental region defined primarily by its function and membership" .
+_:ub1bL892C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:fc0f59ebf7084421892dd9cbcde837ec4b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/sosa/Sampling> .
+_:ub1bL1157C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/isResultOf> .
+<http://linked.data.gov.au/def/datatype/PercentRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL113C19 .
+<http://linked.data.gov.au/def/plot/Stratum> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:ub1bL373C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL995C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:ub1bL1078C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/observationTheme> .
+_:ub1bL161C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/datatype/Count> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL60C19 .
+_:ub1bL132C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL475C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://linked.data.gov.au/def/plot/Site> .
+_:ub1bL960C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/observationTheme> .
+_:ub1bL363C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/siteVisit> .
+<http://linked.data.gov.au/def/plot/> <http://purl.org/dc/terms/contributor> _:ub1bL237C23 .
+_:ub1bL388C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:ub1bL50C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#decimal> .
+_:ub1bL323C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2003/01/geo/wgs84_pos#Point> .
+<http://linked.data.gov.au/def/plot/stratum> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/type> .
+_:ub1bL166C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL757C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:ub1bL171C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/datatype/Text> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Result> .
+_:ub1bL496C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL965C19 .
+<http://www.w3.org/ns/sosa/Procedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:ub1bL745C19 <http://www.w3.org/2000/01/rdf-schema#comment> "aka spatialScope? - to associate a jurisdiction or IBRA or other named thing with the Survey" .
+<http://www.w3.org/ns/sosa/ObservationCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1078C19 .
+_:ub1bL965C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/site> .
+_:ub1bL1172C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:ub1bL762C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/plot/observationTheme> <http://www.w3.org/2004/02/skos/core#note> "Recommended usage is to create observation themes as a controlled vocabulary." .
+_:ub1bL1101C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL448C19 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:ub1bL935C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/observedProperty> .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL955C19 .
+<http://linked.data.gov.au/def/datatype/Count> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL50C19 .
+_:ub1bL280C19 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://linked.data.gov.au/def/plot/SiteStratumTaxon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL509C19 .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL945C19 .
+<http://www.w3.org/ns/ssn/ext/hasMember> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://linked.data.gov.au/def/plot/hadSubActivity> .
+_:ub1bL206C19 <http://schema.org/identifier> <https://orcid.org/0000-0002-3884-3420> .
+_:ub1bL224C23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Person> .
+<http://linked.data.gov.au/def/plot/> <http://www.w3.org/ns/prov#wasGeneratedBy> _:ub1bL262C23 .
+<http://linked.data.gov.au/def/plot/x/sampleType> <http://www.w3.org/2000/01/rdf-schema#label> "sample type classification" .
+<http://linked.data.gov.au/def/plot/SiteTaxon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL538C19 .
+<http://linked.data.gov.au/def/datatype/Count> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL55C19 .
+<http://linked.data.gov.au/def/plot/x/sampleLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://linked.data.gov.au/def/plot/Site> .
+<http://linked.data.gov.au/def/plot/Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL290C19 .
+_:ub1bL388C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1127C19 .
+<http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1162C19 .
+_:ub1bL1195C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.opengis.net/ont/geosparql#hasGeometry> .
+_:ub1bL36C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/datatype/value> .
+<http://linked.data.gov.au/def/plot/> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2006/time#> .
+_:ub1bL398C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/mapScale> .
+_:ub1bL548C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/plot/SiteStratum> <http://www.w3.org/2000/01/rdf-schema#label> "Vegetation stratum" .
+_:ub1bL166C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/datatype/max> .
+_:ub1bL892C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/datasetParameter> .
+_:ub1bL1210C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:ub1bL317C19 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://linked.data.gov.au/def/plot/x/EcologicalCommunity> .
+_:ub1bL543C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://linked.data.gov.au/def/plot/upperParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Link to the upper (global) parameter." .
+_:ub1bL559C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL237C23 <http://schema.org/name> "Mosheh Eliyahu" .
+_:ub1bL569C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/plot/Location> <http://www.w3.org/2000/01/rdf-schema#comment> "Location together with information about how it was obtained" .
+<http://linked.data.gov.au/def/plot/x/sampleLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:ub1bL1137C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#comment> .
+<http://linked.data.gov.au/def/plot/x/Survey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL773C19 .
+_:ub1bL74C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL413C19 .
+<http://linked.data.gov.au/def/plot/x/FluxTower> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL732C19 .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL905C19 .
+<http://linked.data.gov.au/def/plot/x/sampleType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Geometry> .
+_:ub1bL1248C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:ub1bL418C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:ub1bL990C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL1162C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:ub1bL1233C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/datatype/value> .
+<http://www.w3.org/ns/sosa/Procedure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1091C19 .
+_:ub1bL403C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/dcat#dataset> .
+<http://www.w3.org/ns/sosa/ObservationCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1063C19 .
+_:ub1bL113C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL985C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/plot/x/hasResultQuality> <http://www.w3.org/2000/01/rdf-schema#domain> _:ub1bL809C15 .
+_:ub1bL965C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/plot/x/floristics> <http://www.w3.org/2000/01/rdf-schema#domain> <http://linked.data.gov.au/def/plot/Site> .
+<http://linked.data.gov.au/def/plot/SiteStratumTaxon> <http://www.w3.org/2000/01/rdf-schema#comment> "Community of a single taxon in an identified stratum in a vegetation ecosystem occurring at an observation site" .
+_:ub1bL103C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://linked.data.gov.au/def/plot/OrganismOccurence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL317C19 .
+_:ub1bL285C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL224C23 <http://schema.org/affiliation> <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> .
+_:ub1bL732C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hosts> .
+_:ub1bL1000C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:ub1bL1248C19 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/description> .
+_:ub1bL538C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://linked.data.gov.au/def/plot/Site> .
+<http://linked.data.gov.au/def/plot/x/isLocationOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an individual location description to the resource (e.g. a plot:Site) that it relates to" .
+_:ub1bL190C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL767C19 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://www.w3.org/ns/ssn/Input> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1248C19 .
+<http://www.w3.org/ns/sosa/ObservationCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1068C19 .
+<http://linked.data.gov.au/def/datatype/Boolean> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://linked.data.gov.au/def/plot/x/floristics> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1137C19 .
+_:ub1bL443C19 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://linked.data.gov.au/def/plot/taxon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://linked.data.gov.au/def/plot/x/Survey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Activity> .
+_:ub1bL1018C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/site> .
+_:ub1bL1260C15 <http://www.w3.org/2002/07/owl#unionOf> _:fc0f59ebf7084421892dd9cbcde837ec4b10 .
+_:ub1bL915C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/resultTime> .
+<http://linked.data.gov.au/def/plot/mapsheetName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://linked.data.gov.au/def/plot/x/FluxTower> <http://www.w3.org/2000/01/rdf-schema#label> "Flux tower" .
+<http://linked.data.gov.au/def/plot/> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/prov#> .
+_:ub1bL142C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL1043C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/phenomenonTime> .
+_:ub1bL328C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.opengis.net/ont/geosparql#defaultGeometry> .
+_:ub1bL975C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/plot/x/EnvironmentalContinuant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
+<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#comment> "ownership is associated with the parent survey" .
+<http://linked.data.gov.au/def/plot/siteDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/ssn/ext/ObservationCollection> .
+_:ub1bL1119C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL290C19 <http://www.w3.org/2002/07/owl#minCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:ub1bL1043C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2006/time#Instant> .
+_:ub1bL1167C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL262C23 <http://usefulinc.com/ns/doap#repository> <https://github.com/ternaustralia/ontology_tern-plot> .
+_:ub1bL1172C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:ub1bL84C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/datatype/unit> .
+_:ub1bL398C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL368C19 .
+<http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1147C19 .
+_:ub1bL1137C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL1023C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL509C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/isSampleOf> .
+_:ub1bL897C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/upperParameter> .
+<http://linked.data.gov.au/def/plot/Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL300C19 .
+_:ub1bL955C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/tern/ontologies/org/Person> .
+<http://www.w3.org/ns/sosa/ObservationCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1023C19 .
+_:ub1bL1096C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/tern/ontologies/ssn/Method> .
+<http://linked.data.gov.au/def/plot/mapScale> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:ub1bL317C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/isSampleOf> .
+_:ub1bL206C19 <http://schema.org/memberOf> _:ub1bL210C20 .
+<http://linked.data.gov.au/def/plot/x/visitor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://linked.data.gov.au/def/plot/OrganismOccurence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2006/time#TemporalEntity> .
+_:ub1bL1205C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/tern/ontologies/ssn/Method> .
+<http://www.w3.org/ns/sosa/ObservationCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1033C19 .
+<http://linked.data.gov.au/def/plot/siteVisit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:ub1bL36C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://linked.data.gov.au/def/plot/> <http://www.w3.org/2002/07/owl#versionIRI> <http://linked.data.gov.au/def/plot/0.0.2> .
+_:ub1bL290C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/locationMethod> .
+_:ub1bL732C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL363C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/plot/SiteVisit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL589C19 .
+<http://linked.data.gov.au/def/plot/hadSubActivity> <http://www.w3.org/2000/01/rdf-schema#label> "pointer to child activity" .
+<http://linked.data.gov.au/def/datatype/Count> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:ub1bL428C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL793C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/plot/x/sampler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL882C19 .
+<http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1157C19 .
+_:ub1bL930C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/phenomenonTime> .
+<http://www.w3.org/ns/sosa/Sampling> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1185C19 .
+_:ub1bL485C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/isFeatureOfInterestOf> .
+<http://www.w3.org/ns/sosa/Sampling> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1210C19 .
+_:ub1bL262C23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
+_:ub1bL960C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/tern/ontologies/ssn/ObservationTheme> .
+_:ub1bL1101C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:ub1bL930C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2006/time#Instant> .
+_:ub1bL1018C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/plot/x/Survey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL751C19 .
+_:ub1bL915C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL526C19 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:ub1bL351C19 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/hasPart> .
+<http://linked.data.gov.au/def/plot/x/isLocationOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://linked.data.gov.au/def/plot/Location> .
+_:ub1bL745C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/locn#location> .
+_:ub1bL1238C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:ub1bL231C23 <http://schema.org/email> "j.sanchezgonzalez@uq.edu.au" .
+<http://www.w3.org/ns/sosa/Sampling> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1205C19 .
+<http://linked.data.gov.au/def/datatype/PercentRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL118C19 .
+_:ub1bL970C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/wasSubActivityOf> .
+_:ub1bL448C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL548C19 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:ub1bL210C20 <http://schema.org/name> "CSIRO" .
+_:ub1bL190C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://linked.data.gov.au/def/plot/x/Survey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://linked.data.gov.au/def/plot/SiteStratumTaxon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL496C19 .
+_:ub1bL176C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/datatype/unit> .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1010C19 .
+<http://linked.data.gov.au/def/plot/x/sampler> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#wasAssociatedWith> .
+<http://linked.data.gov.au/def/plot/SiteStratumTaxon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Sample> .
+<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL383C19 .
+<http://linked.data.gov.au/def/plot/hadSubActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+_:ub1bL333C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/taxon> .
+_:ub1bL89C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/datatype/value> .
+<http://linked.data.gov.au/def/plot/> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/dcat#> .
+_:ub1bL1114C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL357C19 .
+_:ub1bL458C19 <http://www.w3.org/2002/07/owl#someValuesFrom> _:ub1bL461C26 .
+_:ub1bL594C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/hadSubActivity> .
+_:ub1bL1028C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
+_:ub1bL1023C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/wasSubActivityOf> .
+<http://linked.data.gov.au/def/plot/x/sampleLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://linked.data.gov.au/def/plot/> <http://purl.org/dc/terms/contributor> _:ub1bL231C23 .
+_:ub1bL1043C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/plot/Stratum> <http://www.w3.org/2000/01/rdf-schema#comment> "Structural element covering a recognisable height range in vegetation ecosystem" .
+_:ub1bL1180C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:ub1bL1038C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:ub1bL1114C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/tern/ontologies/org/Person> .
+_:ub1bL727C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/locn#location> .
+<http://linked.data.gov.au/def/datatype/Percent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:ub1bL69C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://qudt.org/schema/qudt/Unit> .
+_:ub1bL127C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/datatype/unit> .
+<http://linked.data.gov.au/def/plot/SiteStratum> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL485C19 .
+<http://linked.data.gov.au/def/plot/taxon> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/type> .
+_:fc0f59ebf7084421892dd9cbcde837ec4b10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:fc0f59ebf7084421892dd9cbcde837ec4b11 .
+_:ub1bL521C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:ub1bL1238C19 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/description> .
+<http://linked.data.gov.au/def/plot/x/isLocationOf> <http://www.w3.org/2000/01/rdf-schema#label> "describes the location of" .
+<http://linked.data.gov.au/def/plot/x/Survey> <http://www.w3.org/2000/01/rdf-schema#label> "Survey" .
+<http://linked.data.gov.au/def/plot/x/sampler> <http://www.w3.org/2000/01/rdf-schema#label> "Sampler" .
+<http://linked.data.gov.au/def/datatype/QuantitativeMeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL132C19 .
+_:ub1bL98C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://qudt.org/schema/qudt/Unit> .
+_:ub1bL1033C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#comment> .
+<http://linked.data.gov.au/def/plot/x/EnvironmentalSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linked.data.gov.au/def/plot/x/EnvironmentalContinuant> .
+_:ub1bL1157C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL55C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/datatype/value> .
+_:ub1bL569C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
+_:ub1bL589C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://linked.data.gov.au/def/plot/x/Assemblage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:ub1bL461C26 <http://www.w3.org/2002/07/owl#unionOf> _:fc0f59ebf7084421892dd9cbcde837ec4b1 .
+_:ub1bL745C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:ub1bL443C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL1142C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:ub1bL1132C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://linked.data.gov.au/def/plot/SiteVisit> .
+<http://linked.data.gov.au/def/plot/observationTheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.opengis.net/ont/geosparql#hasGeometry> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/locn#geometry> .
+_:ub1bL357C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL589C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:ub1bL1048C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasMember> .
+<http://linked.data.gov.au/def/plot/x/EnvironmentalSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+_:ub1bL1073C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/datatype/QuantitativeMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:ub1bL594C19 <http://www.w3.org/2002/07/owl#someValuesFrom> _:ub1bL597C26 .
+_:ub1bL970C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:ub1bL1233C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#decimal> .
+_:ub1bL793C19 <http://www.w3.org/2002/07/owl#hasValue> <http://www.tern.org.au/cv/op/Taxon-identity> .
+_:ub1bL910C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://linked.data.gov.au/def/plot/SiteVisit> .
+<http://linked.data.gov.au/def/plot/SiteVisit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://linked.data.gov.au/def/datatype/Percent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL79C19 .
+_:ub1bL453C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.opengis.net/ont/geosparql#hasGeometry> .
+_:fc0f59ebf7084421892dd9cbcde837ec4b3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:fc0f59ebf7084421892dd9cbcde837ec4b4 .
+<http://linked.data.gov.au/def/plot/SiteVisit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL594C19 .
+_:ub1bL502C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/isSampleOf> .
+_:ub1bL1068C19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:ub1bL1058C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/observationTheme> .
+_:ub1bL79C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.w3.org/ns/locn#Geometry> <http://www.w3.org/2002/07/owl#equivalentClass> _:ub1bL869C23 .
+_:ub1bL147C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL1068C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/wasSubActivityOf> .
+<http://linked.data.gov.au/def/plot/x/Survey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL767C19 .
+_:ub1bL36C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL295C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.opengis.net/ont/geosparql#hasGeometry> .
+_:ub1bL132C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/datatype/uncertainty> .
+<http://linked.data.gov.au/def/plot/Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL453C19 .
+_:ub1bL564C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://www.w3.org/ns/sosa/ObservationCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL1018C19 .
+_:ub1bL1185C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL925C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:ub1bL378C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL224C23 <http://schema.org/identifier> "https://orcid.org/0000-0002-3903-254X" .
+_:ub1bL887C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/upperParameter> .
+_:ub1bL351C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://linked.data.gov.au/def/plot/Site> .
+_:ub1bL1053C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://linked.data.gov.au/def/plot/mapsheetName> <http://www.w3.org/2000/01/rdf-schema#label> "map sheet name" .
+<http://usefulinc.com/ns/doap#repository> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#used> .
+_:fc0f59ebf7084421892dd9cbcde837ec4b8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:fc0f59ebf7084421892dd9cbcde837ec4b9 .
+_:ub1bL79C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#decimal> .
+_:ub1bL1091C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/ssn/Input> .
+<http://linked.data.gov.au/def/datatype/QuantitativeMeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL137C19 .
+_:ub1bL584C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/plot/site> .
+<http://linked.data.gov.au/def/plot/mapsheetNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+_:ub1bL55C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://linked.data.gov.au/def/plot/siteDescription> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/sosa/isFeatureOfInterestOf> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#Point> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/locn#Geometry> .
+<http://linked.data.gov.au/def/datatype/QuantitativeMeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:ub1bL127C19 .
+_:ub1bL413C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/tern/ontologies/ssn/Method> .
+<http://www.w3.org/ns/locn#geometry> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/sosa/hasResult> .
+_:ub1bL1195C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/tern/ontologies/loc/Point> .
+<http://linked.data.gov.au/def/plot/wasSubActivityOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#wasInformedBy> .
+<http://linked.data.gov.au/def/plot/SiteStratum> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Sample> .
+_:ub1bL767C19 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> .
+_:ub1bL935C19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/ns/sosa/ObservableProperty> .
+_:ub1bL751C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL433C19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:ub1bL156C19 <http://www.w3.org/2002/07/owl#onProperty> <http://linked.data.gov.au/def/datatype/unit> .
 

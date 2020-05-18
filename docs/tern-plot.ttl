@@ -1,12 +1,20 @@
 # baseURI: http://linked.data.gov.au/def/plot/
 # imports: http://purl.org/dc/elements/1.1/
+# imports: http://www.qudt.org/2.1/schema/qudt
+# imports: http://www.w3.org/2006/time#
+# imports: http://www.w3.org/ns/dcat#
+# imports: http://www.w3.org/ns/prov#
 # imports: http://www.w3.org/ns/ssn/ext
+# imports: https://raw.githubusercontent.com/AGLDWG/datatype-ont/master/rdf/datatype.rdf
+# imports: https://w3id.org/tern/ontologies/loc/
+# imports: https://w3id.org/tern/ontologies/ssn/
 # prefix: plot
 
 @prefix : <http://linked.data.gov.au/def/plot/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix doap: <http://usefulinc.com/ns/doap#> .
 @prefix geosparql: <http://www.opengis.net/ont/geosparql#> .
+@prefix loc: <https://w3id.org/tern/ontologies/loc/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix plot: <http://linked.data.gov.au/def/plot/> .
 @prefix plot-x: <http://linked.data.gov.au/def/plot/x/> .
@@ -14,6 +22,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sdo: <http://schema.org/> .
+@prefix schema: <http://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix ssn: <http://www.w3.org/ns/ssn/> .
@@ -21,6 +30,176 @@
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix w3cgeo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linked.data.gov.au/def/datatype/Boolean>
+  a owl:Class ;
+  rdfs:subClassOf sosa:Result ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom xsd:boolean ;
+      owl:onProperty <http://linked.data.gov.au/def/datatype/value> ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty <http://linked.data.gov.au/def/datatype/value> ;
+    ] ;
+.
+<http://linked.data.gov.au/def/datatype/Count>
+  a owl:Class ;
+  rdfs:subClassOf sosa:Result ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom xsd:decimal ;
+      owl:onProperty <http://linked.data.gov.au/def/datatype/uncertainty> ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom xsd:integer ;
+      owl:onProperty <http://linked.data.gov.au/def/datatype/value> ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty <http://linked.data.gov.au/def/datatype/value> ;
+    ] ;
+.
+<http://linked.data.gov.au/def/datatype/Percent>
+  a owl:Class ;
+  rdfs:subClassOf sosa:Result ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom <http://qudt.org/schema/qudt/Unit> ;
+      owl:onProperty <http://linked.data.gov.au/def/datatype/unit> ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom xsd:decimal ;
+      owl:onProperty <http://linked.data.gov.au/def/datatype/uncertainty> ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom xsd:decimal ;
+      owl:onProperty <http://linked.data.gov.au/def/datatype/value> ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty <http://linked.data.gov.au/def/datatype/unit> ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty <http://linked.data.gov.au/def/datatype/value> ;
+    ] ;
+.
+<http://linked.data.gov.au/def/datatype/PercentRange>
+  a owl:Class ;
+  rdfs:subClassOf sosa:Result ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom <http://qudt.org/schema/qudt/Unit> ;
+      owl:onProperty <http://linked.data.gov.au/def/datatype/unit> ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom xsd:decimal ;
+      owl:onProperty <http://linked.data.gov.au/def/datatype/uncertainty> ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom xsd:decimal ;
+      owl:onProperty <http://linked.data.gov.au/def/datatype/value> ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty <http://linked.data.gov.au/def/datatype/unit> ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty <http://linked.data.gov.au/def/datatype/value> ;
+    ] ;
+.
+<http://linked.data.gov.au/def/datatype/QuantitativeMeasure>
+  a owl:Class ;
+  rdfs:subClassOf sosa:Result ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom <http://qudt.org/schema/qudt/Unit> ;
+      owl:onProperty <http://linked.data.gov.au/def/datatype/unit> ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom xsd:decimal ;
+      owl:onProperty <http://linked.data.gov.au/def/datatype/uncertainty> ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom xsd:integer ;
+      owl:onProperty <http://linked.data.gov.au/def/datatype/value> ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty <http://linked.data.gov.au/def/datatype/unit> ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty <http://linked.data.gov.au/def/datatype/value> ;
+    ] ;
+.
+<http://linked.data.gov.au/def/datatype/QuantitativeRange>
+  a owl:Class ;
+  rdfs:subClassOf sosa:Result ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom <http://qudt.org/schema/qudt/Unit> ;
+      owl:onProperty <http://linked.data.gov.au/def/datatype/unit> ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom xsd:decimal ;
+      owl:onProperty <http://linked.data.gov.au/def/datatype/uncertainty> ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty <http://linked.data.gov.au/def/datatype/max> ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty <http://linked.data.gov.au/def/datatype/min> ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty <http://linked.data.gov.au/def/datatype/unit> ;
+    ] ;
+.
+<http://linked.data.gov.au/def/datatype/Text>
+  a owl:Class ;
+  rdfs:subClassOf sosa:Result ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty <http://linked.data.gov.au/def/datatype/value> ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty <http://linked.data.gov.au/def/datatype/value> ;
+    ] ;
+.
+
+<https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66>
+  schema:alternateName "TERN" ;
+  schema:name "Terrestrial Ecosystem Research Network" ;
+  schema:url <https://www.tern.org.au/> ;
+.
 
 plot:
   a owl:Ontology ;
@@ -36,22 +215,58 @@ plot:
         ] ;
       sdo:name "Simon J.D.Cox" ;
     ] ;
+  dcterms:contributor [
+    a schema:Person ;
+    schema:email "e.chuc@uq.edu.au" ;
+    schema:identifier "https://orcid.org/0000-0002-6047-9864" ;
+    schema:name "Edmond Chuc" ;
+    schema:affiliation <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> ;
+  ] ;
+  dcterms:contributor [
+    a schema:Person ;
+    schema:email "s.guru@uq.edu.au" ;
+    schema:identifier "https://orcid.org/0000-0002-3903-254X" ;
+    schema:name "Siddeswara Guru" ;
+    schema:affiliation <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> ;
+  ] ;
+  dcterms:contributor [
+    a schema:Person ;
+    schema:email "j.sanchezgonzalez@uq.edu.au" ;
+    schema:name "Javier Sanchez Gonzalez" ;
+    schema:affiliation <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> ;
+  ] ;
+  dcterms:contributor [
+    a schema:Person ;
+    schema:email "mosheh.eliyahu@adelaide.edu.au" ;
+    schema:name "Mosheh Eliyahu" ;
+    schema:affiliation <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> ;
+  ] ;
+  dcterms:publisher <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> ;
   dcterms:description """This vocabulary provides a set of classes to support capture of plot- and site-based ecological survey data. It is primary related to vegetation surveys, following the methdologies outlined in the Australian Soil and Land Survey Field Handbook. 
 
-PLOT is technically an extension to the W3C SSN/SOSA vocabulary, and also uses elements from the SSN-EXT ontology.""" ;
+Plot is technically an extension to the W3C SSN/SOSA vocabulary, and also uses elements from the SSN Extensions ontology.""" ;
   dcterms:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
-  dcterms:modified "2019-06-19"^^xsd:date ;
-  rdfs:label "The PLOT ontology" ;
+  dcterms:modified "2020-05-18"^^xsd:date ;
+  rdfs:label "The Plot Ontology" ;
   rdfs:seeAlso <https://www.publish.csiro.au/book/5230/> ;
   rdfs:seeAlso <https://www.w3.org/TR/vocab-ssn-ext/> ;
   rdfs:seeAlso <https://www.w3.org/ns/ssn/> ;
   owl:imports <http://purl.org/dc/elements/1.1/> ;
+  owl:imports <http://www.qudt.org/2.1/schema/qudt> ;
+  owl:imports time: ;
+  owl:imports <http://www.w3.org/ns/dcat#> ;
+  owl:imports prov: ;
   owl:imports ssn:ext ;
+  owl:imports <https://raw.githubusercontent.com/AGLDWG/datatype-ont/master/rdf/datatype.rdf> ;
+  owl:imports loc: ;
+  owl:imports <https://w3id.org/tern/ontologies/ssn/> ;
   prov:wasGeneratedBy [
       a doap:Project ;
       a prov:Activity ;
       doap:repository <https://github.com/ternaustralia/ontology_tern-plot> ;
     ] ;
+  owl:versionIRI <http://linked.data.gov.au/def/plot/0.0.2> ;
+  owl:versionInfo "0.0.2" ;
 .
 plot:Location
   a owl:Class ;
@@ -131,28 +346,9 @@ May be a plot, quadrat, transect, trap etc
 This is a sub-class of sosa:Sample because a site should be designed to to be representative of an environmental system (which may be an ecosystem or bioregion) or zone (which might be a fiat zone such as a parcel or tract)""" ;
   rdfs:comment "ownership is associated with the parent survey" ;
   rdfs:comment "rights and conditions are associated with the parnet survey" ;
-  rdfs:label "Site or location" ;
+  rdfs:label "Site" ;
   rdfs:subClassOf geosparql:SpatialObject ;
   rdfs:subClassOf sosa:Sample ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      rdfs:comment "A Site is established to sample some biome, bioregion, ecosystem, etc." ;
-      owl:onProperty sosa:isSampleOf ;
-      owl:someValuesFrom [
-          a owl:Class ;
-          owl:unionOf (
-              plot-x:EnvironmentalSystem
-              plot-x:EnvironmentalZone
-            ) ;
-        ] ;
-    ] ;
-  rdfs:subClassOf [
-      a owl:Restriction ;
-      rdfs:comment """A site is established in the context of a site-visit, which is in turn part of a survey.
-Different visits might create sites in the same place with different identifiers""" ;
-      owl:allValuesFrom plot:SiteVisit ;
-      owl:onProperty sosa:isResultOf ;
-    ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       rdfs:comment "A site may be part of a bigger site -e.g. points within a plot" ;
@@ -167,28 +363,109 @@ Different visits might create sites in the same place with different identifiers
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:allValuesFrom plot:Location ;
-      owl:onProperty plot:hasLocation ;
+      owl:allValuesFrom plot:SiteVisit ;
+      owl:onProperty plot:siteVisit ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:allValuesFrom prov:Activity ;
-      owl:onProperty prov:wasGeneratedBy ;
+      owl:allValuesFrom geosparql:Feature ;
+      owl:onProperty sosa:hasUltimateFeatureOfInterest ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty plot:mapsheetName ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty plot:mapsheetNumber ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty dcterms:identifier ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty rdfs:comment ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty rdfs:label ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom skos:Concept ;
+      owl:onProperty plot:mapScale ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom <http://www.w3.org/ns/dcat#Dataset> ;
+      owl:onProperty <http://www.w3.org/ns/dcat#dataset> ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom sosa:Sample ;
+      owl:onProperty sosa:hasSample ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom <https://w3id.org/tern/ontologies/ssn/Method> ;
+      owl:onProperty plot:locationMethod ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty dcterms:created ;
+      owl:onProperty dcterms:identifier ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty rdfs:label ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty <http://www.w3.org/ns/dcat#dataset> ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty plot:mapScale ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty plot:mapsheetName ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty plot:mapsheetNumber ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty plot:siteDescription ;
+      owl:onProperty plot:siteVisit ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:onProperty dcterms:relation ;
-      owl:someValuesFrom plot:Site ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty geosparql:hasGeometry ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:onProperty geosparql:hasGeometry ;
+      owl:someValuesFrom [
+          a owl:Class ;
+          owl:unionOf (
+              loc:Point
+              loc:Polygon
+            ) ;
+        ] ;
     ] ;
 .
 plot:SiteStratum
@@ -282,15 +559,38 @@ plot:SiteVisit
   rdfs:subClassOf prov:Activity ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      rdfs:comment "link from site-visit to survey of which it is a part" ;
-      owl:onProperty plot:wasSubActivityOf ;
-      owl:someValuesFrom plot-x:Survey ;
+      owl:allValuesFrom plot:Site ;
+      owl:onProperty plot:site ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      rdfs:comment "link to the visited site" ;
-      owl:allValuesFrom plot:Site ;
-      owl:onProperty sosa:hasFeatureOfInterest ;
+      owl:allValuesFrom xsd:dateTime ;
+      owl:onProperty prov:startedAtTime ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom xsd:dateTime ;
+      owl:onProperty prov:startedAtTime ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty rdfs:comment ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty rdfs:label ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty plot:site ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty rdfs:label ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
@@ -300,7 +600,7 @@ plot:SiteVisit
           owl:unionOf (
               sosa:Sampling
               sosa:Observation
-              ssn-ext:ObservationCollection
+              sosa:ObservationCollection
             ) ;
         ] ;
     ] ;
@@ -310,6 +610,11 @@ plot:Stratum
   rdfs:comment "Structural element covering a recognisable height range in vegetation ecosystem" ;
   rdfs:label "Vegetation strata classification " ;
   rdfs:subClassOf skos:Concept ;
+.
+plot:datasetParameter
+  a rdf:Property ;
+  rdfs:comment "Link to the dataset-level parameter." ;
+  rdfs:label "dataset parameter" ;
 .
 plot:hadSubActivity
   a owl:ObjectProperty ;
@@ -332,19 +637,35 @@ plot:mapScale
 .
 plot:mapsheetName
   a owl:DatatypeProperty ;
-  rdfs:label "Mapsheet" ;
+  rdfs:label "map sheet name" ;
   rdfs:range xsd:string ;
 .
 plot:mapsheetNumber
   a owl:DatatypeProperty ;
-  rdfs:label "Mapsheet" ;
+  rdfs:label "map sheet number" ;
   rdfs:range xsd:string ;
+.
+plot:observationTheme
+  a owl:ObjectProperty ;
+  rdfs:comment "Link to an observation theme." ;
+  rdfs:label "observation theme" ;
+  skos:note "Recommended usage is to create observation themes as a controlled vocabulary." ;
+.
+plot:site
+  a owl:ObjectProperty ;
+  rdfs:comment "Link to a site." ;
+  rdfs:label "site" ;
 .
 plot:siteDescription
   a owl:ObjectProperty ;
   rdfs:domain plot:Site ;
   rdfs:range ssn-ext:ObservationCollection ;
   rdfs:subPropertyOf sosa:isFeatureOfInterestOf ;
+.
+plot:siteVisit
+  a owl:ObjectProperty ;
+  rdfs:comment "Link to a site visit." ;
+  rdfs:label "site visit" ;
 .
 plot:stratum
   a owl:ObjectProperty ;
@@ -357,6 +678,11 @@ plot:taxon
   rdfs:label "taxon classification" ;
   rdfs:range skos:Concept ;
   rdfs:subPropertyOf dcterms:type ;
+.
+plot:upperParameter
+  a rdf:Property ;
+  rdfs:comment "Link to the upper (global) parameter." ;
+  rdfs:label "upper parameter" ;
 .
 plot:wasSubActivityOf
   a owl:ObjectProperty ;
@@ -551,6 +877,380 @@ w3cgeo:Point
 .
 <http://www.w3.org/ns/locn#geometry>
   rdfs:subPropertyOf sosa:hasResult ;
+.
+sosa:ObservableProperty
+  a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom <https://w3id.org/tern/ontologies/ssn/Parameter> ;
+      owl:onProperty plot:datasetParameter ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom <https://w3id.org/tern/ontologies/ssn/Parameter> ;
+      owl:onProperty plot:upperParameter ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty plot:datasetParameter ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty plot:upperParameter ;
+    ] ;
+.
+sosa:Observation
+  a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom plot:Site ;
+      owl:onProperty plot:site ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom plot:SiteVisit ;
+      owl:onProperty plot:wasSubActivityOf ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom xsd:dateTime ;
+      owl:onProperty sosa:resultTime ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty rdfs:comment ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty rdfs:label ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom time:Instant ;
+      owl:onProperty sosa:phenomenonTime ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom sosa:ObservableProperty ;
+      owl:onProperty sosa:observedProperty ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom sosa:Procedure ;
+      owl:onProperty sosa:usedProcedure ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom sosa:Result ;
+      owl:onProperty sosa:hasResult ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom sosa:Sample ;
+      owl:onProperty sosa:hasFeatureOfInterest ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom <https://w3id.org/tern/ontologies/org/Person> ;
+      owl:onProperty plot-x:observer ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom <https://w3id.org/tern/ontologies/ssn/ObservationTheme> ;
+      owl:onProperty plot:observationTheme ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty plot:site ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty plot:wasSubActivityOf ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty rdfs:label ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sosa:hasFeatureOfInterest ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sosa:hasResult ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sosa:observedProperty ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sosa:phenomenonTime ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sosa:resultTime ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sosa:usedProcedure ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty plot:observationTheme ;
+    ] ;
+.
+sosa:ObservationCollection
+  a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom plot:Site ;
+      owl:onProperty plot:site ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom plot:SiteVisit ;
+      owl:onProperty plot:wasSubActivityOf ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom xsd:dateTime ;
+      owl:onProperty sosa:resultTime ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty rdfs:comment ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty rdfs:label ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom time:Instant ;
+      owl:onProperty sosa:phenomenonTime ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom sosa:Observation ;
+      owl:onProperty sosa:hasMember ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom sosa:Sample ;
+      owl:onProperty sosa:hasSample ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom <https://w3id.org/tern/ontologies/ssn/ObservationTheme> ;
+      owl:onProperty plot:observationTheme ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty plot:site ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty plot:wasSubActivityOf ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty rdfs:label ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty plot:observationTheme ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sosa:hasMember ;
+    ] ;
+.
+sosa:Procedure
+  a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom ssn:Input ;
+      owl:onProperty ssn:hasInput ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom <https://w3id.org/tern/ontologies/ssn/Method> ;
+      owl:onProperty <http://linked.data.gov.au/def/datatype/vocabulary> ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty <http://linked.data.gov.au/def/datatype/vocabulary> ;
+    ] ;
+.
+sosa:Result
+  a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom sosa:Observation ;
+      owl:onProperty sosa:isResultOf ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom <https://w3id.org/tern/ontologies/org/Person> ;
+      owl:onProperty prov:wasAttributedTo ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sosa:isResultOf ;
+    ] ;
+.
+sosa:Sample
+  a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom plot:Site ;
+      owl:onProperty plot:site ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom plot:SiteVisit ;
+      owl:onProperty plot:siteVisit ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty rdfs:comment ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty rdfs:label ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom sosa:Sample ;
+      owl:onProperty sosa:hasSample ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom sosa:Sample ;
+      owl:onProperty sosa:isSampleOf ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom sosa:Sampling ;
+      owl:onProperty sosa:isResultOf ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty plot:site ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty plot:siteVisit ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty rdfs:label ;
+    ] ;
+.
+sosa:Sampling
+  a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty rdfs:comment ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty rdfs:label ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom sosa:Sample ;
+      owl:onProperty sosa:hasResult ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom loc:Point ;
+      owl:onProperty geosparql:hasGeometry ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom <https://w3id.org/tern/ontologies/org/Person> ;
+      owl:onProperty plot-x:sampler ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom <https://w3id.org/tern/ontologies/ssn/Method> ;
+      owl:onProperty sosa:usedProcedure ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty rdfs:label ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sosa:hasResult ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty sosa:usedProcedure ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty geosparql:hasGeometry ;
+    ] ;
+.
+ssn:Input
+  a owl:Class ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom xsd:decimal ;
+      owl:onProperty <http://linked.data.gov.au/def/datatype/value> ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom xsd:string ;
+      owl:onProperty dcterms:description ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty <http://linked.data.gov.au/def/datatype/value> ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dcterms:description ;
+    ] ;
 .
 ssn-ext:hasMember
   rdfs:subPropertyOf plot:hadSubActivity ;
