@@ -1,0 +1,506 @@
+# baseURI: http://linked.data.gov.au/def/plot/shapes/
+# imports: http://datashapes.org/dash
+# imports: http://linked.data.gov.au/def/plot/
+
+@prefix : <http://linked.data.gov.au/def/plot/shapes/> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix plot: <http://linked.data.gov.au/def/plot/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:
+  a owl:Ontology ;
+  owl:imports <http://datashapes.org/dash> ;
+  owl:imports plot: ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+:Boolean
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "Boolean" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://linked.data.gov.au/def/datatype/value> ;
+      sh:datatype xsd:boolean ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
+  sh:targetClass <http://linked.data.gov.au/def/datatype/Boolean> ;
+.
+:Count
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "Count" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://linked.data.gov.au/def/datatype/uncertainty> ;
+      sh:datatype xsd:decimal ;
+      sh:maxCount 1 ;
+      sh:name "uncertainty" ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://linked.data.gov.au/def/datatype/value> ;
+      sh:datatype xsd:decimal ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
+  sh:targetClass <http://linked.data.gov.au/def/datatype/Count> ;
+.
+:Dimension
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "Dimension" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://linked.data.gov.au/def/datatype/unit> ;
+      sh:class <http://qudt.org/schema/qudt/Unit> ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "unit" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path plot:length ;
+      sh:datatype xsd:decimal ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path plot:width ;
+      sh:datatype xsd:decimal ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+    ] ;
+  sh:targetClass plot:Dimension ;
+.
+:Percent
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "Percent" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://linked.data.gov.au/def/datatype/uncertainty> ;
+      sh:datatype xsd:decimal ;
+      sh:maxCount 1 ;
+      sh:name "uncertainty" ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://linked.data.gov.au/def/datatype/unit> ;
+      sh:class <http://qudt.org/schema/qudt/Unit> ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "unit" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://linked.data.gov.au/def/datatype/value> ;
+      sh:datatype xsd:decimal ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
+  sh:targetClass <http://linked.data.gov.au/def/datatype/Percent> ;
+.
+:PercentRange
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "Percent range" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://linked.data.gov.au/def/datatype/uncertainty> ;
+      sh:datatype xsd:decimal ;
+      sh:maxCount 1 ;
+      sh:name "uncertainty" ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://linked.data.gov.au/def/datatype/unit> ;
+      sh:class <http://qudt.org/schema/qudt/Unit> ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "unit" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://linked.data.gov.au/def/datatype/value> ;
+      sh:datatype xsd:decimal ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
+  sh:targetClass <http://linked.data.gov.au/def/datatype/PercentRange> ;
+.
+:Point
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "Point" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://www.opengis.net/ont/geosparql#asWKT> ;
+      sh:datatype <https://w3id.org/tern/ontologies/loc/wktLiteral> ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "as WKT" ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <https://w3id.org/tern/ontologies/loc/altitude> ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <https://w3id.org/tern/ontologies/loc/elevation> ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <https://w3id.org/tern/ontologies/loc/latitude> ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <https://w3id.org/tern/ontologies/loc/longitude> ;
+      sh:datatype xsd:double ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+    ] ;
+  sh:targetClass <https://w3id.org/tern/ontologies/loc/Point> ;
+.
+:PropertyValue
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "Property value" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://schema.org/description> ;
+      sh:datatype xsd:string ;
+      sh:maxCount 1 ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://schema.org/name> ;
+      sh:datatype xsd:string ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path sosa:hasResult ;
+      sh:class sosa:Result ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "has result" ;
+    ] ;
+  sh:targetClass plot:PropertyValue ;
+.
+:QuantitativeMeasure
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "Quantitative measure" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://linked.data.gov.au/def/datatype/uncertainty> ;
+      sh:datatype xsd:decimal ;
+      sh:maxCount 1 ;
+      sh:name "uncertainty" ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://linked.data.gov.au/def/datatype/unit> ;
+      sh:class <http://qudt.org/schema/qudt/Unit> ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "unit" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://linked.data.gov.au/def/datatype/value> ;
+      sh:datatype xsd:decimal ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
+  sh:targetClass <http://linked.data.gov.au/def/datatype/QuantitativeMeasure> ;
+.
+:QuantitativeRange
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "Quantitative range" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://linked.data.gov.au/def/datatype/max> ;
+      sh:datatype xsd:decimal ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "max" ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://linked.data.gov.au/def/datatype/min> ;
+      sh:datatype xsd:decimal ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "min" ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://linked.data.gov.au/def/datatype/uncertainty> ;
+      sh:datatype xsd:decimal ;
+      sh:maxCount 1 ;
+      sh:name "uncertainty" ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://linked.data.gov.au/def/datatype/unit> ;
+      sh:class <http://qudt.org/schema/qudt/Unit> ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "unit" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:targetClass <http://linked.data.gov.au/def/datatype/QuantitativeMeasure> ;
+.
+:Site
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "Site" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path plot:area ;
+      sh:class <http://linked.data.gov.au/def/datatype/QuantitativeMeasure> ;
+      sh:maxCount 1 ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path plot:dimension ;
+      sh:class plot:Dimension ;
+      sh:maxCount 1 ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path plot:locationDescription ;
+      sh:datatype xsd:string ;
+      sh:maxCount 1 ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path plot:locationMethod ;
+      sh:class <https://w3id.org/tern/ontologies/ssn/Method> ;
+      sh:maxCount 1 ;
+      sh:name "location method" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path plot:siteDescription ;
+      sh:datatype xsd:string ;
+      sh:maxCount 1 ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path plot:siteVisit ;
+      sh:class plot:SiteVisit ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://purl.org/dc/terms/hasPart> ;
+      sh:class plot:SiteVisit ;
+      sh:name "has part" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://purl.org/dc/terms/identifier> ;
+      sh:datatype xsd:string ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "identifier" ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://purl.org/dc/terms/isPartOf> ;
+      sh:class plot:SiteVisit ;
+      sh:name "is part of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://schema.org/additionalProperty> ;
+      sh:class plot:PropertyValue ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://www.opengis.net/ont/geosparql#hasGeometry> ;
+      sh:minCount 1 ;
+      sh:name "has geometry" ;
+      sh:nodeKind sh:BlankNode ;
+      sh:or (
+          [
+            sh:class <https://w3id.org/tern/ontologies/loc/Point> ;
+          ]
+          [
+            sh:class <https://w3id.org/tern/ontologies/loc/Polygon> ;
+          ]
+        ) ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path rdfs:comment ;
+      sh:datatype xsd:string ;
+      sh:maxCount 1 ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path rdfs:label ;
+      sh:datatype xsd:string ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://www.w3.org/ns/dcat#dataset> ;
+      sh:class <http://www.w3.org/ns/dcat#Dataset> ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "dataset" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://www.w3.org/ns/prov#generatedAtTime> ;
+      sh:datatype xsd:dateTime ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "generated at time" ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path sosa:hasSample ;
+      sh:class <https://w3id.org/tern/ontologies/ssn/CollectedSample> ;
+      sh:name "has sample" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path sosa:hasUltimateFeatureOfInterest ;
+      sh:class <http://www.opengis.net/ont/geosparql#Feature> ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:targetClass plot:Site ;
+.
+:SiteVisit
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "Site visit" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path plot:hadSubActivity ;
+      sh:name "had sub activity" ;
+      sh:nodeKind sh:IRI ;
+      sh:or (
+          [
+            sh:class sosa:Observation ;
+          ]
+          [
+            sh:class sosa:Sampling ;
+          ]
+        ) ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path plot:site ;
+      sh:class plot:Site ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://purl.org/dc/terms/identifier> ;
+      sh:datatype xsd:string ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "identifier" ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path rdfs:comment ;
+      sh:datatype xsd:string ;
+      sh:maxCount 1 ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path rdfs:label ;
+      sh:datatype xsd:string ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://www.w3.org/ns/prov#endedAtTime> ;
+      sh:datatype xsd:dateTime ;
+      sh:maxCount 1 ;
+      sh:name "ended at time" ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://www.w3.org/ns/prov#startedAtTime> ;
+      sh:datatype xsd:dateTime ;
+      sh:maxCount 1 ;
+      sh:name "started at time" ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path sosa:hasSample ;
+      sh:class <https://w3id.org/tern/ontologies/ssn/CollectedSample> ;
+      sh:name "has sample" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:targetClass plot:SiteVisit ;
+.
+:Text
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "Text" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://linked.data.gov.au/def/datatype/value> ;
+      sh:datatype xsd:string ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
+  sh:targetClass <http://linked.data.gov.au/def/datatype/Text> ;
+.
