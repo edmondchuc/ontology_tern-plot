@@ -33,6 +33,26 @@
     ] ;
   sh:targetClass <http://linked.data.gov.au/def/datatype/Boolean> ;
 .
+:CollectedSample
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "Collected sample" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://rs.tdwg.org/dwc/terms/materialSampleID> ;
+      sh:datatype xsd:string ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <https://w3id.org/tern/ontologies/ssn/sampleStorageLocation> ;
+      sh:class <https://w3id.org/tern/ontologies/loc/Point> ;
+      sh:minCount 1 ;
+    ] ;
+  sh:targetClass <https://w3id.org/tern/ontologies/ssn/CollectedSample> ;
+.
 :Count
   a rdfs:Class ;
   a sh:NodeShape ;
@@ -84,6 +104,135 @@
       sh:minCount 1 ;
     ] ;
   sh:targetClass plot:Dimension ;
+.
+:Input
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "Input" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://linked.data.gov.au/def/datatype/value> ;
+      sh:datatype xsd:decimal ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "value" ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://purl.org/dc/terms/description> ;
+      sh:datatype xsd:string ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+    ] ;
+  sh:targetClass <http://www.w3.org/ns/ssn/Input> ;
+.
+:LineString
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "Line string" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://www.opengis.net/ont/geosparql#asWKT> ;
+      sh:class <https://w3id.org/tern/ontologies/loc/wktLiteral> ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "as WKT" ;
+    ] ;
+  sh:targetClass <https://w3id.org/tern/ontologies/loc/LineString> ;
+.
+:Observation
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "Observation" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path plot:site ;
+      sh:class plot:Site ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path plot:wasSubActivityOf ;
+      sh:class plot:SiteVisit ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "was sub activity of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://linked.data.gov.au/def/plot/x/observer> ;
+      sh:class <https://w3id.org/tern/ontologies/org/Person> ;
+      sh:name "observer" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path rdfs:comment ;
+      sh:datatype xsd:string ;
+      sh:maxCount 1 ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path rdfs:label ;
+      sh:datatype xsd:string ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:nodeKind sh:Literal ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path sosa:Result ;
+      sh:class sosa:Result ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "Result" ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path sosa:hasFeatureOfInterest ;
+      sh:class sosa:FeatureOfInterest ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "has feature of interest" ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path sosa:observedProperty ;
+      sh:class sosa:ObservableProperty ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "observed property" ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path sosa:phenomenonTime ;
+      sh:datatype xsd:dateTime ;
+      sh:maxCount 1 ;
+      sh:name "phenomenon time" ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path sosa:resultTime ;
+      sh:datatype xsd:dateTime ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "result time" ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path sosa:usedProcedure ;
+      sh:class sosa:Procedure ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "used procedure" ;
+    ] ;
+  sh:targetClass sosa:Observation ;
 .
 :Percent
   a rdfs:Class ;
@@ -147,6 +296,51 @@
     ] ;
   sh:targetClass <http://linked.data.gov.au/def/datatype/PercentRange> ;
 .
+:Photograph
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "Photograph" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path sosa:isSampleOf ;
+      sh:class <https://w3id.org/tern/ontologies/ssn/PhotopointCollection> ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "is sample of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:targetClass <https://w3id.org/tern/ontologies/ssn/Photograph> ;
+.
+:PhotopointCollection
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "Photopoint collection" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path sosa:hasSample ;
+      sh:class <https://w3id.org/tern/ontologies/ssn/Photograph> ;
+      sh:minCount 1 ;
+      sh:name "has sample" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:targetClass <https://w3id.org/tern/ontologies/ssn/PhotopointCollection> ;
+.
+:PlantSpecimen
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "Plant specimen" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://rs.tdwg.org/dwc/terms/nameAccordingTo> ;
+      sh:class <http://rs.tdwg.org/dwc/terms/Identification> ;
+      sh:maxCount 1 ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:targetClass <https://w3id.org/tern/ontologies/ssn/PlantSpecimen> ;
+.
 :Point
   a rdfs:Class ;
   a sh:NodeShape ;
@@ -187,6 +381,42 @@
       sh:minCount 1 ;
     ] ;
   sh:targetClass <https://w3id.org/tern/ontologies/loc/Point> ;
+.
+:Polygon
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "Polygon" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://www.opengis.net/ont/geosparql#asWKT> ;
+      sh:class <https://w3id.org/tern/ontologies/loc/wktLiteral> ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "as WKT" ;
+    ] ;
+  sh:targetClass <https://w3id.org/tern/ontologies/loc/Polygon> ;
+.
+:Procedure
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "Procedure" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://linked.data.gov.au/def/datatype/vocabulary> ;
+      sh:class <https://w3id.org/tern/ontologies/ssn/Method> ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://www.w3.org/ns/ssn/hasInput> ;
+      sh:class <http://www.w3.org/ns/ssn/Input> ;
+      sh:maxCount 1 ;
+      sh:name "has input" ;
+    ] ;
+  sh:targetClass sosa:Procedure ;
 .
 :PropertyValue
   a rdfs:Class ;
@@ -285,6 +515,183 @@
       sh:nodeKind sh:IRI ;
     ] ;
   sh:targetClass <http://linked.data.gov.au/def/datatype/QuantitativeMeasure> ;
+.
+:Result
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "Result" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://www.w3.org/ns/prov#wasAttributedTo> ;
+      sh:class <https://w3id.org/tern/ontologies/org/Person> ;
+      sh:name "was attributed to" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path sosa:isResultOf ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "is result of" ;
+      sh:or (
+          [
+            sh:class sosa:Observation ;
+          ]
+          [
+            sh:class sosa:Sampling ;
+          ]
+        ) ;
+    ] ;
+  sh:targetClass sosa:Result ;
+.
+:Sample
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "Sample" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path plot:site ;
+      sh:class plot:Site ;
+      sh:maxCount 1 ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path plot:siteVisit ;
+      sh:class plot:SiteVisit ;
+      sh:maxCount 1 ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path rdfs:comment ;
+      sh:datatype xsd:string ;
+      sh:maxCount 1 ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path rdfs:label ;
+      sh:datatype xsd:string ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://www.w3.org/ns/prov#wasAttributedTo> ;
+      sh:class <https://w3id.org/tern/ontologies/org/Person> ;
+      sh:name "was attributed to" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path sosa:hasSample ;
+      sh:class sosa:Sample ;
+      sh:name "has sample" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path sosa:isFeatureOfInterestOf ;
+      sh:class sosa:Observation ;
+      sh:name "is feature of interest of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path sosa:isResultOf ;
+      sh:class sosa:Sampling ;
+      sh:maxCount 1 ;
+      sh:name "is result of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path sosa:isSampleOf ;
+      sh:class sosa:Sample ;
+      sh:name "is sample of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:targetClass sosa:Sample ;
+.
+:Sampling
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "Sampling" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://linked.data.gov.au/def/plot/x/sampler> ;
+      sh:class <https://w3id.org/tern/ontologies/org/Person> ;
+      sh:name "sampler" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://www.opengis.net/ont/geosparql#hasGeometry> ;
+      sh:class <https://w3id.org/tern/ontologies/loc/Point> ;
+      sh:maxCount 1 ;
+      sh:name "has geometry" ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path rdfs:comment ;
+      sh:datatype xsd:string ;
+      sh:maxCount 1 ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path rdfs:label ;
+      sh:datatype xsd:string ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path sosa:hasResult ;
+      sh:class sosa:Sample ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "has result" ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path sosa:usedProcedure ;
+      sh:class <https://w3id.org/tern/ontologies/ssn/Method> ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "used procedure" ;
+    ] ;
+  sh:targetClass sosa:Sampling ;
+.
+:SamplingPoint
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "Sampling point" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path plot:isSamplingPointOf ;
+      sh:class plot:Transect ;
+      sh:maxCount 1 ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://purl.org/dc/terms/identifier> ;
+      sh:datatype xsd:string ;
+      sh:maxCount 1 ;
+      sh:name "identifier" ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://www.opengis.net/ont/geosparql#hasGeometry> ;
+      sh:class <https://w3id.org/tern/ontologies/loc/Point> ;
+      sh:maxCount 1 ;
+      sh:name "has geometry" ;
+    ] ;
+  sh:targetClass plot:SamplingPoint ;
 .
 :Site
   a rdfs:Class ;
@@ -418,6 +825,96 @@
     ] ;
   sh:targetClass plot:Site ;
 .
+:SiteStratum
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "Site stratum" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path plot:stratum ;
+      sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "stratum" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path sosa:isSampleOf ;
+      sh:class plot:Site ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "is sample of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:targetClass plot:SiteStratum ;
+.
+:SiteStratumTaxon
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "Site stratum taxon" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path plot:stratum ;
+      sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "stratum" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path plot:taxon ;
+      sh:class <http://rs.tdwg.org/dwc/terms/Taxon> ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "taxon" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path sosa:isSampleOf ;
+      sh:minCount 1 ;
+      sh:name "is sample of" ;
+      sh:nodeKind sh:IRI ;
+      sh:or (
+          [
+            sh:class plot:SiteTaxon ;
+          ]
+          [
+            sh:class plot:SiteStratumTaxon ;
+          ]
+        ) ;
+    ] ;
+  sh:targetClass plot:SiteStratumTaxon ;
+.
+:SiteTaxon
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "Site taxon" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path plot:taxon ;
+      sh:class <http://rs.tdwg.org/dwc/terms/Taxon> ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "taxon" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path sosa:isSampleOf ;
+      sh:class plot:Site ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "is sample of" ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:targetClass plot:SiteTaxon ;
+.
 :SiteVisit
   a rdfs:Class ;
   a sh:NodeShape ;
@@ -503,4 +1000,45 @@
       sh:name "value" ;
     ] ;
   sh:targetClass <http://linked.data.gov.au/def/datatype/Text> ;
+.
+:Transect
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "Transect" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path plot:hasSamplingPoint ;
+      sh:class plot:SamplingPoint ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path plot:transectDirection ;
+      sh:datatype xsd:string ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path plot:transectEnd ;
+      sh:class <https://w3id.org/tern/ontologies/loc/Point> ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path plot:transectStart ;
+      sh:class <https://w3id.org/tern/ontologies/loc/Point> ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://www.opengis.net/ont/geosparql#hasGeometry> ;
+      sh:class <https://w3id.org/tern/ontologies/loc/LineString> ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:name "has geometry" ;
+    ] ;
+  sh:targetClass plot:Transect ;
 .
