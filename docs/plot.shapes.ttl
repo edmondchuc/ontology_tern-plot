@@ -857,6 +857,12 @@
     ] ;
   sh:property [
       a sh:PropertyShape ;
+      sh:path <http://www.opengis.net/ont/geosparql#sfWithin> ;
+      sh:class <http://www.opengis.net/ont/geosparql#Feature> ;
+      sh:nodeKind sh:IRI ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
       sh:path rdfs:comment ;
       sh:datatype xsd:string ;
       sh:maxCount 1 ;
@@ -890,12 +896,6 @@
       sh:path sosa:hasSample ;
       sh:class <https://w3id.org/tern/ontologies/ssn/CollectedSample> ;
       sh:name "has sample" ;
-      sh:nodeKind sh:IRI ;
-    ] ;
-  sh:property [
-      a sh:PropertyShape ;
-      sh:path sosa:hasUltimateFeatureOfInterest ;
-      sh:class <http://www.opengis.net/ont/geosparql#Feature> ;
       sh:nodeKind sh:IRI ;
     ] ;
   sh:targetClass plot:Site ;
