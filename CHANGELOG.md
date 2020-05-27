@@ -5,6 +5,25 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## [0.0.3] - 2020-05-27
+### Removed
+- plot:Site restrictions for plot:mapScale, plot:mapsheetName and plot:mapsheetNumber
+### Added
+- plot:PropertyValue
+- plot:Site restriction on schema:additionalProperty
+- plot:area and plot:dimension
+- plot:width and plot:length
+- plot:Dimension
+- plot:siteDescription and plot:locationDescription
+- plot:Transect
+- plot:SamplingPoint
+- plot:transectDirection
+- plot:transectStart
+- plot:transectEnd
+- plot:hasSamplingPoint
+- plot:isSamplingPointOf
+
+
 ## [0.0.2] - 2020-05-18
 ### Changed
 - plot:Site label from "Site and location" to "Site"
@@ -27,7 +46,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - class restrictions for sosa:ObservationCollection
 - class restrictions for sosa:Sample
 - class restrictions for sosa:Sampling
-- class restrictions for plot:Transect
 - class restrictions for plot:SiteStratum
 - class restrictions for plot:SiteTaxon
 - class restrictions for plot:SiteStratumTaxon
