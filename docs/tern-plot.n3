@@ -301,7 +301,7 @@ plot-x:TaxonAssignment a rdfs:Class,
         sosa:Result .
 
 plot: a owl:Ontology ;
-    rdfs:label "PLOT Ontology" ;
+    rdfs:label "The PLOT Ontology" ;
     dcterms:contributor [ a schema:Person ;
             schema:affiliation <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> ;
             schema:email "j.sanchezgonzalez@uq.edu.au" ;
@@ -309,7 +309,11 @@ plot: a owl:Ontology ;
         [ a schema:Person ;
             schema:affiliation <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> ;
             schema:email "mosheh.eliyahu@adelaide.edu.au" ;
-            schema:name "Mosheh Eliyahu" ] ;
+            schema:name "Mosheh Eliyahu" ],
+        [ a schema:Person ;
+            schema:affiliation <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> ;
+            schema:email "t.parkhurst@uq.edu.au" ;
+            schema:name "Tina Parkhurst" ] ;
     dcterms:created "2019-03-25"^^xsd:date ;
     dcterms:creator [ a schema:Person ;
             schema:affiliation <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> ;
@@ -978,10 +982,6 @@ sosa:Observation a owl:Class ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty plot:observationTheme ] .
 
-<https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> schema:alternateName "TERN" ;
-    schema:name "Terrestrial Ecosystem Research Network" ;
-    schema:url <https://www.tern.org.au/> .
-
 plot:site a owl:ObjectProperty ;
     rdfs:label "site" ;
     rdfs:comment "Link to a site." .
@@ -1017,6 +1017,10 @@ loc:Point a owl:Class ;
         [ a owl:Restriction ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty geosparql:asWKT ] .
+
+<https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> schema:alternateName "TERN" ;
+    schema:name "Terrestrial Ecosystem Research Network" ;
+    schema:url <https://www.tern.org.au/> .
 
 geosparql:hasGeometry rdfs:subPropertyOf <http://www.w3.org/ns/locn#geometry> .
 

@@ -242,6 +242,12 @@ plot:
       schema:email "mosheh.eliyahu@adelaide.edu.au" ;
       schema:name "Mosheh Eliyahu" ;
     ] ;
+  dcterms:contributor [
+    a schema:Person ;
+    schema:affiliation <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> ;
+    schema:email "t.parkhurst@uq.edu.au" ;
+    schema:name "Tina Parkhurst" ;
+  ] ;
   dcterms:created "2019-03-25"^^xsd:date ;
   dcterms:creator [
       a schema:Person ;
@@ -274,7 +280,7 @@ PLOT is technically an extension to the W3C SSN/SOSA vocabulary, and also uses e
   dcterms:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
   dcterms:modified "2020-06-16"^^xsd:date ;
   dcterms:publisher <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> ;
-  rdfs:label "PLOT Ontology" ;
+  rdfs:label "The PLOT Ontology" ;
   rdfs:seeAlso <https://www.publish.csiro.au/book/5230/> ;
   rdfs:seeAlso <https://www.w3.org/TR/vocab-ssn-ext/> ;
   rdfs:seeAlso <https://www.w3.org/ns/ssn/> ;
