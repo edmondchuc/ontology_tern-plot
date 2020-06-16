@@ -41,7 +41,8 @@ plot:SamplingPoint a rdfs:Class,
         [ a owl:Restriction ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty geosparql:hasGeometry ],
-        sosa:Sample .
+        sosa:Sample,
+        loc:Point .
 
 plot:Site a rdfs:Class ;
     rdfs:label "Site" ;
@@ -181,12 +182,12 @@ plot-x:FluxTower a rdfs:Class,
         owl:Class ;
     rdfs:label "Flux tower" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <http://www.w3.org/ns/locn#location> ],
+        [ a owl:Restriction ;
             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass sosa:Sensor ;
             owl:onProperty sosa:hosts ],
-        [ a owl:Restriction ;
-            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <http://www.w3.org/ns/locn#location> ],
         sosa:Platform .
 
 plot-x:TaxonAssignment a rdfs:Class,
@@ -216,6 +217,9 @@ plot-x:TaxonAssignment a rdfs:Class,
         [ a owl:Restriction ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <http://linked.data.gov.au/def/datatype/value> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <http://linked.data.gov.au/def/datatype/uncertainty> ],
         sosa:Result .
 
 <http://linked.data.gov.au/def/datatype/Percent> a owl:Class ;
@@ -234,10 +238,16 @@ plot-x:TaxonAssignment a rdfs:Class,
         [ a owl:Restriction ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <http://linked.data.gov.au/def/datatype/value> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <http://linked.data.gov.au/def/datatype/uncertainty> ],
         sosa:Result .
 
 <http://linked.data.gov.au/def/datatype/PercentRange> a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom <http://qudt.org/schema/qudt/Unit> ;
+            owl:onProperty <http://linked.data.gov.au/def/datatype/unit> ],
+        [ a owl:Restriction ;
             owl:allValuesFrom xsd:decimal ;
             owl:onProperty <http://linked.data.gov.au/def/datatype/uncertainty> ],
         [ a owl:Restriction ;
@@ -250,14 +260,20 @@ plot-x:TaxonAssignment a rdfs:Class,
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <http://linked.data.gov.au/def/datatype/value> ],
         [ a owl:Restriction ;
-            owl:allValuesFrom <http://qudt.org/schema/qudt/Unit> ;
-            owl:onProperty <http://linked.data.gov.au/def/datatype/unit> ],
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <http://linked.data.gov.au/def/datatype/uncertainty> ],
         sosa:Result .
 
 <http://linked.data.gov.au/def/datatype/QuantitativeRange> a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:allValuesFrom <http://qudt.org/schema/qudt/Unit> ;
             owl:onProperty <http://linked.data.gov.au/def/datatype/unit> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:decimal ;
+            owl:onProperty <http://linked.data.gov.au/def/datatype/max> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:decimal ;
+            owl:onProperty <http://linked.data.gov.au/def/datatype/min> ],
         [ a owl:Restriction ;
             owl:allValuesFrom xsd:decimal ;
             owl:onProperty <http://linked.data.gov.au/def/datatype/uncertainty> ],
@@ -270,6 +286,9 @@ plot-x:TaxonAssignment a rdfs:Class,
         [ a owl:Restriction ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <http://linked.data.gov.au/def/datatype/unit> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <http://linked.data.gov.au/def/datatype/uncertainty> ],
         sosa:Result .
 
 <http://linked.data.gov.au/def/datatype/Text> a owl:Class ;
@@ -282,27 +301,27 @@ plot-x:TaxonAssignment a rdfs:Class,
         sosa:Result .
 
 plot: a owl:Ontology ;
-    rdfs:label "The Plot Ontology" ;
+    rdfs:label "PLOT Ontology" ;
     dcterms:contributor [ a schema:Person ;
-            schema:affiliation <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> ;
-            schema:email "e.chuc@uq.edu.au" ;
-            schema:identifier "https://orcid.org/0000-0002-6047-9864" ;
-            schema:name "Edmond Chuc" ],
-        [ a schema:Person ;
             schema:affiliation <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> ;
             schema:email "j.sanchezgonzalez@uq.edu.au" ;
             schema:name "Javier Sanchez Gonzalez" ],
         [ a schema:Person ;
             schema:affiliation <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> ;
             schema:email "mosheh.eliyahu@adelaide.edu.au" ;
-            schema:name "Mosheh Eliyahu" ],
+            schema:name "Mosheh Eliyahu" ] ;
+    dcterms:created "2019-03-25"^^xsd:date ;
+    dcterms:creator [ a schema:Person ;
+            schema:affiliation <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> ;
+            schema:email "e.chuc@uq.edu.au" ;
+            schema:identifier "https://orcid.org/0000-0002-6047-9864" ;
+            schema:name "Edmond Chuc" ],
         [ a schema:Person ;
             schema:affiliation <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> ;
             schema:email "s.guru@uq.edu.au" ;
             schema:identifier "https://orcid.org/0000-0002-3903-254X" ;
-            schema:name "Siddeswara Guru" ] ;
-    dcterms:created "2019-03-25"^^xsd:date ;
-    dcterms:creator [ a schema:Person ;
+            schema:name "Siddeswara Guru" ],
+        [ a schema:Person ;
             schema:email "simon.cox@csiro.au" ;
             schema:identifier <https://orcid.org/0000-0002-3884-3420> ;
             schema:memberOf [ a schema:Organization ;
@@ -311,9 +330,9 @@ plot: a owl:Ontology ;
             schema:name "Simon J.D.Cox" ] ;
     dcterms:description """This vocabulary provides a set of classes to support capture of plot- and site-based ecological survey data. It is primary related to vegetation surveys, following the methdologies outlined in the Australian Soil and Land Survey Field Handbook. 
 
-Plot is technically an extension to the W3C SSN/SOSA vocabulary, and also uses elements from the SSN Extensions ontology.""" ;
+PLOT is technically an extension to the W3C SSN/SOSA vocabulary, and also uses elements from the SSN Extensions ontology.""" ;
     dcterms:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
-    dcterms:modified "2020-05-27"^^xsd:date ;
+    dcterms:modified "2020-06-16"^^xsd:date ;
     dcterms:publisher <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> ;
     rdfs:seeAlso <https://www.publish.csiro.au/book/5230/>,
         <https://www.w3.org/TR/vocab-ssn-ext/>,
@@ -327,8 +346,8 @@ Plot is technically an extension to the W3C SSN/SOSA vocabulary, and also uses e
         <https://raw.githubusercontent.com/AGLDWG/datatype-ont/master/rdf/datatype.rdf>,
         loc:,
         <https://w3id.org/tern/ontologies/ssn/> ;
-    owl:versionIRI <http://linked.data.gov.au/def/plot/0.0.3> ;
-    owl:versionInfo "0.0.3" ;
+    owl:versionIRI <http://linked.data.gov.au/def/plot/0.0.4> ;
+    owl:versionInfo "0.0.4" ;
     prov:wasGeneratedBy [ a doap:Project,
                 prov:Activity ;
             doap:repository <https://github.com/ternaustralia/ontology_tern-plot> ] .
@@ -484,6 +503,13 @@ ssn-ext:isMemberOf a owl:ObjectProperty ;
     owl:inverseOf ssn-ext:hasMember .
 
 <https://bitbucket.org/terndatateam/ternplotdata-ontology> a doap:Repository .
+
+<https://w3id.org/tern/ontologies/ssn/SoilSpecimen> rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom <http://linked.data.gov.au/def/datatype/QuantitativeMeasure> ;
+            owl:onProperty plot:weight ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty plot:weight ] .
 
 plot:Dimension a owl:Class ;
     rdfs:label "Dimension" ;
@@ -651,11 +677,17 @@ ssn:Input a owl:Class ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty dcterms:description ],
         [ a owl:Restriction ;
+            owl:allValuesFrom xsd:string ;
+            owl:onProperty rdfs:label ],
+        [ a owl:Restriction ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty <http://linked.data.gov.au/def/datatype/value> ],
         [ a owl:Restriction ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty dcterms:description ] .
+            owl:onProperty dcterms:description ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty rdfs:label ] .
 
 ssn-ext:hasMember rdfs:subPropertyOf plot:hadSubActivity .
 
@@ -675,24 +707,6 @@ loc:Polygon a owl:Class ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty geosparql:asWKT ] .
 
-<http://linked.data.gov.au/def/datatype/QuantitativeMeasure> a owl:Class ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom <http://qudt.org/schema/qudt/Unit> ;
-            owl:onProperty <http://linked.data.gov.au/def/datatype/unit> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:decimal ;
-            owl:onProperty <http://linked.data.gov.au/def/datatype/uncertainty> ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom xsd:integer ;
-            owl:onProperty <http://linked.data.gov.au/def/datatype/value> ],
-        [ a owl:Restriction ;
-            owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <http://linked.data.gov.au/def/datatype/unit> ],
-        [ a owl:Restriction ;
-            owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty <http://linked.data.gov.au/def/datatype/value> ],
-        sosa:Result .
-
 plot:datasetParameter a rdf:Property ;
     rdfs:label "dataset parameter" ;
     rdfs:comment "Link to the dataset-level parameter." .
@@ -700,11 +714,6 @@ plot:datasetParameter a rdf:Property ;
 plot:dimension a rdf:Property ;
     rdfs:label "dimension" ;
     rdfs:comment "The dimension of the feature (such as a site)." .
-
-plot:hasSamplingPoint a owl:ObjectProperty ;
-    rdfs:label "has sampling point" ;
-    rdfs:comment "Link a transect to a sampling point." ;
-    rdfs:subPropertyOf sosa:hasSample .
 
 plot:isSamplingPointOf a owl:ObjectProperty ;
     rdfs:label "is sampling point of" ;
@@ -753,6 +762,9 @@ plot:upperParameter a rdf:Property ;
     rdfs:label "upper parameter" ;
     rdfs:comment "Link to the upper (global) parameter." .
 
+plot:weight a rdf:Property ;
+    rdfs:label "weight" .
+
 plot:width a rdf:Property ;
     rdfs:label "width" .
 
@@ -769,6 +781,9 @@ plot-x:EnvironmentalContinuant a owl:Class ;
 
 sosa:Sampling a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom plot:SamplingPoint ;
+            owl:onProperty plot:hasSamplingPoint ],
+        [ a owl:Restriction ;
             owl:allValuesFrom xsd:string ;
             owl:onProperty rdfs:comment ],
         [ a owl:Restriction ;
@@ -797,7 +812,31 @@ sosa:Sampling a owl:Class ;
             owl:onProperty sosa:usedProcedure ],
         [ a owl:Restriction ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty plot:hasSamplingPoint ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty geosparql:hasGeometry ] .
+
+<http://linked.data.gov.au/def/datatype/QuantitativeMeasure> a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom <http://qudt.org/schema/qudt/Unit> ;
+            owl:onProperty <http://linked.data.gov.au/def/datatype/unit> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:decimal ;
+            owl:onProperty <http://linked.data.gov.au/def/datatype/uncertainty> ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom xsd:decimal ;
+            owl:onProperty <http://linked.data.gov.au/def/datatype/value> ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <http://linked.data.gov.au/def/datatype/unit> ],
+        [ a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <http://linked.data.gov.au/def/datatype/value> ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty <http://linked.data.gov.au/def/datatype/uncertainty> ],
+        sosa:Result .
 
 plot:SiteVisit a owl:Class ;
     rdfs:label "Visit to a site" ;
@@ -865,6 +904,11 @@ w3cgeo:Point rdfs:subClassOf geosparql:Geometry,
 plot:area a rdf:Property ;
     rdfs:label "area" ;
     rdfs:comment "The area of a feature (such as a site)." .
+
+plot:hasSamplingPoint a owl:ObjectProperty ;
+    rdfs:label "has sampling point" ;
+    rdfs:comment "Link a transect to a sampling point." ;
+    rdfs:subPropertyOf sosa:hasSample .
 
 sosa:Observation a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
@@ -934,6 +978,14 @@ sosa:Observation a owl:Class ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty plot:observationTheme ] .
 
+<https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> schema:alternateName "TERN" ;
+    schema:name "Terrestrial Ecosystem Research Network" ;
+    schema:url <https://www.tern.org.au/> .
+
+plot:site a owl:ObjectProperty ;
+    rdfs:label "site" ;
+    rdfs:comment "Link to a site." .
+
 loc:Point a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:allValuesFrom xsd:double ;
@@ -965,14 +1017,6 @@ loc:Point a owl:Class ;
         [ a owl:Restriction ;
             owl:minCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty geosparql:asWKT ] .
-
-<https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> schema:alternateName "TERN" ;
-    schema:name "Terrestrial Ecosystem Research Network" ;
-    schema:url <https://www.tern.org.au/> .
-
-plot:site a owl:ObjectProperty ;
-    rdfs:label "site" ;
-    rdfs:comment "Link to a site." .
 
 geosparql:hasGeometry rdfs:subPropertyOf <http://www.w3.org/ns/locn#geometry> .
 

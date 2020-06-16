@@ -125,6 +125,13 @@
       sh:maxCount 1 ;
       sh:minCount 1 ;
     ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path rdfs:label ;
+      sh:datatype xsd:string ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+    ] ;
   sh:targetClass <http://www.w3.org/ns/ssn/Input> ;
 .
 :LineString
@@ -427,26 +434,32 @@
   sh:property [
       a sh:PropertyShape ;
       sh:path <https://w3id.org/tern/ontologies/loc/altitude> ;
-      sh:datatype xsd:double ;
+      sh:class <http://linked.data.gov.au/def/datatype/QuantitativeMeasure> ;
+      sh:maxCount 1 ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <https://w3id.org/tern/ontologies/loc/depth> ;
+      sh:class <http://linked.data.gov.au/def/datatype/QuantitativeMeasure> ;
       sh:maxCount 1 ;
     ] ;
   sh:property [
       a sh:PropertyShape ;
       sh:path <https://w3id.org/tern/ontologies/loc/elevation> ;
-      sh:datatype xsd:double ;
+      sh:class <http://linked.data.gov.au/def/datatype/QuantitativeMeasure> ;
       sh:maxCount 1 ;
     ] ;
   sh:property [
       a sh:PropertyShape ;
       sh:path <https://w3id.org/tern/ontologies/loc/latitude> ;
-      sh:datatype xsd:double ;
+      sh:class <http://linked.data.gov.au/def/datatype/QuantitativeMeasure> ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
     ] ;
   sh:property [
       a sh:PropertyShape ;
       sh:path <https://w3id.org/tern/ontologies/loc/longitude> ;
-      sh:datatype xsd:double ;
+      sh:class <http://linked.data.gov.au/def/datatype/QuantitativeMeasure> ;
       sh:maxCount 1 ;
       sh:minCount 1 ;
     ] ;
@@ -690,6 +703,12 @@
   a sh:NodeShape ;
   rdfs:label "Sampling" ;
   rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path plot:hasSamplingPoint ;
+      sh:class plot:SamplingPoint ;
+      sh:maxCount 1 ;
+    ] ;
   sh:property [
       a sh:PropertyShape ;
       sh:path <http://linked.data.gov.au/def/plot/x/sampler> ;
@@ -1090,6 +1109,12 @@
   a sh:NodeShape ;
   rdfs:label "Soil specimen" ;
   rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path plot:weight ;
+      sh:class <http://linked.data.gov.au/def/datatype/QuantitativeMeasure> ;
+      sh:maxCount 1 ;
+    ] ;
   sh:targetClass <https://w3id.org/tern/ontologies/ssn/SoilSpecimen> ;
 .
 :StateIdentification
