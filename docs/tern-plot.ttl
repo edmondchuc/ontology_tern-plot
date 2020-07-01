@@ -44,6 +44,33 @@
       owl:onProperty <http://linked.data.gov.au/def/datatype/value> ;
     ] ;
 .
+<http://linked.data.gov.au/def/datatype/Concept>
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom skos:Concept ;
+      owl:onProperty plot:globalValue ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:allValuesFrom skos:Concept ;
+      owl:onProperty rdf:value ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty <http://linked.data.gov.au/def/datatype/vocabulary> ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty rdf:value ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty plot:globalValue ;
+    ] ;
+.
 <http://linked.data.gov.au/def/datatype/Count>
   a owl:Class ;
   rdfs:subClassOf sosa:Result ;
@@ -243,11 +270,11 @@ plot:
       schema:name "Mosheh Eliyahu" ;
     ] ;
   dcterms:contributor [
-    a schema:Person ;
-    schema:affiliation <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> ;
-    schema:email "t.parkhurst@uq.edu.au" ;
-    schema:name "Tina Parkhurst" ;
-  ] ;
+      a schema:Person ;
+      schema:affiliation <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> ;
+      schema:email "t.parkhurst@uq.edu.au" ;
+      schema:name "Tina Parkhurst" ;
+    ] ;
   dcterms:created "2019-03-25"^^xsd:date ;
   dcterms:creator [
       a schema:Person ;
@@ -278,7 +305,7 @@ plot:
 
 PLOT is technically an extension to the W3C SSN/SOSA vocabulary, and also uses elements from the SSN Extensions ontology.""" ;
   dcterms:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
-  dcterms:modified "2020-06-16"^^xsd:date ;
+  dcterms:modified "2020-07-01"^^xsd:date ;
   dcterms:publisher <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> ;
   rdfs:label "The PLOT Ontology" ;
   rdfs:seeAlso <https://www.publish.csiro.au/book/5230/> ;
@@ -293,8 +320,8 @@ PLOT is technically an extension to the W3C SSN/SOSA vocabulary, and also uses e
   owl:imports <https://raw.githubusercontent.com/AGLDWG/datatype-ont/master/rdf/datatype.rdf> ;
   owl:imports loc: ;
   owl:imports <https://w3id.org/tern/ontologies/ssn/> ;
-  owl:versionIRI <http://linked.data.gov.au/def/plot/0.0.4> ;
-  owl:versionInfo "0.0.4" ;
+  owl:versionIRI <http://linked.data.gov.au/def/plot/0.0.5> ;
+  owl:versionInfo "0.0.5" ;
   prov:wasGeneratedBy [
       a doap:Project ;
       a prov:Activity ;
@@ -886,6 +913,11 @@ plot:dimension
   rdfs:comment "The dimension of the feature (such as a site)." ;
   rdfs:label "dimension" ;
 .
+plot:globalValue
+  a rdf:Property ;
+  rdfs:comment "Link to the upper (global) value." ;
+  rdfs:label "global value" ;
+.
 plot:hadSubActivity
   a owl:ObjectProperty ;
   rdfs:comment "To allow links between observations or site-visits and projects, programs and initiatives, between observations and site-visits, etc" ;
@@ -985,11 +1017,6 @@ plot:transectStart
   a rdf:Property ;
   rdfs:comment "The start point of a transect." ;
   rdfs:label "transect start" ;
-.
-plot:upperParameter
-  a rdf:Property ;
-  rdfs:comment "Link to the upper (global) parameter." ;
-  rdfs:label "upper parameter" ;
 .
 plot:wasSubActivityOf
   a owl:ObjectProperty ;
@@ -1197,23 +1224,23 @@ sosa:ObservableProperty
   a owl:Class ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:allValuesFrom <https://w3id.org/tern/ontologies/ssn/Parameter> ;
-      owl:onProperty plot:datasetParameter ;
+      owl:allValuesFrom skos:Concept ;
+      owl:onProperty plot:globalValue ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:allValuesFrom <https://w3id.org/tern/ontologies/ssn/Parameter> ;
-      owl:onProperty plot:upperParameter ;
+      owl:onProperty rdf:value ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty plot:datasetParameter ;
+      owl:onProperty rdf:value ;
     ] ;
   rdfs:subClassOf [
       a owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onProperty plot:upperParameter ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty plot:globalValue ;
     ] ;
 .
 sosa:Observation

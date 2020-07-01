@@ -53,6 +53,43 @@
     ] ;
   sh:targetClass <https://w3id.org/tern/ontologies/ssn/CollectedSample> ;
 .
+:Concept
+  a rdfs:Class ;
+  a sh:NodeShape ;
+  rdfs:label "Concept" ;
+  rdfs:subClassOf rdfs:Resource ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path <http://linked.data.gov.au/def/datatype/vocabulary> ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+      sh:or (
+          [
+            sh:class <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+          ]
+          [
+            sh:class <http://www.w3.org/2004/02/skos/core#Collection> ;
+          ]
+          [
+            sh:class owl:ontology ;
+          ]
+        ) ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path plot:globalValue ;
+      sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+      sh:maxCount 1 ;
+    ] ;
+  sh:property [
+      a sh:PropertyShape ;
+      sh:path rdf:value ;
+      sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
+      sh:maxCount 1 ;
+      sh:minCount 1 ;
+    ] ;
+  sh:targetClass <http://linked.data.gov.au/def/datatype/Concept> ;
+.
 :Count
   a rdfs:Class ;
   a sh:NodeShape ;
@@ -197,18 +234,16 @@
   rdfs:subClassOf rdfs:Resource ;
   sh:property [
       a sh:PropertyShape ;
-      sh:path plot:datasetParameter ;
-      sh:class <https://w3id.org/tern/ontologies/ssn/Parameter> ;
+      sh:path plot:globalValue ;
+      sh:class <http://www.w3.org/2004/02/skos/core#Concept> ;
       sh:maxCount 1 ;
-      sh:minCount 1 ;
-      sh:nodeKind sh:IRI ;
     ] ;
   sh:property [
       a sh:PropertyShape ;
-      sh:path plot:upperParameter ;
+      sh:path rdf:value ;
       sh:class <https://w3id.org/tern/ontologies/ssn/Parameter> ;
       sh:maxCount 1 ;
-      sh:nodeKind sh:IRI ;
+      sh:minCount 1 ;
     ] ;
   sh:targetClass sosa:ObservableProperty ;
 .
