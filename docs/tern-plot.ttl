@@ -29,6 +29,7 @@
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix w3cgeo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix data: <http://linked.data.gov.au/def/datatype/> .
 
 <http://linked.data.gov.au/def/datatype/Boolean>
   a owl:Class ;
