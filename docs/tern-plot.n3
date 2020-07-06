@@ -222,7 +222,11 @@ data:Concept rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty rdf:value ],
         [ a owl:Restriction ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty plot:globalValue ] .
+            owl:onProperty plot:globalValue ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty plot:globalVocabulary ],
+        sosa:Result .
 
 data:Count a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
@@ -353,7 +357,7 @@ plot: a owl:Ontology ;
 
 PLOT is technically an extension to the W3C SSN/SOSA vocabulary, and also uses elements from the SSN Extensions ontology.""" ;
     dcterms:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
-    dcterms:modified "2020-07-01"^^xsd:date ;
+    dcterms:modified "2020-07-06"^^xsd:date ;
     dcterms:publisher <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> ;
     rdfs:seeAlso <https://www.publish.csiro.au/book/5230/>,
         <https://www.w3.org/TR/vocab-ssn-ext/>,
@@ -367,8 +371,8 @@ PLOT is technically an extension to the W3C SSN/SOSA vocabulary, and also uses e
         <https://raw.githubusercontent.com/AGLDWG/datatype-ont/master/rdf/datatype.rdf>,
         loc:,
         <https://w3id.org/tern/ontologies/ssn/> ;
-    owl:versionIRI <http://linked.data.gov.au/def/plot/0.0.5> ;
-    owl:versionInfo "0.0.5" ;
+    owl:versionIRI <http://linked.data.gov.au/def/plot/0.0.6> ;
+    owl:versionInfo "0.0.6" ;
     prov:wasGeneratedBy [ a doap:Project,
                 prov:Activity ;
             doap:repository <https://github.com/ternaustralia/ontology_tern-plot> ] .
@@ -681,7 +685,10 @@ sosa:ObservableProperty a owl:Class ;
             owl:onProperty rdf:value ],
         [ a owl:Restriction ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty plot:globalValue ] .
+            owl:onProperty plot:globalValue ],
+        [ a owl:Restriction ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty plot:globalVocabulary ] .
 
 sosa:Procedure a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
@@ -735,6 +742,10 @@ loc:Polygon a owl:Class ;
 plot:dimension a rdf:Property ;
     rdfs:label "dimension" ;
     rdfs:comment "The dimension of the feature (such as a site)." .
+
+plot:globalVocabulary a rdf:Property ;
+    rdfs:label "global vocabulary" ;
+    rdfs:comment "Link to the upper vocabulary." .
 
 plot:isSamplingPointOf a owl:ObjectProperty ;
     rdfs:label "is sampling point of" ;
