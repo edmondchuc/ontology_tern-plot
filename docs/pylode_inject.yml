@@ -9,7 +9,7 @@ overview:
   p: This section contains diagrams overviewing the SOSA/SSN vocabulary's Observation, Sample & Feature of Interest classes used in PLOT.
   figures:
     - figure:
-        src: plot.jpg
+        src: https://w3id.org/tern/static/plot-ont/plot.jpg
         alt: Plot Ontology overview diagram.
         caption: Plot Ontology overview.
     - figure:
