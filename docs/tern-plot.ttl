@@ -308,13 +308,13 @@ plot:
         ] ;
       schema:name "Simon J.D.Cox" ;
     ] ;
-  dcterms:description """This vocabulary provides a set of classes to support capture of plot- and site-based ecological survey data. It is primary related to vegetation surveys, following the methdologies outlined in the Australian Soil and Land Survey Field Handbook. 
+  dcterms:description """This vocabulary provides a set of classes to support capturing of plot- and site-based ecological survey data. It is primary related to vegetation surveys, following the methpdologies outlined in the Australian Soil and Land Survey Field Handbook. 
 
-PLOT is technically an extension to the W3C SSN/SOSA vocabulary, and also uses elements from the SSN Extensions ontology.""" ;
+TERN ontology is technically an extension to the W3C SSN/SOSA vocabulary, and also uses elements from the SSN Extensions ontology. """ ;
   dcterms:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
   dcterms:modified "2020-07-06"^^xsd:date ;
   dcterms:publisher <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> ;
-  rdfs:label "The PLOT Ontology" ;
+  rdfs:label "TERN Ontology" ;
   rdfs:seeAlso <https://www.publish.csiro.au/book/5230/> ;
   rdfs:seeAlso <https://www.w3.org/TR/vocab-ssn-ext/> ;
   rdfs:seeAlso <https://www.w3.org/ns/ssn/> ;

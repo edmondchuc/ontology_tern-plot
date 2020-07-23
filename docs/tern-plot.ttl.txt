@@ -1,126 +1,126 @@
 @startuml
-title The PLOT Ontology
-"sosa:Sample" <|-- ":SiteTaxon"
-"sosa:Result" <|-- ":Count"
-"schema:PropertyValue" <|-- ":PropertyValue"
-":EcologicalCommunity" <|-- ":Assemblage"
+title TERN Ontology
 "owl:Thing" <|-- ":Dimension"
-"geosparql:SpatialObject" <|-- ":OrganismOccurence"
-"sosa:Sample" <|-- ":OrganismOccurence"
-"time:TemporalEntity" <|-- ":OrganismOccurence"
-"skos:Concept" <|-- ":Stratum"
-"sosa:Platform" <|-- ":FluxTower"
-":Point" <|-- ":SamplingPoint"
-"sosa:Sample" <|-- ":SamplingPoint"
-"sosa:FeatureOfInterest" <|-- ":EnvironmentalContinuant"
-"sosa:Observation" <|-- ":TaxonAssignment"
-":EnvironmentalSystem" <|-- ":EcologicalCommunity"
 "sosa:Sample" <|-- ":SiteStratumTaxon"
-"sosa:Result" <|-- ":Text"
-"sosa:Result" <|-- ":Percent"
-"sosa:Result" <|-- ":Boolean"
-"sosa:Result" <|-- ":QuantitativeMeasure"
-"sosa:Sample" <|-- ":SiteStratum"
-"prov:Activity" <|-- ":Survey"
-"owl:Thing" <|-- ":EnvironmentalSystem"
-":EnvironmentalContinuant" <|-- ":EnvironmentalSystem"
-"owl:Thing" <|-- ":EnvironmentalZone"
-":EnvironmentalContinuant" <|-- ":EnvironmentalZone"
-"prov:Activity" <|-- ":SiteVisit"
-"sosa:Result" <|-- ":PercentRange"
-"dct:Location" <|-- ":Location"
-"sosa:Sample" <|-- ":Transect"
 "sosa:Result" <|-- ":QuantitativeRange"
-Class "sosa:Procedure" [[http://www.w3.org/ns/sosa/Procedure]] {
-}
-Class "ssn:Input" [[http://www.w3.org/ns/ssn/Input]] {
-}
-Class ":SiteTaxon" [[http://linked.data.gov.au/def/plot/SiteTaxon]] {
-}
-Class ":Count" [[http://linked.data.gov.au/def/datatype/Count]] {
-}
-Class ":PropertyValue" [[http://linked.data.gov.au/def/plot/PropertyValue]] {
-}
-Class ":Assemblage" [[http://linked.data.gov.au/def/plot/x/Assemblage]] {
-}
-Class ":ub1bL376C26" [[ub1bL376C26]] {
+"sosa:Platform" <|-- ":FluxTower"
+"schema:PropertyValue" <|-- ":PropertyValue"
+"sosa:Result" <|-- ":PercentRange"
+"sosa:Sample" <|-- ":SamplingPoint"
+":Point" <|-- ":SamplingPoint"
+":EcologicalCommunity" <|-- ":Assemblage"
+"dct:Location" <|-- ":Location"
+"sosa:FeatureOfInterest" <|-- ":EnvironmentalContinuant"
+"prov:Activity" <|-- ":SiteVisit"
+":EnvironmentalSystem" <|-- ":EcologicalCommunity"
+"sosa:Sample" <|-- ":SiteTaxon"
+"sosa:Result" <|-- ":QuantitativeMeasure"
+"sosa:Result" <|-- ":Boolean"
+"skos:Concept" <|-- ":Stratum"
+":EnvironmentalContinuant" <|-- ":EnvironmentalSystem"
+"owl:Thing" <|-- ":EnvironmentalSystem"
+"sosa:Result" <|-- ":Text"
+":EnvironmentalContinuant" <|-- ":EnvironmentalZone"
+"owl:Thing" <|-- ":EnvironmentalZone"
+"sosa:Result" <|-- ":Percent"
+"sosa:Observation" <|-- ":TaxonAssignment"
+"sosa:Sample" <|-- ":Transect"
+"prov:Activity" <|-- ":Survey"
+"sosa:Result" <|-- ":Count"
+"sosa:Sample" <|-- ":OrganismOccurence"
+"geosparql:SpatialObject" <|-- ":OrganismOccurence"
+"time:TemporalEntity" <|-- ":OrganismOccurence"
+"sosa:Sample" <|-- ":SiteStratum"
+Class ":Point" [[https://w3id.org/tern/ontologies/loc/Point]] {
 }
 Class ":Dimension" [[http://linked.data.gov.au/def/plot/Dimension]] {
 }
-Class ":OrganismOccurence" [[http://linked.data.gov.au/def/plot/OrganismOccurence]] {
+Class ":SiteStratumTaxon" [[http://linked.data.gov.au/def/plot/SiteStratumTaxon]] {
 }
-Class ":Stratum" [[http://linked.data.gov.au/def/plot/Stratum]] {
+Class "sosa:ObservableProperty" [[http://www.w3.org/ns/sosa/ObservableProperty]] {
+}
+Class ":QuantitativeRange" [[http://linked.data.gov.au/def/datatype/QuantitativeRange]] {
 }
 Class ":FluxTower" [[http://linked.data.gov.au/def/plot/x/FluxTower]] {
 }
+Class ":PropertyValue" [[http://linked.data.gov.au/def/plot/PropertyValue]] {
+}
+Class "sosa:Observation" [[http://www.w3.org/ns/sosa/Observation]] {
+}
+Class ":PercentRange" [[http://linked.data.gov.au/def/datatype/PercentRange]] {
+}
 Class ":SamplingPoint" [[http://linked.data.gov.au/def/plot/SamplingPoint]] {
 }
-Class "sosa:Result" [[http://www.w3.org/ns/sosa/Result]] {
+Class ":Assemblage" [[http://linked.data.gov.au/def/plot/x/Assemblage]] {
 }
-Class ":ub1bL1571C15" [[ub1bL1571C15]] {
-[[http://www.w3.org/ns/ssn/ext/isMemberOf :isMemberOf]] : [[http://www.w3.org/ns/ssn/ext/ObservationCollection :ObservationCollection]]
+Class ":Location" [[http://linked.data.gov.au/def/plot/Location]] {
+}
+Class ":Polygon" [[https://w3id.org/tern/ontologies/loc/Polygon]] {
+}
+Class ":ub1bL365C26" [[ub1bL365C26]] {
+}
+Class ":LineString" [[https://w3id.org/tern/ontologies/loc/LineString]] {
 }
 Class ":ub1bL1223C23" [[ub1bL1223C23]] {
 }
 Class ":EnvironmentalContinuant" [[http://linked.data.gov.au/def/plot/x/EnvironmentalContinuant]] {
 }
-Class ":TaxonAssignment" [[http://linked.data.gov.au/def/plot/x/TaxonAssignment]] {
-}
-Class ":ub1bL836C26" [[ub1bL836C26]] {
+Class ":SiteVisit" [[http://linked.data.gov.au/def/plot/SiteVisit]] {
 }
 Class ":EcologicalCommunity" [[http://linked.data.gov.au/def/plot/x/EcologicalCommunity]] {
 }
-Class ":SiteStratumTaxon" [[http://linked.data.gov.au/def/plot/SiteStratumTaxon]] {
-}
-Class ":Text" [[http://linked.data.gov.au/def/datatype/Text]] {
-}
-Class ":Percent" [[http://linked.data.gov.au/def/datatype/Percent]] {
-}
-Class "sosa:Observation" [[http://www.w3.org/ns/sosa/Observation]] {
-}
-Class ":Boolean" [[http://linked.data.gov.au/def/datatype/Boolean]] {
-}
-Class "sosa:ObservableProperty" [[http://www.w3.org/ns/sosa/ObservableProperty]] {
+Class ":SiteTaxon" [[http://linked.data.gov.au/def/plot/SiteTaxon]] {
 }
 Class ":QuantitativeMeasure" [[http://linked.data.gov.au/def/datatype/QuantitativeMeasure]] {
 }
-Class ":ub1bL365C26" [[ub1bL365C26]] {
+Class "sosa:Sampling" [[http://www.w3.org/ns/sosa/Sampling]] {
 }
-Class ":SiteStratum" [[http://linked.data.gov.au/def/plot/SiteStratum]] {
+Class ":Boolean" [[http://linked.data.gov.au/def/datatype/Boolean]] {
 }
-Class ":Survey" [[http://linked.data.gov.au/def/plot/x/Survey]] {
+Class ":Stratum" [[http://linked.data.gov.au/def/plot/Stratum]] {
 }
-Class ":ub1bL685C26" [[ub1bL685C26]] {
+Class ":ub1bL376C26" [[ub1bL376C26]] {
 }
 Class ":EnvironmentalSystem" [[http://linked.data.gov.au/def/plot/x/EnvironmentalSystem]] {
 }
+Class ":Text" [[http://linked.data.gov.au/def/datatype/Text]] {
+}
 Class ":EnvironmentalZone" [[http://linked.data.gov.au/def/plot/x/EnvironmentalZone]] {
 }
-Class "sosa:Sample" [[http://www.w3.org/ns/sosa/Sample]] {
+Class ":Percent" [[http://linked.data.gov.au/def/datatype/Percent]] {
 }
-Class ":SiteVisit" [[http://linked.data.gov.au/def/plot/SiteVisit]] {
-}
-Class ":Point" [[https://w3id.org/tern/ontologies/loc/Point]] {
-}
-Class ":PercentRange" [[http://linked.data.gov.au/def/datatype/PercentRange]] {
-}
-Class ":Location" [[http://linked.data.gov.au/def/plot/Location]] {
+Class ":TaxonAssignment" [[http://linked.data.gov.au/def/plot/x/TaxonAssignment]] {
 }
 Class ":Transect" [[http://linked.data.gov.au/def/plot/Transect]] {
 }
-Class ":QuantitativeRange" [[http://linked.data.gov.au/def/datatype/QuantitativeRange]] {
+Class ":ub1bL1571C15" [[ub1bL1571C15]] {
+[[http://www.w3.org/ns/ssn/ext/isMemberOf :isMemberOf]] : [[http://www.w3.org/ns/ssn/ext/ObservationCollection :ObservationCollection]]
 }
-Class "sosa:Sampling" [[http://www.w3.org/ns/sosa/Sampling]] {
+Class ":ub1bL685C26" [[ub1bL685C26]] {
 }
-Class ":LineString" [[https://w3id.org/tern/ontologies/loc/LineString]] {
+Class ":Survey" [[http://linked.data.gov.au/def/plot/x/Survey]] {
+}
+Class "sosa:Procedure" [[http://www.w3.org/ns/sosa/Procedure]] {
 }
 Class ":ub1bL1163C15" [[ub1bL1163C15]] {
 }
-Class ":Polygon" [[https://w3id.org/tern/ontologies/loc/Polygon]] {
+Class ":Count" [[http://linked.data.gov.au/def/datatype/Count]] {
+}
+Class ":ub1bL836C26" [[ub1bL836C26]] {
+}
+Class ":OrganismOccurence" [[http://linked.data.gov.au/def/plot/OrganismOccurence]] {
+}
+Class "sosa:Sample" [[http://www.w3.org/ns/sosa/Sample]] {
+}
+Class "ssn:Input" [[http://www.w3.org/ns/ssn/Input]] {
+}
+Class "sosa:Result" [[http://www.w3.org/ns/sosa/Result]] {
+}
+Class ":SiteStratum" [[http://linked.data.gov.au/def/plot/SiteStratum]] {
 }
 "dwc:Occurrence" .. ":OrganismOccurence"
 header
-Creator: Siddeswara Guru (s.guru@uq.edu.au) 
+Creator: Edmond Chuc (e.chuc@uq.edu.au) 
 endheader
 center footer Generated by [[https://github.com/edmondchuc/ontogram https://github.com/edmondchuc/ontogram]]
 @enduml
