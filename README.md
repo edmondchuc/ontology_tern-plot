@@ -1,7 +1,9 @@
 # TERN Plot Ontology
 
 ## NOTICE
-This repository has been rebranded to [TERN Ontology](https://github.com/ternaustralia/ontology_tern). Contents of this repository is now archived.
+**This repository has been rebranded to [TERN Ontology](https://github.com/ternaustralia/ontology_tern). Contents of this repository is now archived.**
+
+<hr>
 
 Documentation online: https://ternaustralia.github.io/ontology_tern-plot/
 
