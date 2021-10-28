@@ -1,4 +1,4 @@
-# baseURI: http://linked.data.gov.au/def/plot/
+# baseURI: https://linked.data.gov.au/def/plot/
 # imports: http://purl.org/dc/elements/1.1/
 # imports: http://www.qudt.org/2.1/schema/qudt
 # imports: http://www.w3.org/2006/time#
@@ -10,15 +10,15 @@
 # imports: https://w3id.org/tern/ontologies/ssn/
 # prefix: plot
 
-@prefix : <http://linked.data.gov.au/def/plot/> .
-@prefix data: <http://linked.data.gov.au/def/datatype/> .
+@prefix : <https://linked.data.gov.au/def/plot/> .
+@prefix data: <https://linked.data.gov.au/def/datatype/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix doap: <http://usefulinc.com/ns/doap#> .
 @prefix geosparql: <http://www.opengis.net/ont/geosparql#> .
 @prefix loc: <https://w3id.org/tern/ontologies/loc/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix plot: <http://linked.data.gov.au/def/plot/> .
-@prefix plot-x: <http://linked.data.gov.au/def/plot/x/> .
+@prefix plot: <https://linked.data.gov.au/def/plot/> .
+@prefix plot-x: <https://linked.data.gov.au/def/plot/x/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -262,7 +262,7 @@ data:Text
       owl:onProperty data:value ;
     ] ;
 .
-plot:
+<https://linked.data.gov.au/def/plot>
   a owl:Ontology ;
   dcterms:contributor [
       a schema:Person ;
@@ -301,11 +301,7 @@ plot:
       a schema:Person ;
       schema:email "simon.cox@csiro.au" ;
       schema:identifier <https://orcid.org/0000-0002-3884-3420> ;
-      schema:memberOf [
-          a schema:Organization ;
-          schema:identifier <http://catalogue.linked.data.gov.au/def/csiro> ;
-          schema:name "CSIRO" ;
-        ] ;
+      schema:affiliation <https://linked.data.gov.au/def/csiro> ;
       schema:name "Simon J.D.Cox" ;
     ] ;
   dcterms:description """This vocabulary provides a set of classes to support capturing of plot- and site-based ecological survey data. It is primary related to vegetation surveys, following the methpdologies outlined in the Australian Soil and Land Survey Field Handbook. 
@@ -313,7 +309,7 @@ plot:
 TERN ontology is technically an extension to the W3C SSN/SOSA vocabulary, and also uses elements from the SSN Extensions ontology. """ ;
   dcterms:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
   dcterms:modified "2020-07-06"^^xsd:date ;
-  dcterms:publisher <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> ;
+  dcterms:publisher <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> , <https://linked.data.gov.au/org/tern> ;
   rdfs:label "TERN Ontology" ;
   rdfs:seeAlso <https://www.publish.csiro.au/book/5230/> ;
   rdfs:seeAlso <https://www.w3.org/TR/vocab-ssn-ext/> ;
@@ -327,7 +323,7 @@ TERN ontology is technically an extension to the W3C SSN/SOSA vocabulary, and al
   owl:imports <https://raw.githubusercontent.com/AGLDWG/datatype-ont/master/rdf/datatype.rdf> ;
   owl:imports loc: ;
   owl:imports <https://w3id.org/tern/ontologies/ssn/> ;
-  owl:versionIRI <http://linked.data.gov.au/def/plot/0.0.6> ;
+  owl:versionIRI <https://linked.data.gov.au/def/plot/0.0.6> ;
   owl:versionInfo "0.0.6" ;
   prov:wasGeneratedBy [
       a doap:Project ;
